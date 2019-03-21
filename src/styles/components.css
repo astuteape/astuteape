@@ -1,0 +1,29 @@
+/* Hero Text */
+.hero-text {
+  font-size: 18px;
+  font-family: "Arial", sans-serif;
+  line-height: 1.8rem;
+  color: #2d3038;
+}
+
+.hero-text .indent-lvl-one {
+  padding-left: 125px;
+}
+
+.hero-text .indent-lvl-two {
+  padding-left: 32px;
+}
+
+.hero-text .span-lvl-one {
+  font-weight: bold;
+  font-size: 26px;
+  font-style: italic;
+  color: #e35205;
+}
+
+.hero-text .span-lvl-two > a {
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  color: #1c1f2a;
+}
