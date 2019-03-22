@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-import PrimaryNav from "./nav/PrimaryNav"
+import PrimaryNav from "./nav/primary_nav"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -34,9 +34,6 @@ const Layout = ({ children }) => (
         >
           <main>{children}</main>
           <PrimaryNav />
-          <footer>
-            © Wade Christensen | Astute Ape {new Date().getFullYear()}
-          </footer>
         </div>
       </>
     )}
