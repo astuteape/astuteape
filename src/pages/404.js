@@ -1,14 +1,17 @@
 import React from "react"
-
-import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PageTitle from "../components/text/page_title"
+import { Link } from "gatsby"
 
 const NotFoundPage = () => (
-  <Layout>
+  <main>
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+    <PageTitle titleText="404" />
+    <p>
+      Oops! This is a404br oken page. It's getting daaaark in here . . . .
+      Please take me <Link to="/">home</Link>.
+    </p>
+  </main>
 )
 
 export default NotFoundPage

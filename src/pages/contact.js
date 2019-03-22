@@ -1,10 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
+import PageTitle from "../components/text/page_title"
 
 const ContactPage = () => {
   return (
     <Layout>
-      <h1>Contact</h1>
+      <PageTitle titleText="Contact" />
     </Layout>
   )
 }
