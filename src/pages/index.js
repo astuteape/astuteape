@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import HeroText from "../components/hero_text"
 import SEO from "../components/seo"
-import TitleText from "../components/text/title_text"
+import SiteTitle from "../components/text/site_title"
 
 const IndexPage = () => (
   <Layout>
@@ -22,7 +22,7 @@ const IndexPage = () => (
         `art`,
       ]}
     />
-    <TitleText />
+    <SiteTitle />
     <h1>Wade Christensen</h1>
     <HeroText />
   </Layout>
