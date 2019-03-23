@@ -7,37 +7,32 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
 
 import PrimaryNav from "./nav/primary_nav"
+import Footer from "./footer/footer"
+
+import "../styles/layout.css"
 
 const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <PrimaryNav />
-        </div>
-      </>
-    )}
-  />
+  <div className="grid-container-frame">
+    <section className="grid-nav">
+      <PrimaryNav />
+    </section>
+    <section className="grid-main">
+      <main className="phi-item">{children}</main>
+      <div className="grid-item">2</div>
+      <div className="grid-item">3</div>
+      <div className="grid-item">4</div>
+      <div className="grid-item">5</div>
+      <div className="grid-item">6</div>
+      <div className="grid-item">7</div>
+      <div className="grid-item">8</div>
+      <div className="grid-item">9</div>
+    </section>
+    <section className="grid-footer">
+      <Footer />
+    </section>
+  </div>
 )
 
 Layout.propTypes = {

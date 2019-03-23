@@ -1,3 +1,18 @@
-html {
-  background: #fff;
+/* Root Variables */
+:root {
+  --aa-white: #fff;
+  --aa-light-gray: #2d3038;
+  --aa-dark-gray: #1c1c21;
+  --aa-light-blue: #1f2a44;
+  --aa-dark-blue: #1c1f2a;
+  --aa-orange: #e35205;
+  --aa-body-font: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  background: var(--aa-white);
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
 }

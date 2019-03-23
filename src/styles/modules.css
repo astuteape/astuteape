@@ -1,17 +1,16 @@
 /* Title Text */
 h1.page-title {
   font-size: 50px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #fff;
-  text-shadow: 1px 1px 1px #1c1f2a;
+  font-family: var(--aa-body-font);
+  color: var(--aa-dark-gray);
 }
 
 /* Hero Text */
 .hero-text {
   font-size: 18px;
-  font-family: "Arial", sans-serif;
+  font-family: var(--aa-body-font);
   line-height: 1.8rem;
-  color: #2d3038;
+  color: var(--aa-dark-gray);
 }
 
 .hero-text .indent-lvl-one {
@@ -26,20 +25,31 @@ h1.page-title {
   font-weight: bold;
   font-size: 26px;
   font-style: italic;
-  color: #e35205;
+  color: var(--aa-orange);
 }
 
 .hero-text .span-lvl-two > a {
   font-weight: bold;
   font-size: 20px;
   font-style: italic;
-  color: #1c1f2a;
+  color: var(--aa-dark-blue);
+}
+
+/* Navigation */
+.primary-nav li,
+li > a {
+  font-family: var(--aa-body-font);
+  font-size: 36px;
+  color: var(--aa-white);
+  text-decoration: none;
+  list-style-type: none;
+  margin: 10px 0;
 }
 
 /* Footer */
 footer {
-  font-size: 24px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-family: var(--aa-body-font);
   color: #fff;
   text-shadow: 1px 1px 1px #1c1f2a;
 }

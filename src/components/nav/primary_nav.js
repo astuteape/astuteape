@@ -12,7 +12,7 @@ const NavLink = props => {
 const PrimaryNav = ({ children }) => {
   return (
     <nav>
-      <ul>
+      <ul className="primary-nav">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/blog">Blog</NavLink>
