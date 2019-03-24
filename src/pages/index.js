@@ -1,6 +1,6 @@
 import React from "react"
 
-import Layout from "../components/layout"
+import Layout from "../components/layouts/layout"
 import SEO from "../components/seo"
 import PageTitle from "../components/text/page_title"
 import HeroText from "../components/hero_text"

@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/layouts/layout"
 import PageTitle from "../components/text/page_title"
 
 const ContactPage = () => {

@@ -2,12 +2,12 @@ import React from "react"
 import Layout from "../components/layouts/layout"
 import PageTitle from "../components/text/page_title"
 
-const AboutPage = () => {
+const WorkPage = () => {
   return (
     <Layout>
-      <PageTitle titleText="About" />
+      <PageTitle titleText="Work" />
     </Layout>
   )
 }
 
-export default AboutPage
+export default WorkPage

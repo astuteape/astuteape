@@ -11,6 +11,7 @@ h1.page-title {
   font-family: var(--aa-body-font);
   line-height: 1.8rem;
   color: var(--aa-dark-gray);
+  text-shadow: 5px 5px 10px var(--aa-dark-gray);
 }
 
 .hero-text .indent-lvl-one {
@@ -39,7 +40,7 @@ h1.page-title {
 .primary-nav li,
 li > a {
   font-family: var(--aa-body-font);
-  font-size: 36px;
+  font-size: 24px;
   color: var(--aa-white);
   text-decoration: none;
   list-style-type: none;
@@ -52,4 +53,8 @@ footer {
   font-family: var(--aa-body-font);
   color: #fff;
   text-shadow: 1px 1px 1px #1c1f2a;
+}
+
+.focus-one {
+  grid-column: span 2;
 }
