@@ -2,7 +2,8 @@
 h1.page-title {
   font-size: 50px;
   font-family: var(--aa-body-font);
-  color: var(--aa-dark-gray);
+  color: var(--aa-white);
+  text-shadow: 3px 3px 0px var(--aa-light-gray);
 }
 
 /* Hero Text */
@@ -11,7 +12,6 @@ h1.page-title {
   font-family: var(--aa-body-font);
   line-height: 1.8rem;
   color: var(--aa-dark-gray);
-  text-shadow: 5px 5px 10px var(--aa-dark-gray);
 }
 
 .hero-text .indent-lvl-one {
@@ -37,14 +37,23 @@ h1.page-title {
 }
 
 /* Navigation */
-.primary-nav li,
-li > a {
+.primary-nav li > a {
   font-family: var(--aa-body-font);
   font-size: 24px;
   color: var(--aa-white);
   text-decoration: none;
-  list-style-type: none;
   margin: 10px 0;
+}
+
+.social-nav {
+  display: inherit;
+}
+
+.social-nav li > a {
+  margin: 0;
+  font-family: var(--aa-body-font);
+  color: var(--aa-dark-gray);
+  text-decoration: none;
 }
 
 /* Footer */
@@ -53,8 +62,4 @@ footer {
   font-family: var(--aa-body-font);
   color: #fff;
   text-shadow: 1px 1px 1px #1c1f2a;
-}
-
-.focus-one {
-  grid-column: span 2;
 }

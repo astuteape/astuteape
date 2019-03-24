@@ -16,3 +16,7 @@ body {
   padding: 0;
   font-size: 16px;
 }
+
+li {
+  list-style-type: none;
+}

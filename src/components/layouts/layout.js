@@ -18,17 +18,11 @@ const Layout = ({ children }) => (
     <section className="grid-nav">
       <PrimaryNav />
     </section>
-    <section className="grid-main">
-      <main className="phi-item">{children[1]}</main>
-      <div className="grid-item">{children[2]}</div>
-      <div className="grid-item">3</div>
-      <div className="grid-item">4</div>
-      <div className="grid-item">5</div>
-      <div className="grid-item">6</div>
-      <div className="grid-item">7</div>
-      <div className="grid-item">8</div>
-      <div className="grid-item">9</div>
-    </section>
+    <main className="grid-main">
+      <div className="grid-item-first">{children[1]}</div>
+      <div className="grid-item-second">{children[2]}</div>
+      <div className="grid-item-third">{children[3]}</div>
+    </main>
     <section className="grid-footer">
       <Footer />
     </section>
