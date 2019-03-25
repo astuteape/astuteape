@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import "../styles/modules.css"
+import "../../styles/modules.css"
 
 const HeroText = () => {
   return (

@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layouts/layout"
 import SEO from "../components/seo"
 import PageTitle from "../components/text/page_title"
-import HeroText from "../components/hero_text"
+import HeroText from "../components/text/hero_text"
 import SocialNav from "../components/nav/social_nav"
 
 const IndexPage = () => (
