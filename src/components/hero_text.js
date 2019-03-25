@@ -11,7 +11,7 @@ const HeroText = () => {
       and <span className="span-lvl-one">educator</span>
       <br />
       <span className="indent-lvl-two">navigating</span> the technology and
-      media industries. I like talking to folks, so{" "}
+      media industries. Want to chat?{" "}
       <span className="span-lvl-two">
         <Link to="../contact">get in touch</Link>
       </span>

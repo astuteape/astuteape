@@ -1,8 +1,11 @@
 .grid-container-frame {
   display: grid;
   height: 100vh;
-  grid-template-columns: minmax(150px, 300px) 1fr;
+  grid-template-columns: minmax(150px, 200px) 1fr;
   grid-template-rows: 1fr 33px;
+  border-top: 33px solid var(--aa-dark-blue);
+  border-right: 33px solid var(--aa-dark-blue);
+  box-sizing: border-box;
 }
 
 .grid-nav {
