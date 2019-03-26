@@ -12,6 +12,14 @@ const NavLink = props => {
 const PrimaryNav = ({ children }) => {
   return (
     <nav>
+      <button className="mobile-nav-button">
+        <svg width="32" height="32" viewBox="0 0 16 16">
+          <path
+            fill="#000000"
+            d="M1 3h14v3h-14zM1 7h14v3h-14zM1 11h14v3h-14z"
+          />
+        </svg>
+      </button>
       <ul className="primary-nav">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>

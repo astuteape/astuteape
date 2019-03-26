@@ -18,7 +18,7 @@ const Layout = ({ children }) => (
     <section className="grid-left-sidebar">
       <PrimaryNav />
     </section>
-    <main className="grid-main">{children}</main>
+    <main className="grid-main-static">{children}</main>
     <section className="grid-footer">
       <Footer />
     </section>
