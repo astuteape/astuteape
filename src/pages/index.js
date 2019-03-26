@@ -23,9 +23,15 @@ const IndexPage = () => (
         `art`,
       ]}
     />
-    <PageTitle titleText="Wade Christensen" />
-    <HeroText />
-    <SocialNav />
+    <div className="index-page-title">
+      <PageTitle titleText="Wade Christensen" />
+    </div>
+    <div className="index-text-body">
+      <HeroText />
+    </div>
+    <div className="index-social-nav">
+      <SocialNav />
+    </div>
   </Layout>
 )
 

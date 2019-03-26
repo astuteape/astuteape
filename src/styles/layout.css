@@ -2,6 +2,9 @@
 .grid-container-frame {
   display: grid;
   height: 100vh;
+  grid-template-areas:
+    "nav main"
+    "nav footer";
   grid-template-columns: minmax(150px, 200px) 1fr;
   grid-template-rows: 1fr 33px;
   border-top: 33px solid var(--aa-dark-blue);
@@ -10,7 +13,7 @@
 }
 
 .grid-left-sidebar {
-  grid-row: span 2;
+  grid-area: nav;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,17 +24,37 @@
 
 /* Sub grid for layout of page contents */
 .grid-main {
+  grid-area: main;
   display: grid;
   grid-gap: 5px;
+  grid-template-areas:
+    "top-left top-center top-right"
+    "middle-left middle-center middle-right"
+    "bottom-left bottom-center bottom-right";
   grid-template-columns: 1fr 20% 1fr;
   grid-template-rows: 1fr 20% 1fr;
   background: var(--aa-white);
 }
 
 .grid-footer {
+  grid-area: footer;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: var(--aa-dark-blue);
+}
+
+/* Static Layout */
+/* Index Page */
+.index-page-title {
+  grid-area: top-left;
+}
+
+.index-text-body {
+  grid-area: middle-left;
+}
+
+.index-social-nav {
+  grid-area: bottom-left;
 }
