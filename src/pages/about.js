@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layouts/layout"
+import Layout from "../components/layouts/static_layout"
 import PageTitle from "../components/text/page_title"
 
 const AboutPage = () => {
