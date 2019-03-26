@@ -1,3 +1,4 @@
+/* Framing parent grid */
 .grid-container-frame {
   display: grid;
   height: 100vh;
@@ -8,7 +9,7 @@
   box-sizing: border-box;
 }
 
-.grid-nav {
+.grid-left-sidebar {
   grid-row: span 2;
   display: flex;
   flex-direction: column;
@@ -18,11 +19,13 @@
   background: var(--aa-dark-blue);
 }
 
+/* Sub grid for layout of page contents */
 .grid-main {
   display: grid;
-  grid-gap: 1px;
+  grid-gap: 5px;
   grid-template-columns: 1fr 20% 1fr;
   grid-template-rows: 1fr 20% 1fr;
+  background: var(--aa-white);
 }
 
 .grid-footer {
@@ -31,26 +34,4 @@
   justify-content: center;
   align-items: center;
   background: var(--aa-dark-blue);
-}
-
-.grid-item-first {
-  grid-column: span 2;
-  display: flex;
-  flex-direction: column;
-  margin: auto 0 0 10%;
-}
-
-.grid-item-second {
-  grid-column: span 2;
-  padding-left: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.grid-item-third {
-  grid-column: span 2;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-end;
 }

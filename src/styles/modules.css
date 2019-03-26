@@ -1,9 +1,10 @@
+/* TEXT MODULES */
 /* Title Text */
 h1.page-title {
   font-size: 50px;
   font-family: var(--aa-body-font);
   color: var(--aa-white);
-  text-shadow: 3px 3px 0px var(--aa-light-gray);
+  text-shadow: 3px 3px 0px var(--aa-dark-blue);
 }
 
 /* Hero Text */
@@ -46,11 +47,11 @@ h1.page-title {
 }
 
 .social-nav {
-  display: inherit;
+  display: inline-flex;
 }
 
 .social-nav li > a {
-  margin: 0;
+  margin: 0 10px;
   font-family: var(--aa-body-font);
   color: var(--aa-dark-gray);
   text-decoration: none;

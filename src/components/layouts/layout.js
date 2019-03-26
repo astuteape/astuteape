@@ -15,14 +15,10 @@ import "../../styles/layout.css"
 
 const Layout = ({ children }) => (
   <div className="grid-container-frame">
-    <section className="grid-nav">
+    <section className="grid-left-sidebar">
       <PrimaryNav />
     </section>
-    <main className="grid-main">
-      <div className="grid-item-first">{children[1]}</div>
-      <div className="grid-item-second">{children[2]}</div>
-      <div className="grid-item-third">{children[3]}</div>
-    </main>
+    <main className="grid-main">{children}</main>
     <section className="grid-footer">
       <Footer />
     </section>
