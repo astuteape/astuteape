@@ -53,9 +53,9 @@ h1.page-title {
 }
 
 @media (min-width: 1024px) {
-  .mobile-nav-button {
+  /* .mobile-nav-button {
     display: none;
-  }
+  } */
 
   .primary-nav li > a {
     display: block;
