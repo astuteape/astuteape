@@ -46,15 +46,6 @@
   background: var(--aa-white);
 } */
 
-.grid-footer {
-  grid-area: footer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: var(--aa-dark-blue);
-}
-
 /* Static Layout */
 .grid-main-static {
   grid-area: main;

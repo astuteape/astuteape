@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import PrimaryNav from "../nav/primary_nav"
-import Footer from "../footer/footer"
 
 import "../../styles/layout.css"
 
@@ -19,9 +18,6 @@ const Layout = ({ children }) => (
       <PrimaryNav />
     </section>
     <main className="grid-main-static">{children}</main>
-    <section className="grid-footer">
-      <Footer />
-    </section>
   </div>
 )
 

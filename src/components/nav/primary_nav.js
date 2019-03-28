@@ -29,7 +29,6 @@ class PrimaryNav extends React.Component {
       <nav>
         <ul className="primary-nav">
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
           <NavLink to="/blog">Blog</NavLink>
           <NavLink to="/work">Work</NavLink>
           <NavLink to="/contact">Contact</NavLink>
