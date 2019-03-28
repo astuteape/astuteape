@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-export default class PrimaryNav extends React.Component {
+class PrimaryNav extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -22,21 +22,11 @@ export default class PrimaryNav extends React.Component {
       </li>
     )
 
-    let buttonClass = ["mobile-nav-button"]
     if (this.state.isNavVisible) {
-      buttonClass.push("isNavVisible")
     }
 
     return (
       <nav>
-        <button className={buttonClass.join(" ")} onClick={this.handleNavClick}>
-          <svg width="32" height="32" viewBox="0 0 16 16">
-            <path
-              fill="#000000"
-              d="M1 3h14v3h-14zM1 7h14v3h-14zM1 11h14v3h-14z"
-            />
-          </svg>
-        </button>
         <ul className="primary-nav">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
@@ -49,3 +39,5 @@ export default class PrimaryNav extends React.Component {
     )
   }
 }
+
+export default PrimaryNav
