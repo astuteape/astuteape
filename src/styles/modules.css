@@ -1,66 +1,32 @@
-/* TEXT MODULES */
-/* Title Text */
-h1.page-title {
-  font-size: 50px;
-  font-family: var(--aa-body-font);
-  color: var(--aa-white);
-  text-shadow: 3px 3px 0px var(--aa-dark-blue);
-}
-
-/* Hero Text */
-.hero-text {
-  font-size: 18px;
-  font-family: var(--aa-body-font);
-  line-height: 1.8rem;
-  color: var(--aa-dark-gray);
-}
-
-.hero-text .span-lvl-one {
-  font-weight: bold;
-  font-size: 26px;
-  font-style: italic;
-  color: var(--aa-orange);
-}
-
-.hero-text .span-lvl-two > a {
-  font-weight: bold;
-  font-size: 20px;
-  font-style: italic;
-  color: var(--aa-dark-blue);
-}
-
-@media (min-width: 1024px) {
-  .hero-text .indent-lvl-one {
-    padding-left: 100px;
-  }
-
-  .hero-text .indent-lvl-two {
-    padding-left: 32px;
-  }
-}
-
+/* NAVIGATION */
 /* Navigation */
-.mobile-nav-button {
-  display: block;
+.primary-nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 10px 0;
 }
 
 .primary-nav li > a {
-  display: none;
-  font-family: var(--aa-body-font);
   font-size: 24px;
-  color: var(--aa-dark-blue);
   text-decoration: none;
+  font-family: var(--theme-header-font);
+  color: var(--theme-shade-lightest);
 }
 
 @media (min-width: 1024px) {
-  /* .mobile-nav-button {
-    display: none;
-  } */
+  .primary-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .primary-nav li {
+    padding: 10px 0;
+  }
 
   .primary-nav li > a {
-    display: block;
-    color: var(--aa-white);
-    margin: 10px 0;
+    color: var(--theme-shade-lightest);
   }
 }
 .social-nav {
@@ -72,4 +38,45 @@ h1.page-title {
   font-family: var(--aa-body-font);
   color: var(--aa-dark-gray);
   text-decoration: none;
+}
+
+/* TEXT MODULES */
+/* Title Text */
+h1.page-title {
+  font-size: 50px;
+  font-family: var(--theme-header-font);
+  color: var(--theme-shade-lightest);
+  text-shadow: 3px 3px 0px var(--theme-color-darkest);
+}
+
+/* Hero Text */
+.hero-text {
+  font-size: 18px;
+  line-height: 1.8rem;
+  font-family: var(--theme-body-font);
+  color: var(--theme-shade-dark);
+}
+
+.hero-text .span-lvl-one {
+  font-weight: bold;
+  font-size: 26px;
+  font-style: italic;
+  color: var(--theme-color-accent);
+}
+
+.hero-text .span-lvl-two > a {
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--theme-color-darkest);
+}
+
+@media (min-width: 1024px) {
+  .hero-text .indent-lvl-one {
+    padding-left: 100px;
+  }
+
+  .hero-text .indent-lvl-two {
+    padding-left: 32px;
+  }
 }

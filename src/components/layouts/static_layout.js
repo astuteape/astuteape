@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 
@@ -13,11 +6,11 @@ import PrimaryNav from "../nav/primary_nav"
 import "../../styles/layout.css"
 
 const Layout = ({ children }) => (
-  <div className="grid-container-frame">
-    <section className="grid-left-sidebar">
+  <div className="layout-site-container">
+    <main className="layout-main-content">{children}</main>
+    <section className="layout-site-nav">
       <PrimaryNav />
     </section>
-    <main className="grid-main-static">{children}</main>
   </div>
 )
 
