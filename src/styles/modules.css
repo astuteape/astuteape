@@ -8,7 +8,7 @@
 }
 
 .primary-nav li > a {
-  font-size: 24px;
+  font-size: 28px;
   text-decoration: none;
   color: var(--theme-shade-lightest);
 }

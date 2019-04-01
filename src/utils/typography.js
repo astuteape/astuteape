@@ -5,12 +5,24 @@ const typography = new Typography({
   baseLineHeight: `1`,
   googleFonts: [
     {
-      name: "Ubuntu",
-      styles: ["400", "400i", "500", "500i", "700", "700i"],
+      name: "Teko",
+      styles: ["400", "500", "700"],
+    },
+    {
+      name: "Roboto Condensed",
+      styles: ["400", "400i", "700", "700i"],
     },
   ],
-  headerFontFamily: ["Arial", "Arial", "Helvetica", "sans-serif"],
-  bodyFontFamily: ["Ubuntu", "Arial", "Helvetica", "sans-serif"],
+  headerFontFamily: ["Teko", "Arial", "Helvetica", "sans-serif"],
+  bodyFontFamily: ["Roboto Condensend", "Arial", "Helvetica", "sans-serif"],
+  overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+    ".primary-nav li > a": {
+      fontFamily: ["Teko", "Arial", "Helvetica", "sans-serif"].join(","),
+    },
+    ".page-title": {
+      fontFamily: "Arial",
+    },
+  }),
 })
 
 export default typography
