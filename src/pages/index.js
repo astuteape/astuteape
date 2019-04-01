@@ -32,6 +32,13 @@ const IndexPage = () => (
     <div className="index-social-nav">
       <SocialNav />
     </div>
+    <div> </div>
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
   </Layout>
 )
 

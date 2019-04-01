@@ -30,13 +30,21 @@
 
   .layout-main-content {
     display: grid;
-    grid-gap: 5px;
     grid-template-areas:
       "tl tc tr"
       "ml mc mr"
       "bl bc br";
     grid-template-columns: 1fr 20% 1fr;
     grid-template-rows: 1fr 20% 1fr;
+    background: url("../images/sampleape.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-position: 75% 50%;
+  }
+
+  .layout-main-content > * {
+    border-left: 1px solid var(--theme-color-darkest);
+    border-bottom: 1px solid var(--theme-color-darkest);
   }
 
   .layout-site-nav {
@@ -52,6 +60,7 @@
   .index-page-title {
     grid-area: tl;
     position: relative;
+    grid-column: span 2;
   }
 
   .index-page-title .page-title {
@@ -63,6 +72,7 @@
   .index-text-body {
     position: relative;
     grid-area: ml;
+    grid-column: span 2;
   }
 
   .index-text-body .hero-text {

@@ -52,7 +52,6 @@ h1.page-title {
 /* Hero Text */
 .hero-text {
   font-size: 18px;
-  line-height: 1.8rem;
   font-family: var(--theme-body-font);
   color: var(--theme-shade-dark);
 }
@@ -72,11 +71,11 @@ h1.page-title {
 }
 
 @media (min-width: 1024px) {
-  .hero-text .indent-lvl-one {
+  .indent-lvl-one {
     padding-left: 100px;
   }
 
-  .hero-text .indent-lvl-two {
+  .indent-lvl-two {
     padding-left: 32px;
   }
 }
