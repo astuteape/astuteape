@@ -10,7 +10,6 @@
 .primary-nav li > a {
   font-size: 24px;
   text-decoration: none;
-  font-family: var(--theme-header-font);
   color: var(--theme-shade-lightest);
 }
 
@@ -35,7 +34,6 @@
 
 .social-nav li > a {
   margin: 0 10px;
-  font-family: var(--aa-body-font);
   color: var(--aa-dark-gray);
   text-decoration: none;
 }
@@ -44,7 +42,6 @@
 /* Title Text */
 h1.page-title {
   font-size: 50px;
-  font-family: var(--theme-header-font);
   color: var(--theme-shade-lightest);
   text-shadow: 3px 3px 0px var(--theme-color-darkest);
 }
@@ -52,7 +49,6 @@ h1.page-title {
 /* Hero Text */
 .hero-text {
   font-size: 18px;
-  font-family: var(--theme-body-font);
   color: var(--theme-shade-dark);
 }
 

@@ -1,8 +1,6 @@
 /* Root Variables */
 :root {
-  /* Font stacks */
-  --theme-header-font: Arial, Helvetica, sans-serif;
-  --theme-body-font: Arial, Helvetica, sans-serif;
+  /* Font stacks provided by typography.js plugin */
   /* Shades white to black */
   --theme-shade-lightest: #fff;
   --theme-shade-dark: #2d3038;
@@ -19,7 +17,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
   background: var(--theme-shade-lightest);
 }
 
