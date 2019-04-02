@@ -13,11 +13,11 @@ import PrimaryNav from "../nav/primary_nav"
 import "../../styles/layout.css"
 
 const Layout = ({ children }) => (
-  <div className="grid-container-frame">
-    <section className="grid-left-sidebar">
+  <div className="layout-site-container">
+    <main className="layout-main-content-blog">{children}</main>
+    <section className="layout-site-nav">
       <PrimaryNav />
     </section>
-    <main className="grid-main-dynamic">{children}</main>
   </div>
 )
 

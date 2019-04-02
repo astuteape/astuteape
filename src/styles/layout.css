@@ -42,13 +42,20 @@
     background-position: 75% 50%;
   }
 
-  .layout-main-content > * {
-    border-left: 1px solid var(--theme-color-darkest);
-    border-bottom: 1px solid var(--theme-color-darkest);
+  .layout-main-content-blog {
+    display: grid;
+    grid-template-areas:
+      "title"
+      "content";
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 1fr;
+    padding: 50px;
+    overflow: auto;
   }
 
   .layout-site-nav {
     display: flex;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
