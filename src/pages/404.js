@@ -1,5 +1,5 @@
 import React from "react"
-import SEO from "../components/seo"
+import SEO from "../components/meta_data/seo"
 import PageTitle from "../components/text/page_title"
 import { Link } from "gatsby"
 

@@ -1,22 +1,52 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layouts/dynamic_layout"
+import SEO from "../components/meta_data/seo"
 
 export default ({ data }) => {
+  const allArticles = data.allMarkdownRemark
+
   return (
     <Layout>
+      <SEO
+        title="Blog"
+        keywords={[
+          `astute ape`,
+          `wade christensen`,
+          `blog`,
+          `articles`,
+          `writing`,
+          `tutorials`,
+        ]}
+      />
+
       <div>
         <h1 className="page-title">Blog</h1>
-        <h4>{data.allMarkdownRemark.totalCount} Articles</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+        {allArticles.edges.map(({ node }) => (
           <div key={node.id}>
             <Link to={node.fields.slug}>
-              <h3>
-                {node.frontmatter.title}
-                <span>— {node.frontmatter.date}</span>
-              </h3>
+              <h3>{node.frontmatter.title}</h3>
+              <p>
+                <span>
+                  <strong>{`By ${node.frontmatter.author} | `}</strong>
+                </span>
+                <span>
+                  <strong>{`Published ${node.frontmatter.date} | `}</strong>
+                </span>
+                <span>
+                  <strong>
+                    {node.timeToRead > 1
+                      ? `Read Time ${node.timeToRead} minutes`
+                      : `Read Time ${node.timeToRead} minute`}
+                  </strong>
+                </span>
+              </p>
+              <p>
+                {node.frontmatter.summary
+                  ? node.frontmatter.summary
+                  : node.excerpt}
+              </p>
             </Link>
-            <p>{node.excerpt}</p>
           </div>
         ))}
       </div>
@@ -31,11 +61,14 @@ export const query = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 140)
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            author
+            date(formatString: "MMMM DD, YYYY")
+            summary
           }
+          timeToRead
+          excerpt(pruneLength: 280)
           fields {
             slug
           }

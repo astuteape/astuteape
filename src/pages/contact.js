@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layouts/static_layout"
-import SEO from "../components/seo"
+import SEO from "../components/meta_data/seo"
 import PageTitle from "../components/text/page_title"
 import SocialNav from "../components/nav/social_nav"
 

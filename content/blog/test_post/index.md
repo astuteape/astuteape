@@ -2,13 +2,14 @@
 title: "A Test Blog Post"
 author: "Wade Christensen"
 date: "2019-04-02"
+summary: "A short summary of what the article is about. This is in place of an excerpt of the first few characters. Try to keep it under 280"
 ---
 
-## Anderson .Paak & The Free Nationals
+## All Them Witches
 
-### NPR: Tiny Desk Concert
+### KEXP
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ferZnZ0_rSM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VteuWD_dIdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Some Text
 
@@ -33,12 +34,6 @@ Maecenas eu eros sit amet sapien auctor tempus. Duis ut est vulputate nulla vehi
 Morbi pulvinar viverra lacus, quis finibus nisi lacinia sed. Nullam suscipit lorem tristique est euismod condimentum. Sed ac ex leo. Aenean lorem quam, semper vitae lorem sed, accumsan consectetur massa. Etiam interdum est sit amet metus ullamcorper pulvinar. Aenean eu nisl sit amet purus mattis facilisis et sit amet neque. Quisque volutpat velit vel tellus ultricies efficitur in in eros. Fusce velit libero, suscipit eget risus ac, fermentum facilisis quam. Duis non viverra mauris. Suspendisse mollis, arcu sit amet ornare facilisis, velit lectus sollicitudin urna, ac luctus elit lorem eu velit. Morbi efficitur sit amet felis id elementum. Nullam cursus tincidunt blandit. In malesuada nibh a ipsum vehicula pretium. Donec quam nisi, volutpat nec blandit nec, cursus nec nibh. Quisque faucibus vehicula libero, nec egestas risus dapibus quis. Ut sed massa mauris.
 
 Duis sed semper justo. Donec nec mattis ante. Nulla quis erat vehicula, rutrum magna nec, euismod mauris. Morbi lobortis cursus vehicula. Nunc ornare facilisis tortor. Mauris tincidunt mi ut justo malesuada, a pulvinar velit porta. Mauris eu suscipit tortor. Proin convallis pellentesque posuere. Curabitur at elit convallis mauris viverra hendrerit non sit amet sem. Nulla et orci convallis, rutrum elit sit amet, cursus est. Vestibulum mattis quam augue, eu egestas lorem consequat nec. Integer pharetra nibh in tortor fermentum scelerisque. In porttitor vestibulum nisi, et iaculis magna. Integer eget semper tortor.
-
-Nullam suscipit scelerisque massa. Maecenas accumsan pulvinar luctus. Fusce egestas augue ac hendrerit molestie. Nunc porttitor ultricies pharetra. Morbi luctus luctus felis. In hac habitasse platea dictumst. Nam dictum elementum odio ut bibendum. Donec tempor aliquet ante ut pulvinar. Nunc id tempor risus. Fusce pretium libero id erat porttitor, eget semper mi pulvinar. Aenean molestie scelerisque nunc. Ut molestie non lorem non finibus. Donec justo tortor, vehicula non eros in, placerat faucibus lorem. Praesent ac diam mauris. Nulla ornare eget metus vel ultricies. Aliquam in lorem scelerisque, sollicitudin risus in, condimentum arcu.
-
-Proin lacinia ornare nibh, eget semper libero dignissim ut. Aliquam molestie neque et ante pulvinar mollis in eu diam. Curabitur euismod aliquet malesuada. Curabitur iaculis vehicula imperdiet. Phasellus tincidunt venenatis risus, ac aliquet turpis egestas id. Aliquam cursus sed nibh ac fermentum. Morbi semper est tortor, ac mattis elit eleifend ut. Etiam luctus convallis eros sed efficitur. Ut ornare nulla sit amet purus congue, ut porttitor elit sollicitudin.
-
-Morbi mattis facilisis quam, quis euismod tellus facilisis id. Nam ultrices euismod libero. Sed arcu mi, sagittis sed eros sed, iaculis condimentum massa. Proin eu erat eget mi porttitor fringilla eu non dui. Sed auctor orci suscipit enim sagittis ultricies. Quisque ut felis leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse ut nisi et libero pretium consectetur at vel libero. Aliquam erat volutpat. Cras ultricies arcu non odio blandit, nec rhoncus sapien imperdiet. Etiam tristique eu magna vel cursus. Pellentesque mi justo, faucibus rhoncus egestas nec, venenatis in eros. Nulla luctus fringilla mi nec lacinia.
 
 Curabitur tortor magna, consectetur a imperdiet et, laoreet in lectus. Ut varius justo eget nisl pellentesque pharetra. Duis molestie at mi sit amet lacinia. Curabitur non ante a sem consequat bibendum. Nullam consectetur ipsum purus, eget dictum orci suscipit ac. Aenean in consequat neque, sit amet ultricies velit. Vestibulum nec pulvinar augue, ac bibendum nulla. Suspendisse ullamcorper pretium leo, nec elementum mauris consequat sit amet. Etiam non velit metus. Donec ultricies eros quis nibh accumsan lacinia. Vivamus finibus tortor quis nibh sollicitudin tincidunt. Aliquam erat volutpat. Phasellus vel sapien purus. Nam posuere neque dolor, in suscipit lorem congue ac. Nam aliquet feugiat felis non pharetra. Nam rutrum lectus sit amet nulla bibendum rhoncus.
 

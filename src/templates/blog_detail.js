@@ -1,16 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layouts/dynamic_layout"
+import SEO from "../components/meta_data/seo"
 
 export default ({ data }) => {
   const article = data.markdownRemark
-  const timeToRead =
-    article.timeToRead !== 1
-      ? `Read Time: ${article.timeToRead} minutes`
-      : `Read Time: ${article.timeToRead} minute`
 
   return (
     <Layout>
+      <SEO
+        title={article.frontmatter.title}
+        keywords={[
+          `${article.frontmatter.title}`,
+          `${article.frontmatter.author}`,
+          `${article.frontmatter.keywords}`,
+        ]}
+      />
       <div>
         <div>
           <h1 className="page-title">{article.frontmatter.title}</h1>
@@ -22,7 +27,11 @@ export default ({ data }) => {
               <strong>{`Published ${article.frontmatter.date} |`}</strong>
             </span>{" "}
             <span>
-              <strong>{timeToRead}</strong>
+              <strong>
+                {article.timeToRead > 1
+                  ? `Read Time: ${article.timeToRead} minutes`
+                  : `Read Time: ${article.timeToRead} minute`}
+              </strong>
             </span>
           </div>
         </div>
@@ -39,7 +48,8 @@ export const query = graphql`
       frontmatter {
         title
         author
-        date
+        date(formatString: "MMMM DD, YYYY")
+        keywords
       }
       timeToRead
     }
