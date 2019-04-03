@@ -22,15 +22,12 @@ class PrimaryNav extends React.Component {
       </li>
     )
 
-    if (this.state.isNavVisible) {
-    }
-
     return (
       <nav>
         <ul className="primary-nav">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/blog">Blog</NavLink>
-          <NavLink to="/work">Work</NavLink>
+          <NavLink to="/projects">Projects</NavLink>
           <NavLink to="/contact">Contact</NavLink>
         </ul>
         {this.props.children}

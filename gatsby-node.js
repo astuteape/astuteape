@@ -21,6 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
         allMarkdownRemark {
           edges {
             node {
+              fileAbsolutePath
               fields {
                 slug
               }
@@ -30,14 +31,26 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `
   ).then(result => {
+    const blogPath = new RegExp("\\/content\\/blog\\/")
+    const projectsPath = new RegExp("\\/content\\/projects\\/")
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve(`./src/templates/blog_detail.js`),
-        context: {
-          slug: node.fields.slug,
-        },
-      })
+      if (blogPath.test(node.fileAbsolutePath)) {
+        createPage({
+          path: `/blog${node.fields.slug}`,
+          component: path.resolve(`./src/templates/blog_detail.js`),
+          context: {
+            slug: node.fields.slug,
+          },
+        })
+      } else if (projectsPath.test(node.fileAbsolutePath)) {
+        createPage({
+          path: `/projects${node.fields.slug}`,
+          component: path.resolve(`./src/templates/project_detail.js`),
+          context: {
+            slug: node.fields.slug,
+          },
+        })
+      }
     })
   })
 }

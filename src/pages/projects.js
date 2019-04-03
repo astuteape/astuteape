@@ -1,46 +1,30 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
 import Layout from "../components/layouts/dynamic_layout"
 import SEO from "../components/meta_data/seo"
+import { Link, graphql } from "gatsby"
 import PageTitle from "../components/text/page_title"
 
-export default ({ data }) => {
+const ProjectsPage = ({ data }) => {
   const allArticles = data.allMarkdownRemark
 
   return (
     <Layout>
       <SEO
-        title="Blog"
+        title="projects"
         keywords={[
-          `astute ape`,
-          `wade christensen`,
-          `blog`,
-          `articles`,
-          `writing`,
-          `tutorials`,
+          "astute ape",
+          "wade christensen",
+          "projects",
+          "portfolio",
+          "work",
         ]}
       />
-      <PageTitle titleText="Blog" />
+      <PageTitle titleText="Projects" />
       <div>
         {allArticles.edges.map(({ node }) => (
           <div key={node.id}>
-            <Link to={`/blog${node.fields.slug}`}>
+            <Link to={`projects${node.fields.slug}`}>
               <h3>{node.frontmatter.title}</h3>
-              <p>
-                <span>
-                  <strong>{`By ${node.frontmatter.author} | `}</strong>
-                </span>
-                <span>
-                  <strong>{`Published ${node.frontmatter.date} | `}</strong>
-                </span>
-                <span>
-                  <strong>
-                    {node.timeToRead > 1
-                      ? `Read Time ${node.timeToRead} minutes`
-                      : `Read Time ${node.timeToRead} minute`}
-                  </strong>
-                </span>
-              </p>
               <p>
                 {node.frontmatter.summary
                   ? node.frontmatter.summary
@@ -57,7 +41,7 @@ export default ({ data }) => {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+      filter: { fileAbsolutePath: { regex: "/content/projects/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       totalCount
@@ -80,3 +64,5 @@ export const query = graphql`
     }
   }
 `
+
+export default ProjectsPage
