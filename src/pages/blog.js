@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layouts/blog_layout"
+import Layout from "../components/layout/blog_layout"
 import SEO from "../components/meta_data/seo"
 import PageTitle from "../components/text/page_title"
 

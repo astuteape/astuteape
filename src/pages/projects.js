@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layouts/dynamic_layout"
+import Layout from "../components/layout/dynamic_layout"
 import SEO from "../components/meta_data/seo"
 import { Link, graphql } from "gatsby"
 import PageTitle from "../components/text/page_title"
