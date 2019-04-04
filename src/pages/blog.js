@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layouts/dynamic_layout"
+
+import Layout from "../components/layouts/blog_layout"
 import SEO from "../components/meta_data/seo"
 import PageTitle from "../components/text/page_title"
 
@@ -20,40 +21,38 @@ export default ({ data }) => {
           `tutorials`,
         ]}
       />
-      <PageTitle titleText="Blog" />
-      <div>
-        {allArticles.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link to={`/blog${node.fields.slug}`}>
-              <h3>{node.frontmatter.title}</h3>
-              <p>
-                <span>
-                  <strong>{`By ${node.frontmatter.author} | `}</strong>
-                </span>
-                <span>
-                  <strong>{`Published ${node.frontmatter.date} | `}</strong>
-                </span>
-                <span>
-                  <strong>
-                    {node.timeToRead > 1
-                      ? `Read Time ${node.timeToRead} minutes`
-                      : `Read Time ${node.timeToRead} minute`}
-                  </strong>
-                </span>
-              </p>
-              <p>
-                {node.frontmatter.summary
-                  ? node.frontmatter.summary
-                  : node.excerpt}
-              </p>
-            </Link>
-          </div>
-        ))}
+      <div className="page-title">
+        <PageTitle titleText="BLOG" />
       </div>
+      {allArticles.edges.map(({ node }) => (
+        <div className="blog-post" key={node.id}>
+          <Link to={`/blog${node.fields.slug}`}>
+            <h3 className="blog-post-title">{node.frontmatter.title}</h3>
+            <ul className="blog-post-data">
+              <li>{`By ${node.frontmatter.author}`}</li>
+              <li>{`${node.frontmatter.date} | `}</li>
+              <li>
+                {/* Pluralize Read Time if > 1 miute */}
+                {node.timeToRead > 1
+                  ? `Read Time ${node.timeToRead} minutes`
+                  : `Read Time ${node.timeToRead} minute`}
+              </li>
+            </ul>
+            <p className="blog-post-summary">
+              {/* Display a summary from the post front matter. 
+                If none exists, an exerpt is pulled from the post */}
+              {node.frontmatter.summary
+                ? node.frontmatter.summary
+                : node.excerpt}
+            </p>
+          </Link>
+        </div>
+      ))}
     </Layout>
   )
 }
 
+// All posts generated from Markdown and filtered by those in the /content/blog directory
 export const query = graphql`
   query {
     allMarkdownRemark(
@@ -71,7 +70,7 @@ export const query = graphql`
             summary
           }
           timeToRead
-          excerpt(pruneLength: 280)
+          excerpt(pruneLength: 140)
           fields {
             slug
           }
