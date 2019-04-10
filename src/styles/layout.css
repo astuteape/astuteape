@@ -17,7 +17,21 @@
 
 .layout-site-nav {
   grid-area: nav;
-  background: var(--theme-color-darkest);
+}
+
+/* Plugin required to prevent nav from transitioning
+when the page transitions occur
+*/
+.gatsby-plugin-transition-link-portal {
+  width: 100vw;
+  top: auto !important;
+  bottom: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .gatsby-plugin-transition-link-portal {
+    width: 200px;
+  }
 }
 
 /* Blog Page */
@@ -62,7 +76,7 @@
 @media screen and (min-width: 1024px) {
   .layout-site-container {
     grid-template-areas: "nav main";
-    grid-template-columns: minmax(150px, 200px) 1fr;
+    grid-template-columns: 200px 1fr;
     grid-template-rows: 1fr;
   }
 

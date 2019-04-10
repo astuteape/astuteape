@@ -1,5 +1,6 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Layout from "../components/layout/blog_layout"
 import SEO from "../components/meta_data/seo"
@@ -26,7 +27,7 @@ const BlogPage = ({ data }) => {
       </div>
       {allArticles.edges.map(({ node }) => (
         <div className="blog-post" key={node.id}>
-          <Link to={`/blog${node.fields.slug}`}>
+          <AniLink fade to={`/blog${node.fields.slug}`}>
             <h3 className="blog-post-title">{node.frontmatter.title}</h3>
             <ul className="blog-post-data">
               <li>{`By ${node.frontmatter.author}`}</li>
@@ -45,7 +46,7 @@ const BlogPage = ({ data }) => {
                 ? node.frontmatter.summary
                 : node.excerpt}
             </p>
-          </Link>
+          </AniLink>
         </div>
       ))}
     </Layout>

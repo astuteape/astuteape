@@ -5,6 +5,7 @@ Primary site nagivation
 ======================= */
 .navbar {
   padding: 15px 0;
+  background: var(--theme-color-darkest);
 }
 
 .primary-nav {

@@ -1,23 +1,16 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
-
 import PrimaryNav from "../nav/primary_nav"
 
+import { TransitionPortal } from "gatsby-plugin-transition-link"
 import "../../styles/layout.css"
 
 const Layout = ({ children }) => (
   <div className="layout-site-container">
     <main className="layout-main-content-blog">{children}</main>
-    <section className="layout-site-nav">
+    <TransitionPortal className="layout-site-nav">
       <PrimaryNav />
-    </section>
+    </TransitionPortal>
   </div>
 )
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import "../../styles/modules.css"
 
 const HeroText = () => {
@@ -16,7 +16,9 @@ const HeroText = () => {
         <span className="indent-lvl-two">navigating</span> the technology and
         media industries. Want to chat?{" "}
         <span className="span-lvl-two">
-          <Link to="/contact">get in touch.</Link>
+          <AniLink fade to="/contact">
+            get in touch.
+          </AniLink>
         </span>
       </p>
     </div>

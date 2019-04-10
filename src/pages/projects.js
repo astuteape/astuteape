@@ -1,7 +1,8 @@
 import React from "react"
 import Layout from "../components/layout/dynamic_layout"
 import SEO from "../components/meta_data/seo"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import PageTitle from "../components/text/page_title"
 
 const ProjectsPage = ({ data }) => {
@@ -23,14 +24,14 @@ const ProjectsPage = ({ data }) => {
       <div>
         {allArticles.edges.map(({ node }) => (
           <div key={node.id}>
-            <Link to={`/projects${node.fields.slug}`}>
+            <AniLink fade to={`/projects${node.fields.slug}`}>
               <h3>{node.frontmatter.title}</h3>
               <p>
                 {node.frontmatter.summary
                   ? node.frontmatter.summary
                   : node.excerpt}
               </p>
-            </Link>
+            </AniLink>
           </div>
         ))}
       </div>
