@@ -1,29 +1,29 @@
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const PrimaryNav = () => {
   return (
     <nav className="navbar">
       <ul className="primary-nav">
         <li>
-          <Link to="/" activeClassName="active">
+          <AniLink fade to="/" activeClassName="active">
             Home
-          </Link>
+          </AniLink>
         </li>
         <li>
-          <Link to="/blog/" activeClassName="active">
+          <AniLink fade to="/blog" activeClassName="active">
             Blog
-          </Link>
+          </AniLink>
         </li>
         <li>
-          <Link to="/projects/" activeClassName="active">
+          <AniLink fade to="/projects" activeClassName="active">
             Projects
-          </Link>
+          </AniLink>
         </li>
         <li>
-          <Link to="/contact/" activeClassName="active">
+          <AniLink fade to="/contact" activeClassName="active">
             Contact
-          </Link>
+          </AniLink>
         </li>
       </ul>
     </nav>

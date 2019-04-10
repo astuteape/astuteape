@@ -23,7 +23,7 @@ const ProjectsPage = ({ data }) => {
       <div>
         {allArticles.edges.map(({ node }) => (
           <div key={node.id}>
-            <Link to={`projects${node.fields.slug}`}>
+            <Link to={`/projects${node.fields.slug}`}>
               <h3>{node.frontmatter.title}</h3>
               <p>
                 {node.frontmatter.summary
