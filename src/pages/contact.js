@@ -5,7 +5,7 @@ import SEO from "../components/meta_data/seo"
 import PageTitle from "../components/text/page_title"
 import SocialNav from "../components/nav/social_nav"
 
-const IndexPage = () => (
+const ContactPage = () => (
   <Layout>
     <SEO
       title="Home"
@@ -31,4 +31,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default ContactPage

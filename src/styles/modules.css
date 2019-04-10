@@ -1,33 +1,82 @@
-/* NAVIGATION */
-/* Navigation */
-.primary-nav {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0;
-  padding: 10px 0;
+/* NAVIGATION MODULES*/
+
+/* ====================
+Primary site nagivation
+======================= */
+.navbar {
+  padding: 15px 0;
 }
 
-.primary-nav li > a {
-  font-size: 28px;
-  text-decoration: none;
+.primary-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.primary-nav > li > a {
+  padding: 10px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  transition: color 0.5s, font-size 0.5s;
+  transition-timing-function: ease-in-out;
   color: var(--theme-shade-lightest);
 }
 
-@media (min-width: 1024px) {
-  .primary-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.primary-nav > li > a:hover {
+  font-size: 1.6rem;
+  color: var(--theme-color-accent);
+}
+
+.primary-nav > li > a.active {
+  font-size: 1.66rem;
+  color: var(--theme-color-accent);
+}
+
+@media screen and (min-width: 400px) {
+  .primary-nav > li > a {
+    padding: 15px;
+    font-size: 1.5rem;
   }
 
-  .primary-nav li {
-    padding: 10px 0;
+  .primary-nav > li > a:hover {
+    font-size: 1.7rem;
   }
 
-  .primary-nav li > a {
-    color: var(--theme-shade-lightest);
+  .primary-nav > li > a:active {
+    font-size: 1.75rem;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .primary-nav > li > a {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .primary-nav {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 33%;
+    max-height: 250px;
+  }
+}
+/* ========================
+End primary site nagivation
+=========================== */
+
+/* ====================
+Social media nagivation
+======================= */
 .social-nav {
   display: inline-flex;
 }
@@ -37,9 +86,11 @@
   color: var(--aa-dark-gray);
   text-decoration: none;
 }
+/* ========================
+End social media nagivation
+=========================== */
 
 /* TEXT MODULES */
-/* Title Text */
 h1.page-title {
   font-size: 50px;
   color: var(--theme-shade-lightest);

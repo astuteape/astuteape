@@ -5,7 +5,7 @@ import Layout from "../components/layout/blog_layout"
 import SEO from "../components/meta_data/seo"
 import PageTitle from "../components/text/page_title"
 
-export default ({ data }) => {
+const BlogPage = ({ data }) => {
   const allArticles = data.allMarkdownRemark
 
   return (
@@ -79,3 +79,4 @@ export const query = graphql`
     }
   }
 `
+export default BlogPage
