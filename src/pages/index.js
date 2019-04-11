@@ -1,6 +1,6 @@
 import React from "react"
 
-import Layout from "../components/layout/static_layout"
+import Layout from "../components/layout/index_layout"
 import SEO from "../components/meta_data/seo"
 import PageTitle from "../components/text/page_title"
 import HeroText from "../components/text/hero_text"
@@ -32,8 +32,6 @@ const IndexPage = () => (
     <div className="index-social-nav">
       <SocialNav />
     </div>
-    <div />
-    <div />
     <div />
     <div />
     <div />

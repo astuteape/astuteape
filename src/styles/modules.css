@@ -75,7 +75,7 @@ Social media nagivation
 
 .social-nav li > a {
   margin: 0 10px;
-  color: var(--aa-dark-gray);
+  color: var(--theme-color-darkest);
   text-decoration: none;
 }
 /* ========================
@@ -111,10 +111,10 @@ h1.page-title {
 
 @media (min-width: 1024px) {
   .indent-lvl-one {
-    padding-left: 100px;
+    padding-left: 0;
   }
 
   .indent-lvl-two {
-    padding-left: 32px;
+    padding-left: 0;
   }
 }
