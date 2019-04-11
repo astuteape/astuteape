@@ -25,12 +25,10 @@ Primary site nagivation
 }
 
 .primary-nav > li > a:hover {
-  font-size: 1.6rem;
   color: var(--theme-color-accent);
 }
 
 .primary-nav > li > a.active {
-  font-size: 1.66rem;
   color: var(--theme-color-accent);
 }
 
@@ -39,19 +37,12 @@ Primary site nagivation
     padding: 15px;
     font-size: 1.5rem;
   }
-
-  .primary-nav > li > a:hover {
-    font-size: 1.7rem;
-  }
-
-  .primary-nav > li > a:active {
-    font-size: 1.75rem;
-  }
 }
 
 @media screen and (min-width: 768px) {
   .primary-nav > li > a {
     padding: 20px;
+    font-size: 1.75rem;
   }
 }
 
