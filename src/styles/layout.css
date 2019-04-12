@@ -6,8 +6,7 @@
   background: var(--theme-color-darkest);
 }
 
-.layout-main-content,
-.layout-main-content-index {
+.layout-main-content {
   display: grid;
   grid-template-areas:
     "main"
@@ -41,16 +40,32 @@ when the page transitions occur
   }
 }
 
-/* Index Page */
-@media (min-width: 1024px) {
+/* =======
+INDEX PAGE
+========== */
+.layout-main-content-index {
+  display: grid;
+  grid-template-areas:
+    "main"
+    "nav";
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px max-content;
+  height: 100%;
+  height: 100vh;
+  padding: 15px;
+  background: var(--theme-shade-lightest);
+}
+
+@media (min-width: 1600px) {
   .layout-main-content-index {
     grid-template-areas:
       "tl mc tr"
       "ml mc mr"
       "bl bc br";
-    grid-template-columns: 1fr minmax(20%, max-content) 1fr;
-    grid-template-rows: 1fr minmax(20%, max-content) 1fr;
+    grid-template-columns: 1fr 20% 1fr;
+    grid-template-rows: 1fr 20% 1fr;
     margin-left: 150px;
+    padding: 0;
   }
 
   .layout-main-content-index > :nth-child(-n + 3),
@@ -68,6 +83,15 @@ when the page transitions occur
     display: grid;
     grid-area: tl / span 2;
     padding-left: 50px;
+  }
+
+  .index-page-image {
+    position: absolute;
+    top: calc(100vh - 75%);
+    left: calc(100vw - 800px);
+    width: 400px;
+    height: auto;
+    z-index: 100;
   }
 
   .index-page-title > .page-title {

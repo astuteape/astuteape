@@ -70,7 +70,7 @@ End primary site nagivation
 Social media nagivation
 ======================= */
 .social-nav {
-  display: inline-flex;
+  display: flex;
 }
 
 .social-nav li > a {
@@ -84,13 +84,20 @@ End social media nagivation
 
 /* TEXT MODULES */
 h1.page-title {
-  font-size: 50px;
+  font-size: 38px;
   color: var(--theme-shade-lightest);
   text-shadow: 3px 3px 0px var(--theme-color-darkest);
 }
 
+@media screen and (min-width: 768px) {
+  h1.page-title {
+    font-size: 50px;
+  }
+}
+
 /* Hero Text */
 .hero-text {
+  max-width: 600px;
   font-size: 18px;
   color: var(--theme-shade-dark);
 }
@@ -102,19 +109,8 @@ h1.page-title {
   color: var(--theme-color-accent);
 }
 
-.hero-text .span-lvl-two > a {
-  font-weight: bold;
-  font-size: 20px;
-  font-style: italic;
-  color: var(--theme-color-darkest);
-}
-
 @media (min-width: 1024px) {
   .indent-lvl-one {
-    padding-left: 0;
-  }
-
-  .indent-lvl-two {
     padding-left: 0;
   }
 }
