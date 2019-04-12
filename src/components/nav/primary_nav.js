@@ -20,11 +20,6 @@ const PrimaryNav = () => {
             Projects
           </AniLink>
         </li>
-        <li>
-          <AniLink fade to="/contact" activeClassName="active">
-            Contact
-          </AniLink>
-        </li>
       </ul>
     </nav>
   )
