@@ -6,7 +6,7 @@ import "../../styles/layout.css"
 
 const Layout = ({ children }) => (
   <div className="layout-site-container-index">
-    <main className="layout-main-content-index">{children}</main>
+    <main className="layout-main-container">{children}</main>
     <TransitionPortal>
       <PrimaryNav />
     </TransitionPortal>

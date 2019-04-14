@@ -5,14 +5,10 @@ const HeroText = () => {
   return (
     <div className="hero-text">
       <p>
-        I'm a <span className="span-lvl-one">software developer</span>,
-        <span className="span-lvl-one indent-lvl-one">
-          {" "}
-          multimedia producer
-        </span>
-        , and<span className="span-lvl-one"> educator</span>
-        <span className="indent-lvl-two"> navigating</span> the technology and
-        media industries.
+        I'm a <span className="hero-emphasis">software developer</span>,
+        <span className="hero-emphasis"> multimedia producer</span>, and
+        <span className="hero-emphasis"> educator</span> navigating the
+        technology and media industries.
       </p>
     </div>
   )

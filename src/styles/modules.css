@@ -46,7 +46,7 @@ Primary site nagivation
 @media (min-width: 1024px) {
   .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
     background: linear-gradient(
@@ -55,7 +55,7 @@ Primary site nagivation
       #222633 60%,
       #242836 75%,
       #4f5775 80%,
-      var(--theme-shade-lightest) 89%,
+      var(--theme-shade-lightest) 88%,
       var(--theme-color-accent) 100%
     );
   }
@@ -66,8 +66,10 @@ Primary site nagivation
     align-items: center;
     height: 33%;
     max-height: 250px;
+    margin-left: 5%;
   }
 }
+
 /* ========================
 End primary site nagivation
 =========================== */
@@ -75,7 +77,7 @@ End primary site nagivation
 /* ====================
 Social media nagivation
 ======================= */
-.social-nav {
+/* .social-nav {
   display: flex;
 }
 
@@ -83,7 +85,7 @@ Social media nagivation
   margin: 0 10px;
   color: var(--theme-color-darkest);
   text-decoration: none;
-}
+} */
 /* ========================
 End social media nagivation
 =========================== */
@@ -91,9 +93,10 @@ End social media nagivation
 /* TEXT MODULES */
 h1.page-title {
   font-size: 38px;
-  font-family: "Teko";
-  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
   color: var(--theme-shade-lightest);
+  text-shadow: 3px 3px 0 var(--theme-color-darkest);
 }
 
 @media screen and (min-width: 768px) {
@@ -106,18 +109,13 @@ h1.page-title {
 .hero-text {
   max-width: 600px;
   font-size: 18px;
+  text-align: center;
   color: var(--theme-shade-dark);
 }
 
-.hero-text .span-lvl-one {
+.hero-emphasis {
   font-weight: bold;
   font-size: 26px;
   font-style: italic;
   color: var(--theme-color-accent);
-}
-
-@media (min-width: 1024px) {
-  .indent-lvl-one {
-    padding-left: 0;
-  }
 }

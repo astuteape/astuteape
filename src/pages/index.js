@@ -24,14 +24,16 @@ const IndexPage = () => (
         `art`,
       ]}
     />
-    <div className="index-page-title">
+    <div className="index-title">
       <PageTitle titleText="Wade Christensen" />
     </div>
-    <div className="index-page-image">
-      <Image />
-    </div>
-    <div className="index-text-body">
-      <HeroText />
+    <div className="index-content">
+      <div className="index-image">
+        <Image />
+      </div>
+      <div className="index-text-body">
+        <HeroText />
+      </div>
     </div>
     <div className="index-social-nav">
       <SocialNav />
