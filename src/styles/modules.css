@@ -24,10 +24,7 @@ Primary site nagivation
   color: var(--theme-shade-lightest);
 }
 
-.primary-nav > li > a:hover {
-  color: var(--theme-color-accent);
-}
-
+.primary-nav > li > a:hover,
 .primary-nav > li > a.active {
   color: var(--theme-color-accent);
 }
@@ -52,6 +49,15 @@ Primary site nagivation
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(
+      90deg,
+      var(--theme-color-darkest) 30%,
+      #222633 60%,
+      #242836 75%,
+      #4f5775 80%,
+      var(--theme-shade-lightest) 89%,
+      var(--theme-color-accent) 100%
+    );
   }
 
   .primary-nav {
@@ -85,8 +91,9 @@ End social media nagivation
 /* TEXT MODULES */
 h1.page-title {
   font-size: 38px;
+  font-family: "Teko";
+  font-weight: 500;
   color: var(--theme-shade-lightest);
-  text-shadow: 3px 3px 0px var(--theme-color-darkest);
 }
 
 @media screen and (min-width: 768px) {

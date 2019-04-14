@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Image from "../image/image"
 import PrimaryNav from "../nav/primary_nav"
 import { TransitionPortal } from "gatsby-plugin-transition-link"
 import "../../styles/layout.css"
@@ -11,9 +10,6 @@ const Layout = ({ children }) => (
     <TransitionPortal>
       <PrimaryNav />
     </TransitionPortal>
-    <section className="index-page-image">
-      <Image />
-    </section>
   </div>
 )
 
