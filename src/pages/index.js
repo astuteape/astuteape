@@ -24,10 +24,11 @@ const IndexPage = () => (
         `art`,
       ]}
     />
-    <div className="index-title">
+    <div className="header">
       <PageTitle titleText="Wade Christensen" />
+      <h3 className="page-title-aside">Astute Ape</h3>
     </div>
-    <div className="index-content">
+    <div className="content">
       <div className="index-image">
         <Image />
       </div>
@@ -35,8 +36,11 @@ const IndexPage = () => (
         <HeroText />
       </div>
     </div>
-    <div className="index-social-nav">
-      <SocialNav />
+    <div className="footer">
+      <div className="contact">
+        <h3>Get in touch via email or social.</h3>
+        <SocialNav />
+      </div>
     </div>
   </Layout>
 )
