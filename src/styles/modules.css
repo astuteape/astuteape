@@ -221,3 +221,16 @@ h1.page-title {
 .layout-main-container .index-image {
   width: 300px !important;
 }
+
+/* =======
+Blog posts
+========== */
+.blog-post-data li {
+  display: inline-block;
+  font-weight: 700;
+  padding: 0 3px;
+}
+
+.blog-post-data:hover {
+  color: var(--theme-color-accent);
+}

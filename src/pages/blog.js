@@ -8,6 +8,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Layout from "../components/layout/layout"
 import PageTitle from "../components/text/page_title"
 import SEO from "../components/meta_data/seo"
+import SocialNav from "../components/nav/social_nav"
 
 const BlogPage = ({ data }) => {
   const allArticles = data.allMarkdownRemark
@@ -25,33 +26,39 @@ const BlogPage = ({ data }) => {
           `tutorials`,
         ]}
       />
-      <div className="page-title">
-        <PageTitle titleText="BLOG" />
+      <div className="blog page-title">
+        <PageTitle titleText="Blog" />
       </div>
-      {allArticles.edges.map(({ node }) => (
-        <div className="blog-post" key={node.id}>
-          <AniLink fade to={`/blog${node.fields.slug}`}>
-            <h3 className="blog-post-title">{node.frontmatter.title}</h3>
-            <ul className="blog-post-data">
-              <li>{`By ${node.frontmatter.author}`}</li>
-              <li>{`${node.frontmatter.date} | `}</li>
-              <li>
-                {/* Pluralize Read Time if > 1 miute */}
-                {node.timeToRead > 1
-                  ? `Read Time ${node.timeToRead} minutes`
-                  : `Read Time ${node.timeToRead} minute`}
-              </li>
-            </ul>
-            <p className="blog-post-summary">
-              {/* Display a summary from the post front matter. 
+      <div className="blog main-content">
+        {allArticles.edges.map(({ node }) => (
+          <div className="blog-post" key={node.id}>
+            <AniLink fade to={`/blog${node.fields.slug}`}>
+              <h3 className="blog-post-title">{node.frontmatter.title}</h3>
+              <ul className="blog-post-data">
+                <li>{`By ${node.frontmatter.author} | `}</li>
+                <li>{`${node.frontmatter.date} | `}</li>
+                <li>
+                  {/* Pluralize Read Time if > 1 miute */}
+                  {node.timeToRead > 1
+                    ? `Read Time: ${node.timeToRead} minutes`
+                    : `Read Time: ${node.timeToRead} minute`}
+                </li>
+              </ul>
+              <p className="blog-post-summary">
+                {/* Display a summary from the post front matter. 
                 If none exists, an exerpt is pulled from the post */}
-              {node.frontmatter.summary
-                ? node.frontmatter.summary
-                : node.excerpt}
-            </p>
-          </AniLink>
-        </div>
-      ))}
+                {node.frontmatter.summary
+                  ? node.frontmatter.summary
+                  : node.excerpt}
+              </p>
+            </AniLink>
+          </div>
+        ))}
+      </div>
+      <div className="blog main-footer">
+        <h3>Get in touch via email or social</h3>
+        <SocialNav />
+      </div>
     </Layout>
   )
 }

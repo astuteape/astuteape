@@ -29,7 +29,7 @@ Layout of the two main site sections (navigation and content)
   grid-template-rows: min-content 1fr min-content;
   grid-auto-rows: min-content;
   min-height: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 50px);
   margin-bottom: 75px;
   padding: 0 10px;
   background: var(--theme-shade-lightest);
@@ -49,14 +49,15 @@ Main container media queries
 ============================ */
 @media screen and (min-width: 1024px) {
   .layout-main-container {
+    margin: 25px 25px 75px 25px;
     padding: 0;
   }
 }
 
 @media screen and (min-width: 1224px) {
   .layout-main-container {
-    width: calc(100vw - 200px);
-    margin: 0 0 0 200px;
+    width: calc(100vw - 300px);
+    margin: 50px 50px 75px 250px;
     background: var(--theme-shade-lightest);
   }
 }
@@ -87,8 +88,15 @@ Layout of the grid items in the main content area
   grid-area: main-footer;
 }
 
+.layout-main-container .main-footer .contact {
+  grid-area: grid-right;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
 /* =======
-Index Page
+Index page
 ========== */
 .layout-main-container .index.main-header,
 .layout-main-container .index.main-content,
@@ -99,33 +107,65 @@ Index Page
   align-items: center;
 }
 
-.layout-main-container .index.main-footer .contact {
-  grid-area: grid-right;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 /* =====================
 Index page media queries 
 ======================== */
 @media screen and (min-width: 1024px) {
-  .layout-main-container .main-footer {
+  .layout-main-container .index.main-footer {
     grid-area: main-footer;
     display: grid;
-    grid-gap: 0;
     grid-template-areas: "grid-left grid-right";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
 
-  .layout-main-container .main-footer .contact {
+  .layout-main-container .index.main-footer .contact {
     grid-area: grid-right;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     margin: 0 20px 20px 0;
+  }
+}
+
+/* ======
+Blog page
+========= */
+.layout-main-container .blog.main-header,
+.layout-main-container .blog.main-content,
+.layout-main-container .blog.main-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-main-container .blog-post {
+  max-width: 500px;
+}
+
+/* ====================
+Blog page media queries 
+======================= */
+@media screen and (min-width: 1024px) {
+  .layout-main-container .blog.main-content {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content;
+    grid-auto-flow: row;
+    grid-auto-columns: min-content;
+    margin-top: 50px;
+  }
+
+  .blog.main-content .blog-post {
+    justify-self: center;
+  }
+
+  .blog.main-content .blog-post:last-child:nth-child(odd) {
+    grid-column: 1 / 3;
+  }
+
+  .blog-post-title {
+    text-align: center;
   }
 }
