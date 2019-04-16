@@ -7,8 +7,8 @@ const HeroText = () => {
       <p>
         I'm a <span className="hero-emphasis">software developer</span>,
         <span className="hero-emphasis"> multimedia producer</span>, and
-        <span className="hero-emphasis"> educator</span> available for freelance
-        web development, and print and digital design. Currently, I bring coding
+        <span className="hero-emphasis"> educator</span> available for web
+        development, and print or digital design. Currently, I bring coding
         lessons to life{" "}
         <a
           href="https://teamtreehouse.com/"
