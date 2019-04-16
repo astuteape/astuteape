@@ -1,11 +1,14 @@
 import React from "react"
 
-import Layout from "../components/layout/index_layout"
+// From Gatsby
 import SEO from "../components/meta_data/seo"
-import PageTitle from "../components/text/page_title"
+
+// Site components
 import HeroText from "../components/text/hero_text"
-import SocialNav from "../components/nav/social_nav"
 import Image from "../components/image/image"
+import Layout from "../components/layout/layout"
+import PageTitle from "../components/text/page_title"
+import SocialNav from "../components/nav/social_nav"
 
 const IndexPage = () => (
   <Layout>
@@ -24,11 +27,11 @@ const IndexPage = () => (
         `art`,
       ]}
     />
-    <div className="header">
+    <div className="index main-header">
       <PageTitle titleText="Wade Christensen" />
       <h3 className="page-title-aside">Astute Ape</h3>
     </div>
-    <div className="content">
+    <div className="index main-content">
       <div className="index-image">
         <Image />
       </div>
@@ -36,7 +39,7 @@ const IndexPage = () => (
         <HeroText />
       </div>
     </div>
-    <div className="footer">
+    <div className="index main-footer">
       <div className="contact">
         <h3>Get in touch via email or social.</h3>
         <SocialNav />

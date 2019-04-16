@@ -1,4 +1,14 @@
-/* Framing parent grid */
+/* =====================================
+Media queries used for layout site wide:
+min-width: 411px;
+min-width: 768px;
+min-width: 1024px;
+min-width: 1224px;
+======================================== */
+
+/* =============================================
+Style of the root element or main site container 
+================================================ */
 .layout-site-container {
   height: 100%;
   height: 100vh;
@@ -6,23 +16,44 @@
   padding: 0;
 }
 
+/* ==========================================================
+Layout of the two main site sections (navigation and content)
+============================================================= */
 .layout-main-container {
   display: grid;
   grid-template-areas:
-    "header"
-    "content"
-    "footer";
+    "main-header"
+    "main-content"
+    "main-footer";
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr min-content;
   grid-auto-rows: min-content;
-  grid-gap: 10px;
   min-height: 100%;
   min-height: 100vh;
   margin-bottom: 75px;
+  padding: 0 10px;
   background: var(--theme-shade-lightest);
 }
 
+/* Plugin required to prevent nav from transitioning when the page
+transitions occur. This element is the navigation section */
+.gatsby-plugin-transition-link-portal {
+  width: 100vw;
+  height: 75px;
+  top: auto !important;
+  bottom: 0;
+}
+
+/* =========================
+Main container media queries
+============================ */
 @media screen and (min-width: 1024px) {
+  .layout-main-container {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1224px) {
   .layout-main-container {
     width: calc(100vw - 200px);
     margin: 0 0 0 200px;
@@ -30,28 +61,45 @@
   }
 }
 
-/* Content Area CSS Grid Layout */
-.layout-main-container .header,
-.layout-main-container .content,
-.layout-main-container .footer {
+/* =========================
+Nav container media queries
+============================ */
+@media screen and (min-width: 1224px) {
+  .gatsby-plugin-transition-link-portal {
+    width: 200px;
+    height: 100%;
+    height: 100vh;
+  }
+}
+
+/* ==============================================
+Layout of the grid items in the main content area
+================================================= */
+.layout-main-container .main-header {
+  grid-area: main-header;
+}
+
+.layout-main-container .main-content {
+  grid-area: main-content;
+}
+
+.layout-main-container .main-footer {
+  grid-area: main-footer;
+}
+
+/* =======
+Index Page
+========== */
+.layout-main-container .index.main-header,
+.layout-main-container .index.main-content,
+.layout-main-container .index.main-footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.layout-main-container .header {
-  grid-area: header;
-}
 
-.layout-main-container .content {
-  grid-area: content;
-}
-
-.layout-main-container .footer {
-  grid-area: footer;
-}
-
-.layout-main-container .footer .contact {
+.layout-main-container .index.main-footer .contact {
   grid-area: grid-right;
   display: flex;
   flex-direction: column;
@@ -59,9 +107,12 @@
   align-items: center;
 }
 
+/* =====================
+Index page media queries 
+======================== */
 @media screen and (min-width: 1024px) {
-  .layout-main-container .footer {
-    grid-area: footer;
+  .layout-main-container .main-footer {
+    grid-area: main-footer;
     display: grid;
     grid-gap: 0;
     grid-template-areas: "grid-left grid-right";
@@ -69,7 +120,7 @@
     grid-template-rows: 1fr;
   }
 
-  .layout-main-container .footer .contact {
+  .layout-main-container .main-footer .contact {
     grid-area: grid-right;
     display: flex;
     flex-direction: column;
@@ -78,24 +129,3 @@
     margin: 0 20px 20px 0;
   }
 }
-/* Plugin required to prevent nav from transitioning
-when the page transitions occur
-*/
-.gatsby-plugin-transition-link-portal {
-  width: 100vw;
-  height: 75px;
-  top: auto !important;
-  bottom: 0;
-}
-
-@media screen and (min-width: 1024px) {
-  .gatsby-plugin-transition-link-portal {
-    width: 200px;
-    height: 100%;
-    height: 100vh;
-  }
-}
-
-/* =======
-INDEX PAGE
-========== */

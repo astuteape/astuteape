@@ -1,9 +1,13 @@
 import React from "react"
-import Layout from "../components/layout/dynamic_layout"
-import SEO from "../components/meta_data/seo"
-import { graphql } from "gatsby"
+
+// From Gatsby
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { graphql } from "gatsby"
+
+// Site components
+import Layout from "../components/layout/layout"
 import PageTitle from "../components/text/page_title"
+import SEO from "../components/meta_data/seo"
 
 const ProjectsPage = ({ data }) => {
   const allArticles = data.allMarkdownRemark

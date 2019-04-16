@@ -1,10 +1,13 @@
 import React from "react"
+
+// From Gatsby
 import { graphql } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import Layout from "../components/layout/blog_layout"
-import SEO from "../components/meta_data/seo"
+// Site components
+import Layout from "../components/layout/layout"
 import PageTitle from "../components/text/page_title"
+import SEO from "../components/meta_data/seo"
 
 const BlogPage = ({ data }) => {
   const allArticles = data.allMarkdownRemark

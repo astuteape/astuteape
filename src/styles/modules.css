@@ -1,4 +1,10 @@
-/* NAVIGATION MODULES*/
+/* =====================================
+Media queries used for layout site wide:
+min-width: 411px;
+min-width: 768px;
+min-width: 1024px;
+min-width: 1224px;
+======================================== */
 
 /* ====================
 Primary site nagivation
@@ -12,15 +18,6 @@ Primary site nagivation
   padding-bottom: 3%;
   transition: background 1s;
   transition-timing-function: ease-in-out;
-  background: linear-gradient(
-    0deg,
-    var(--theme-color-darkest) 30%,
-    #222633 60%,
-    #242836 75%,
-    #4f5775 80%,
-    var(--theme-shade-lightest) 88%,
-    var(--theme-color-accent) 100%
-  );
 }
 
 .navbar.home {
@@ -86,7 +83,7 @@ Primary site nagivation
   color: var(--theme-color-accent);
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 411px) {
   .primary-nav > li > a {
     font-size: 1.5rem;
   }
@@ -98,7 +95,7 @@ Primary site nagivation
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1224px) {
   .navbar {
     justify-content: center;
     align-items: flex-start;
