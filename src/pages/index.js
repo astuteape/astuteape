@@ -6,7 +6,7 @@ import SEO from "../components/meta_data/seo"
 // Site components
 import HeroText from "../components/text/hero_text"
 import Image from "../components/image/image"
-import Layout from "../components/layout/layout"
+import Layout from "../components/layout/index_layout"
 import PageTitle from "../components/text/page_title"
 import SocialNav from "../components/nav/social_nav"
 

@@ -89,15 +89,13 @@ Primary site nagivation
     margin-left: 10%;
   }
 }
-/* ========================
-End primary site nagivation
-=========================== */
 
 /* ====================
 Social media nagivation
 ======================= */
 .social-nav {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .social-nav li {
@@ -105,9 +103,10 @@ Social media nagivation
   padding: 0 10px;
   text-align: center;
 }
-/* ========================
-End social media nagivation
-=========================== */
+
+.social-nav a > svg:hover path {
+  fill: var(--theme-color-accent);
+}
 
 /* TEXT MODULES */
 .page-title {
