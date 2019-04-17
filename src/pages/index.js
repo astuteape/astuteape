@@ -28,8 +28,10 @@ const IndexPage = () => (
       ]}
     />
     <div className="index main-header">
-      <PageTitle titleText="Wade Christensen" />
-      <h3 className="page-title-aside">Astute Ape</h3>
+      <div>
+        <PageTitle titleText="Wade Christensen" />
+        <h3 className="page-title-aside">Is Astute Ape</h3>
+      </div>
     </div>
     <div className="index main-content">
       <div className="index-image">
@@ -41,7 +43,6 @@ const IndexPage = () => (
     </div>
     <div className="index main-footer">
       <div className="contact">
-        <h3>Get in touch via email or social.</h3>
         <SocialNav />
       </div>
     </div>

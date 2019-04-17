@@ -44,19 +44,21 @@ const BlogPage = ({ data }) => {
                     : `Read Time: ${node.timeToRead} minute`}
                 </li>
               </ul>
-              <p className="blog-post-summary">
-                {/* Display a summary from the post front matter. 
+            </AniLink>
+            <p className="blog-post-summary">
+              {/* Display a summary from the post front matter. 
                 If none exists, an exerpt is pulled from the post */}
-                {node.frontmatter.summary
-                  ? node.frontmatter.summary
-                  : node.excerpt}
-              </p>
+              {node.frontmatter.summary
+                ? node.frontmatter.summary
+                : node.excerpt}
+            </p>
+            <AniLink fade to={`/blog${node.fields.slug}`}>
+              Read
             </AniLink>
           </div>
         ))}
       </div>
       <div className="blog main-footer">
-        <h3>Get in touch via email or social</h3>
         <SocialNav />
       </div>
     </Layout>

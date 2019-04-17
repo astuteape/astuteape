@@ -18,41 +18,12 @@ Primary site nagivation
   padding-bottom: 3%;
   transition: background 1s;
   transition-timing-function: ease-in-out;
-}
-
-.navbar.home {
   background: linear-gradient(
     0deg,
-    var(--theme-color-darkest) 30%,
-    #222633 60%,
-    #242836 75%,
-    #4f5775 80%,
-    var(--theme-shade-lightest) 88%,
-    var(--theme-color-accent) 100%
-  );
-}
-
-.navbar.blog {
-  background: linear-gradient(
-    0deg,
-    var(--theme-color-darkest) 30%,
-    #222633 60%,
-    #242836 75%,
-    #4f5775 80%,
-    var(--theme-shade-lightest) 88%,
-    rgb(30, 255, 0) 100%
-  );
-}
-
-.navbar.projects {
-  background: linear-gradient(
-    0deg,
-    var(--theme-color-darkest) 30%,
-    #222633 60%,
-    #242836 75%,
-    #4f5775 80%,
-    var(--theme-shade-lightest) 88%,
-    rgb(255, 230, 0) 100%
+    var(--theme-color-darkest) 75%,
+    #4f5775 75% 83.3%,
+    var(--theme-shade-lightest) 83.3% 91.6%,
+    var(--theme-color-accent) 91.6% 100%
   );
 }
 
@@ -102,48 +73,10 @@ Primary site nagivation
     height: 100vh;
     background: linear-gradient(
       90deg,
-      var(--theme-color-darkest) 30%,
-      #222633 60%,
-      #242836 75%,
-      #4f5775 80%,
-      var(--theme-shade-lightest) 88%,
-      var(--theme-color-accent) 100%
-    );
-  }
-
-  .navbar.home {
-    background: linear-gradient(
-      90deg,
-      var(--theme-color-darkest) 30%,
-      #222633 60%,
-      #242836 75%,
-      #4f5775 80%,
-      var(--theme-shade-lightest) 88%,
-      var(--theme-color-accent) 100%
-    );
-  }
-
-  .navbar.blog {
-    background: linear-gradient(
-      90deg,
-      var(--theme-color-darkest) 30%,
-      #222633 60%,
-      #242836 75%,
-      #4f5775 80%,
-      var(--theme-shade-lightest) 88%,
-      rgb(30, 255, 0) 100%
-    );
-  }
-
-  .navbar.projects {
-    background: linear-gradient(
-      90deg,
-      var(--theme-color-darkest) 30%,
-      #222633 60%,
-      #242836 75%,
-      #4f5775 80%,
-      var(--theme-shade-lightest) 88%,
-      rgb(255, 230, 0) 100%
+      var(--theme-color-darkest) 85%,
+      #4f5775 85% 90%,
+      var(--theme-shade-lightest) 90% 95%,
+      var(--theme-color-accent) 95% 100%
     );
   }
 
@@ -164,23 +97,22 @@ End primary site nagivation
 Social media nagivation
 ======================= */
 .social-nav {
-  grid-area: grid-right;
-  display: flex;
-  justify-content: flex-end;
+  text-align: center;
 }
 
-.social-nav li > a {
-  margin: 0 10px;
-  color: var(--theme-color-darkest);
-  text-decoration: none;
+.social-nav li {
+  display: inline-block;
+  padding: 0 10px;
+  text-align: center;
 }
 /* ========================
 End social media nagivation
 =========================== */
 
 /* TEXT MODULES */
-h1.page-title {
-  font-size: 38px;
+.page-title {
+  margin-bottom: 0;
+  font-size: 1.6rem;
   text-align: center;
   text-transform: uppercase;
   color: var(--theme-shade-lightest);
@@ -188,12 +120,18 @@ h1.page-title {
 }
 
 .page-title-aside {
-  justify-self: flex-end;
+  font-size: 1.25rem;
+  text-align: right;
 }
 
 @media screen and (min-width: 768px) {
-  h1.page-title {
-    font-size: 50px;
+  .page-title {
+    font-size: 3.5rem;
+  }
+
+  .page-title-aside {
+    font-size: 1.6rem;
+    text-align: right;
   }
 }
 
@@ -225,12 +163,12 @@ h1.page-title {
 /* =======
 Blog posts
 ========== */
+.blog-post {
+  padding: 10px;
+}
+
 .blog-post-data li {
   display: inline-block;
   font-weight: 700;
   padding: 0 3px;
-}
-
-.blog-post-data:hover {
-  color: var(--theme-color-accent);
 }

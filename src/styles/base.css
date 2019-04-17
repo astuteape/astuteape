@@ -44,7 +44,7 @@ a:link {
 }
 
 a:hover {
-  color: var(--theme-color-dark);
+  color: var(--theme-color-accent);
 }
 
 a:active {

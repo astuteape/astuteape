@@ -10,8 +10,6 @@ min-width: 1224px;
 Style of the root element or main site container 
 ================================================ */
 .layout-site-container {
-  height: 100%;
-  height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -25,13 +23,9 @@ Layout of the two main site sections (navigation and content)
     "main-header"
     "main-content"
     "main-footer";
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: min-content min-content min-content;
   grid-auto-rows: min-content;
-  min-height: 100%;
-  min-height: calc(100vh - 50px);
-  margin-bottom: 75px;
-  padding: 0 10px;
+  margin: 0 0 75px 0;
   background: var(--theme-shade-lightest);
 }
 
@@ -47,17 +41,10 @@ transitions occur. This element is the navigation section */
 /* =========================
 Main container media queries
 ============================ */
-@media screen and (min-width: 1024px) {
-  .layout-main-container {
-    margin: 25px 25px 75px 25px;
-    padding: 0;
-  }
-}
 
 @media screen and (min-width: 1224px) {
   .layout-main-container {
-    width: calc(100vw - 300px);
-    margin: 50px 50px 75px 250px;
+    margin: 0 0 0 250px;
     background: var(--theme-shade-lightest);
   }
 }
@@ -88,13 +75,6 @@ Layout of the grid items in the main content area
   grid-area: main-footer;
 }
 
-.layout-main-container .main-footer .contact {
-  grid-area: grid-right;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-}
 /* =======
 Index page
 ========== */
@@ -103,32 +83,37 @@ Index page
 .layout-main-container .index.main-footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 5px;
+}
+
+.layout-main-container .index.main-header {
+  justify-content: flex-end;
+}
+
+.layout-main-container .index.main-content,
+.layout-main-container .index.main-footer {
+  justify-content: flex-start;
 }
 
 /* =====================
 Index page media queries 
 ======================== */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
+  .layout-main-container .index.main-header,
+  .layout-main-container .index.main-content,
   .layout-main-container .index.main-footer {
-    grid-area: main-footer;
-    display: grid;
-    grid-template-areas: "grid-left grid-right";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
-
-  .layout-main-container .index.main-footer .contact {
-    grid-area: grid-right;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 20px 20px 0;
+    padding: 25px 20px 0 20px;
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .layout-main-container .index.main-header,
+  .layout-main-container .index.main-content,
+  .layout-main-container .index.main-footer {
+    padding: 40px 0 0 0;
+  }
+}
 /* ======
 Blog page
 ========= */
@@ -154,7 +139,6 @@ Blog page media queries
     grid-template-rows: max-content;
     grid-auto-flow: row;
     grid-auto-columns: min-content;
-    margin-top: 50px;
   }
 
   .blog.main-content .blog-post {
