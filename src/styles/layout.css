@@ -36,14 +36,14 @@ Layout of the two main site sections (navigation and content)
     "main-footer";
   grid-auto-rows: min-content;
   margin: 0 0 75px 0;
-  background: var(--theme-shade-lightest);
+  background: var(--color-page-bg);
 }
 
 .layout-main-container-detail {
   display: flex;
   flex-direction: row;
   margin: 0 0 75px 0;
-  background: var(--theme-shade-lightest);
+  background: var(--color-page-bg);
   justify-content: center;
 }
 

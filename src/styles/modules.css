@@ -19,13 +19,13 @@ Primary site nagivation
   transition: background 1s;
   transition-timing-function: ease-in-out;
   /* Background fallback for MS Edge */
-  background: var(--theme-color-darkest);
+  background: var(--color-nav-bg);
   background-image: linear-gradient(
     0deg,
-    var(--theme-color-darkest) 75%,
-    #4f5775 75% 83.3%,
-    var(--theme-shade-lightest) 83.3% 91.6%,
-    var(--theme-color-accent) 91.6% 100%
+    var(--color-dark) 75%,
+    var(--color-midtone) 75% 83.3%,
+    var(--shade-light) 83.3% 91.6%,
+    var(--color-accent) 91.6% 100%
   );
 }
 
@@ -48,12 +48,12 @@ Primary site nagivation
   text-transform: uppercase;
   transition: color 0.5s, font-size 0.5s;
   transition-timing-function: ease-in-out;
-  color: var(--theme-shade-lightest);
+  color: var(--color-page-bg);
 }
 
 .primary-nav > li > a:hover,
 .primary-nav > li > a.active {
-  color: var(--theme-color-accent);
+  color: var(--color-link-achov);
 }
 
 @media screen and (min-width: 411px) {
@@ -74,13 +74,13 @@ Primary site nagivation
     align-items: flex-start;
     height: 100vh;
     /* Background fallback for MS Edge */
-    background: var(--theme-color-darkest);
+    background: var(--color-nav-bg);
     background-image: linear-gradient(
       90deg,
-      var(--theme-color-darkest) 85%,
-      #4f5775 85% 90%,
-      var(--theme-shade-lightest) 90% 95%,
-      var(--theme-color-accent) 95% 100%
+      var(--color-dark) 75%,
+      var(--color-midtone) 75% 83.3%,
+      var(--shade-light) 83.3% 91.6%,
+      var(--color-accent) 91.6% 100%
     );
   }
 
@@ -108,8 +108,12 @@ Social media nagivation
   text-align: center;
 }
 
+.social-nav a > svg path {
+  fill: var(--color-icon);
+}
+
 .social-nav a > svg:hover path {
-  fill: var(--theme-color-accent);
+  fill: var(--color-icon-achov);
 }
 
 /* ========
@@ -120,8 +124,8 @@ Page titles
   font-size: 1.6rem;
   text-align: center;
   text-transform: uppercase;
-  color: var(--theme-shade-lightest);
-  text-shadow: 3px 3px 0 var(--theme-color-darkest);
+  color: var(--color-page-bg);
+  text-shadow: 3px 3px 0 var(--color-text-heading);
 }
 
 .page-title-aside {
@@ -153,14 +157,14 @@ Hero Text
   font-size: 28px;
   text-align: center;
   font-family: "Teko";
-  color: var(--theme-shade-dark);
+  color: var(--color-text);
 }
 
 .hero-emphasis {
   font-weight: 500;
   font-size: 42px;
   font-style: italic;
-  color: var(--theme-color-accent);
+  color: var(--color-link-achov);
 }
 
 /* ===
@@ -183,5 +187,5 @@ Footnotes
 }
 
 .footnotes a:hover {
-  color: var(--theme-color-accent);
+  color: var(--color-link-achov);
 }

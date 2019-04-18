@@ -1,16 +1,24 @@
 /* Root Variables */
 :root {
   /* Font stacks provided by typography.js plugin */
-  /* Shades white to black */
-  --theme-shade-lightest: #fff;
-  --theme-shade-dark: #2d3038;
-  --theme-shade-darker: #1c1c21;
-  --theme-shade-darkest: #000;
+  /* Values white to black */
+  --shade-light: #fff;
+  --shade-midtone: #2d3038;
+  --shade-dark: #000;
   /* Color pallette */
-  --theme-color-accent: #e35205;
-  --theme-color-light: #1f2a44;
-  --theme-color-dark: #1f2a44;
-  --theme-color-darkest: #1c1f2a;
+  --color-light: #7986b5;
+  --color-midtone: #4f5775;
+  --color-dark: #1c1f2a;
+  --color-accent: #e35205;
+  /* Colors assigned to areas */
+  --color-page-bg: var(--shade-light);
+  --color-nav-bg: var(--color-dark);
+  --color-text: var(--shade-midtone);
+  --color-text-heading: var(--shade-dark);
+  --color-link: var(--color-midtone);
+  --color-link-achov: var(--color-accent);
+  --color-icon: var(--color-dark);
+  --color-icon-achov: var(--color-light);
 }
 
 body {
@@ -20,12 +28,20 @@ body {
   padding: 0;
   font-size: 16px;
   line-height: 1;
-  background: var(--theme-shade-lightest);
   overflow: hidden;
 }
 
 p {
   line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-heading);
 }
 
 ol,
@@ -39,20 +55,20 @@ li {
 }
 
 a:link {
-  color: var(--theme-shade-darker);
+  color: var(--color-link);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--theme-color-accent);
+  color: var(--color-link-achov);
 }
 
 a:active {
-  color: var(--theme-color-accent);
+  color: var(--color-link-achov);
 }
 
 a:visited {
-  color: var(--theme-shade-darker);
+  color: var(--color-link);
 }
 
 a:hover h1,
@@ -60,7 +76,7 @@ a:hover h2,
 a:hover h3,
 a:hover h4,
 a:hover h5 {
-  color: var(--theme-color-accent);
+  color: var(--color-link-achov);
   text-decoration: underline;
 }
 
