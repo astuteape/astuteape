@@ -188,9 +188,9 @@ Blog and Projects pages media queries
   }
 }
 
-/* =============
-Blog detail view
-================ */
+/* =======================
+Blog and post detail views
+========================== */
 .post-detail.main-content {
   width: 100%;
   max-width: 650px;
