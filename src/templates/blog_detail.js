@@ -4,7 +4,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 // Site components
-import Layout from "../components/layout/layout"
+import Layout from "../components/layout/detail_layout"
 import SEO from "../components/meta_data/seo"
 
 export default ({ data }) => {
@@ -20,26 +20,29 @@ export default ({ data }) => {
           `${article.frontmatter.keywords}`,
         ]}
       />
-      <div>
-        <div>
-          <h1 className="page-title">{article.frontmatter.title}</h1>
-          <div>
-            <span>
-              <strong>{`By ${article.frontmatter.author} |`}</strong>
-            </span>{" "}
-            <span>
-              <strong>{`Published ${article.frontmatter.date} |`}</strong>
-            </span>{" "}
-            <span>
-              <strong>
-                {article.timeToRead > 1
-                  ? `Read Time: ${article.timeToRead} minutes`
-                  : `Read Time: ${article.timeToRead} minute`}
-              </strong>
-            </span>
-          </div>
+      <div className="post-detail main-content">
+        <div className="post-title">
+          <h1>{article.frontmatter.title}</h1>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: article.html }} />
+        <div className="post-info">
+          <span>
+            <strong>{`By ${article.frontmatter.author} |`}</strong>
+          </span>{" "}
+          <span>
+            <strong>{`Published ${article.frontmatter.date} |`}</strong>
+          </span>{" "}
+          <span>
+            <strong>
+              {article.timeToRead > 1
+                ? `Read Time: ${article.timeToRead} minutes`
+                : `Read Time: ${article.timeToRead} minute`}
+            </strong>
+          </span>
+        </div>
+        <div
+          className="post-content"
+          dangerouslySetInnerHTML={{ __html: article.html }}
+        />
       </div>
     </Layout>
   )

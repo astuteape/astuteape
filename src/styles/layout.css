@@ -39,6 +39,14 @@ Layout of the two main site sections (navigation and content)
   background: var(--theme-shade-lightest);
 }
 
+.layout-main-container-detail {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 75px 0;
+  background: var(--theme-shade-lightest);
+  justify-content: center;
+}
+
 /* Plugin required to prevent nav from transitioning when the page
 transitions occur. This element is the navigation section */
 .gatsby-plugin-transition-link-portal {
@@ -59,6 +67,10 @@ Main container media queries
 
   .layout-site-container.index .layout-main-container {
     margin: 0 0 0 200px;
+  }
+
+  .layout-main-container-detail {
+    margin: 40px 0 0 200px;
   }
 }
 
@@ -147,9 +159,15 @@ Blog and Projects pages
   padding: 15px 0;
 }
 
-/* ====================
-Blog page media queries 
-======================= */
+.collection-item-info li {
+  display: inline-block;
+  font-weight: 700;
+  padding: 0 3px;
+}
+
+/* ==================================
+Blog and Projects pages media queries 
+===================================== */
 @media screen and (min-width: 1024px) {
   .layout-main-container .collection-page.main-content {
     display: grid;
@@ -168,4 +186,46 @@ Blog page media queries
   .collection-item-title {
     text-align: center;
   }
+}
+
+/* =============
+Blog detail view
+================ */
+.post-detail.main-content {
+  width: 100%;
+  max-width: 650px;
+  margin-top: 20px;
+}
+
+.post-title {
+  text-align: center;
+  padding: 10px;
+}
+
+.post-info {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.post-content {
+  padding: 10px;
+}
+
+.post-content p {
+  font-size: 1.125rem;
+  line-height: 1.2rem;
+  text-align: left;
+}
+
+.post-content img,
+.post-content iframe {
+  display: block;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+}
+
+.post-content pre {
+  overflow-x: scroll;
+  padding: 10px;
 }

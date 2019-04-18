@@ -162,16 +162,3 @@ Social media nagivation
 .layout-main-container .index-image {
   width: 300px !important;
 }
-
-/* =======
-Blog posts
-========== */
-.blog-post {
-  padding: 10px;
-}
-
-.blog-post-data li {
-  display: inline-block;
-  font-weight: 700;
-  padding: 0 3px;
-}

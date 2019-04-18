@@ -1,19 +1,23 @@
 ---
-title: "A Test Blog Post"
+title: "All Them Witches"
 author: "Wade Christensen"
-date: "2019-04-02"
+date: "2019-04-18"
 summary: "A short summary of what the article is about. This is in place of an excerpt of the first few characters. Try to keep it under 280"
 ---
-
-## All Them Witches
-
-### KEXP
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VteuWD_dIdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Some Text
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales magna in nisi tempus sollicitudin ac vitae felis. Donec at convallis ex, eget hendrerit tellus. In quam purus, blandit sit amet purus vitae, commodo facilisis neque. Donec maximus diam magna, non porttitor dolor imperdiet consectetur. Integer eleifend risus ornare, condimentum augue ut, pulvinar metus. Nam pulvinar, massa in sodales porttitor, ex neque luctus nunc, nec dignissim risus arcu a urna. Aliquam vel libero fringilla, rhoncus augue eget, elementum lorem. Nulla nibh elit, iaculis ut rhoncus ut, dictum ac ex.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales magna in nisi tempus sollicitudin ac vitae felis. Donec at convallis ex, eget hendrerit tellus. In quam purus, blandit sit amet purus vitae, commodo facilisis neque.
+
+```javascript
+const demo = () => {
+    return (
+        `lemons, limes, chili powder;
+    )
+}
+```
 
 Phasellus sodales consectetur erat, id tempor nisi scelerisque id. Donec porttitor felis at ipsum consectetur consequat. Mauris porttitor elit et nulla venenatis pulvinar. Aenean sed vestibulum ex. Mauris sapien odio, efficitur at pulvinar vel, congue non purus. Vestibulum posuere a ante sit amet convallis. Duis vehicula lobortis ante non pharetra. Integer quis mauris a tellus scelerisque facilisis ullamcorper eu elit. Nulla fringilla vehicula congue. Ut hendrerit urna sodales, vulputate justo vitae, tempor dolor. Vivamus nec ex tellus. Duis commodo massa sit amet tellus pretium egestas. In semper leo sed ex ultrices, sit amet posuere felis accumsan.
 

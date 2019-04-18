@@ -4,7 +4,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 // Site components
-import Layout from "../components/layout/layout"
+import Layout from "../components/layout/detail_layout"
 import SEO from "../components/meta_data/seo"
 
 export default ({ data }) => {
@@ -20,11 +20,14 @@ export default ({ data }) => {
           `${project.frontmatter.keywords}`,
         ]}
       />
-      <div>
-        <div>
-          <h1 className="page-title">{project.frontmatter.title}</h1>
+      <div className="post-detail main-content">
+        <div className="post-title">
+          <h1>{project.frontmatter.title}</h1>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: project.html }} />
+        <div
+          className="post-content"
+          dangerouslySetInnerHTML={{ __html: project.html }}
+        />
       </div>
     </Layout>
   )

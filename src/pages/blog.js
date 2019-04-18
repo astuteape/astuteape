@@ -36,7 +36,7 @@ const BlogPage = ({ data }) => {
               <h3 className="collection-item-title">
                 {node.frontmatter.title}
               </h3>
-              <ul className="collection-item-data">
+              <ul className="collection-item-info">
                 <li>{`By ${node.frontmatter.author} | `}</li>
                 <li>{`${node.frontmatter.date} | `}</li>
                 <li>
