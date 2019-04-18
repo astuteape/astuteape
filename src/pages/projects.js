@@ -8,6 +8,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import PageTitle from "../components/text/page_title"
 import SEO from "../components/meta_data/seo"
+import SocialNav from "../components/nav/social_nav"
 
 const ProjectsPage = ({ data }) => {
   const allArticles = data.allMarkdownRemark
@@ -24,20 +25,32 @@ const ProjectsPage = ({ data }) => {
           "work",
         ]}
       />
-      <PageTitle titleText="Projects" />
-      <div>
+      <div className="collection-page page-title">
+        <PageTitle titleText="Projects" />
+      </div>
+      <div className="collection-page main-content">
         {allArticles.edges.map(({ node }) => (
           <div key={node.id}>
-            <AniLink fade to={`/projects${node.fields.slug}`}>
-              <h3>{node.frontmatter.title}</h3>
-              <p>
+            <div className="collection-item">
+              <AniLink fade to={`/projects${node.fields.slug}`}>
+                <h3 className="collection-item-title">
+                  {node.frontmatter.title}
+                </h3>
+              </AniLink>
+              <p className="collection-item-summary">
                 {node.frontmatter.summary
                   ? node.frontmatter.summary
                   : node.excerpt}
               </p>
-            </AniLink>
+              <AniLink fade to={`/projects${node.fields.slug}`}>
+                Read
+              </AniLink>
+            </div>
           </div>
         ))}
+      </div>
+      <div className="collection-page main-footer">
+        <SocialNav />
       </div>
     </Layout>
   )

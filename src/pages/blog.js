@@ -26,15 +26,17 @@ const BlogPage = ({ data }) => {
           `tutorials`,
         ]}
       />
-      <div className="blog page-title">
+      <div className="collection-page page-title">
         <PageTitle titleText="Blog" />
       </div>
-      <div className="blog main-content">
+      <div className="collection-page main-content">
         {allArticles.edges.map(({ node }) => (
-          <div className="blog-post" key={node.id}>
+          <div className="collection-item" key={node.id}>
             <AniLink fade to={`/blog${node.fields.slug}`}>
-              <h3 className="blog-post-title">{node.frontmatter.title}</h3>
-              <ul className="blog-post-data">
+              <h3 className="collection-item-title">
+                {node.frontmatter.title}
+              </h3>
+              <ul className="collection-item-data">
                 <li>{`By ${node.frontmatter.author} | `}</li>
                 <li>{`${node.frontmatter.date} | `}</li>
                 <li>
@@ -45,7 +47,7 @@ const BlogPage = ({ data }) => {
                 </li>
               </ul>
             </AniLink>
-            <p className="blog-post-summary">
+            <p className="collection-item-summary">
               {/* Display a summary from the post front matter. 
                 If none exists, an exerpt is pulled from the post */}
               {node.frontmatter.summary
@@ -58,7 +60,7 @@ const BlogPage = ({ data }) => {
           </div>
         ))}
       </div>
-      <div className="blog main-footer">
+      <div className="collection-page main-footer">
         <SocialNav />
       </div>
     </Layout>

@@ -116,7 +116,7 @@ Index page
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5px;
+  padding: 15px;
 }
 
 .layout-main-container .index.main-header {
@@ -128,29 +128,30 @@ Index page
   justify-content: flex-start;
 }
 
-/* ======
-Blog page
-========= */
-.layout-main-container .blog.main-header,
-.layout-main-container .blog.main-content,
-.layout-main-container .blog.main-footer {
+/* ====================
+Blog and Projects pages
+======================= */
+.layout-main-container .collection-page.main-header,
+.layout-main-container .collection-page.main-content,
+.layout-main-container .collection-page.main-footer {
   display: flex;
   flex-direction: column;
 }
 
-.layout-main-container .blog.main-content {
+.layout-main-container .collection-page.main-content {
   justify-self: center;
 }
 
-.layout-main-container .blog-post {
+.layout-main-container .collection-item {
   max-width: 500px;
+  padding: 15px 0;
 }
 
 /* ====================
 Blog page media queries 
 ======================= */
 @media screen and (min-width: 1024px) {
-  .layout-main-container .blog.main-content {
+  .layout-main-container .collection-page.main-content {
     display: grid;
     grid-gap: 15px;
     grid-template-columns: 1fr 1fr;
@@ -160,11 +161,11 @@ Blog page media queries
     max-width: 1024px;
   }
 
-  .blog.main-content .blog-post {
+  .collection-page.main-content .collection-item {
     justify-self: center;
   }
 
-  .blog-post-title {
+  .collection-item-title {
     text-align: center;
   }
 }
