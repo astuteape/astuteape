@@ -18,7 +18,9 @@ Primary site nagivation
   padding-bottom: 3%;
   transition: background 1s;
   transition-timing-function: ease-in-out;
-  background: linear-gradient(
+  /* Background fallback for MS Edge */
+  background: var(--theme-color-darkest);
+  background-image: linear-gradient(
     0deg,
     var(--theme-color-darkest) 75%,
     #4f5775 75% 83.3%,
@@ -71,7 +73,9 @@ Primary site nagivation
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
-    background: linear-gradient(
+    /* Background fallback for MS Edge */
+    background: var(--theme-color-darkest);
+    background-image: linear-gradient(
       90deg,
       var(--theme-color-darkest) 85%,
       #4f5775 85% 90%,
