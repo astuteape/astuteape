@@ -1,18 +1,17 @@
-/* Root Variables */
+/* =====================
+Root Variables light mode
+========================= */
 :root {
-  /* Font stacks provided by typography.js plugin */
-  /* Values white to black */
   --shade-light: #fff;
   --shade-midtone: #2d3038;
   --shade-dark: #000;
-  /* Color pallette */
   --color-light: #4f5775;
   --color-midtone: #2b3b75;
   --color-dark: #1c1f2a;
   --color-accent: #e35205;
-  /* Colors assigned to areas */
   --color-page-bg: var(--shade-light);
   --color-nav-bg: var(--color-dark);
+  --color-nav-link: var(--shade-light);
   --color-text: var(--shade-midtone);
   --color-text-heading: var(--shade-dark);
   --color-link: var(--color-midtone);
@@ -20,6 +19,28 @@
   --color-icon: var(--color-dark);
   --color-icon-achov: var(--color-light);
 }
+
+/* =====================
+Root Variables dark mode
+======================== */
+/* :root {
+  --shade-light: #dfdfdf;
+  --shade-midtone: #5f6267;
+  --shade-dark: #313131;
+  --color-light: #abb2ce;
+  --color-midtone: #707eb1;
+  --color-dark: #262933;
+  --color-accent: #d46529;
+  --color-page-bg: var(--color-dark);
+  --color-nav-bg: var(--color-dark);
+  --color-nav-link: var(--shade-light);
+  --color-text: var(--shade-light);
+  --color-text-heading: var(--shade-light);
+  --color-link: var(--color-light);
+  --color-link-achov: var(--color-accent);
+  --color-icon: var(--color-midtone);
+  --color-icon-achov: var(--color-light);
+} */
 
 body {
   width: 100%;
@@ -29,10 +50,12 @@ body {
   font-size: 16px;
   line-height: 1;
   overflow: hidden;
+  background: var(--color-page-bg);
 }
 
 p {
   line-height: 1.2;
+  color: var(--color-text);
 }
 
 h1,

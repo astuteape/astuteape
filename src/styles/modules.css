@@ -48,7 +48,7 @@ Primary site nagivation
   text-transform: uppercase;
   transition: color 0.5s, font-size 0.5s;
   transition-timing-function: ease-in-out;
-  color: var(--color-page-bg);
+  color: var(--color-nav-link);
 }
 
 .primary-nav > li > a:hover,
