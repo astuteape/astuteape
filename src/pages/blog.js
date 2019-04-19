@@ -37,7 +37,6 @@ const BlogPage = ({ data }) => {
                 {node.frontmatter.title}
               </h3>
               <ul className="collection-item-info">
-                <li>{`By ${node.frontmatter.author} | `}</li>
                 <li>{`${node.frontmatter.date} | `}</li>
                 <li>
                   {/* Pluralize Read Time if > 1 miute */}
@@ -54,7 +53,11 @@ const BlogPage = ({ data }) => {
                 ? node.frontmatter.summary
                 : node.excerpt}
             </p>
-            <AniLink fade to={`/blog${node.fields.slug}`}>
+            <AniLink
+              className="button-link"
+              fade
+              to={`/blog${node.fields.slug}`}
+            >
               Read
             </AniLink>
           </div>

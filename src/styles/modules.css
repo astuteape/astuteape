@@ -23,7 +23,7 @@ Primary site nagivation
   background-image: linear-gradient(
     0deg,
     var(--color-dark) 75%,
-    var(--color-midtone) 75% 83.3%,
+    var(--color-light) 75% 83.3%,
     var(--shade-light) 83.3% 91.6%,
     var(--color-accent) 91.6% 100%
   );
@@ -78,7 +78,7 @@ Primary site nagivation
     background-image: linear-gradient(
       90deg,
       var(--color-dark) 75%,
-      var(--color-midtone) 75% 83.3%,
+      var(--color-light) 75% 83.3%,
       var(--shade-light) 83.3% 91.6%,
       var(--color-accent) 91.6% 100%
     );
@@ -172,6 +172,91 @@ Images
 ====== */
 .layout-main-container .index-image {
   width: 300px !important;
+}
+
+/* ====
+Buttons
+======= */
+a.button-link {
+  width: max-content;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.2rem;
+  font-family: "Teko", sans-serif;
+  font-size: 1.1rem;
+  background: var(--color-icon);
+  color: var(--color-page-bg);
+}
+
+a.button-link:hover {
+  background: var(--color-icon-achov);
+}
+
+/* =========================================
+Blog and Projects Items AKA collection-items
+============================================ */
+.collection-item-info {
+  margin-bottom: 0.3rem;
+}
+
+.collection-item-title {
+  margin-bottom: 0;
+}
+
+.collection-item-info li {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0 3px;
+  color: var(--color-text-heading);
+}
+
+.collection-item-summary {
+  margin: 0 0 0.5rem 0;
+}
+
+.collection-item a.button-link {
+  justify-self: flex-end;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* =======================
+Blog and post detail views
+========================== */
+.post-title {
+  text-align: center;
+  padding: 10px;
+}
+
+.post-info {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.post-content {
+  padding: 10px;
+}
+
+.post-content p {
+  font-size: 1.125rem;
+  line-height: 1.2rem;
+  text-align: left;
+}
+
+.post-content img,
+.post-content iframe {
+  display: block;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+}
+
+.post-content pre {
+  padding: 10px;
+}
+
+.post-content code.language-text {
+  padding: 5px 10px;
 }
 
 /* ======
