@@ -25,19 +25,21 @@ export default ({ data }) => {
           <h1>{article.frontmatter.title}</h1>
         </div>
         <div className="post-info">
-          <span>
-            <strong>{`By ${article.frontmatter.author} |`}</strong>
-          </span>{" "}
-          <span>
-            <strong>{`Published ${article.frontmatter.date} |`}</strong>
-          </span>{" "}
-          <span>
-            <strong>
-              {article.timeToRead > 1
-                ? `Read Time: ${article.timeToRead} minutes`
-                : `Read Time: ${article.timeToRead} minute`}
-            </strong>
-          </span>
+          <p>
+            <strong>{`By ${article.frontmatter.author}`}</strong>
+          </p>{" "}
+          <p>
+            <span>
+              <strong>{`Published ${article.frontmatter.date} |`}</strong>
+            </span>{" "}
+            <span>
+              <strong>
+                {article.timeToRead > 1
+                  ? `Read Time: ${article.timeToRead} minutes`
+                  : `Read Time: ${article.timeToRead} minute`}
+              </strong>
+            </span>
+          </p>
         </div>
         <div
           className="post-content"

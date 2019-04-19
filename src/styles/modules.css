@@ -223,15 +223,30 @@ Blog and Projects Items AKA collection-items
 /* =======================
 Blog and post detail views
 ========================== */
+.post-title h1 {
+  margin: auto auto 0 auto;
+}
+
 .post-title {
   text-align: center;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 
 .post-info {
   text-align: center;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 0 10px 10px 10px;
+}
+
+.post-info :first-child p {
+  margin: 0;
+  padding: 0 10px 20px 10px;
+}
+
+.post-info :not(:first-child) {
+  padding: 0;
+  margin: 0;
+  font-size: 0.8rem;
 }
 
 .post-content {
