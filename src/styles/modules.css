@@ -29,9 +29,21 @@ Primary site nagivation
   );
 }
 
+@media screen and (min-width: 500px) {
+  .navbar {
+    padding-bottom: 0.75%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .navbar {
     padding-bottom: 1%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    padding-bottom: 0.5%;
   }
 }
 

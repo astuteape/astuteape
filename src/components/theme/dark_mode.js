@@ -5,13 +5,13 @@ class DarkMode extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      label: "Dark Mode",
+      label: `dark`,
     }
   }
 
-  handleClick = () => {
+  setLabel = () => {
     this.setState(prevState => ({
-      label: !prevState.label,
+      label: prevState.label === `dark` ? `light` : `dark`,
     }))
   }
 
@@ -22,13 +22,15 @@ class DarkMode extends React.Component {
           <label class="toggle">
             <input
               type="checkbox"
-              onClick={this.handleClick}
+              onClick={this.setLabel}
               onChange={event =>
                 toggleTheme(event.target.checked ? `dark` : `light`)
               }
               checked={theme === `dark`}
             />{" "}
-            <span>{this.state.label ? "Light Mode" : "Dark Mode"}</span>
+            <span>
+              {this.state.label === `dark` ? `Light Mode` : `Dark Mode`}
+            </span>
           </label>
         )}
       </ThemeToggler>
