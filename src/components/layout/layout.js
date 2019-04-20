@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 import PrimaryNav from "../nav/primary_nav"
 import { TransitionPortal } from "gatsby-plugin-transition-link"
 import "../../styles/layout.css"

@@ -1,7 +1,7 @@
 /* =====================
 Root Variables light mode
 ========================= */
-:root {
+body {
   --shade-light: #fff;
   --shade-midtone: #2d3038;
   --shade-dark: #000;
@@ -18,12 +18,13 @@ Root Variables light mode
   --color-link-achov: var(--color-accent);
   --color-icon: var(--color-dark);
   --color-icon-achov: var(--color-light);
+  transition: all 1s;
 }
 
 /* =====================
 Root Variables dark mode
 ======================== */
-/* :root {
+body.dark {
   --shade-light: #dfdfdf;
   --shade-midtone: #5f6267;
   --shade-dark: #313131;
@@ -40,7 +41,8 @@ Root Variables dark mode
   --color-link-achov: var(--color-accent);
   --color-icon: var(--color-midtone);
   --color-icon-achov: var(--color-light);
-} */
+  transition: all 1s;
+}
 
 body {
   width: 100%;
