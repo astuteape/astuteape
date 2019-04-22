@@ -110,7 +110,7 @@ Primary site nagivation
 Dark mode toggle
 ================ */
 .toggle {
-  color: var(--color-nav-link);
+  color: white;
 }
 
 /* ====================
