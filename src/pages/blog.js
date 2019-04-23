@@ -26,7 +26,7 @@ const BlogPage = ({ data }) => {
           `tutorials`,
         ]}
       />
-      <div className="collection-page page-title">
+      <div className="collection-page">
         <PageTitle titleText="Blog" />
       </div>
       <div className="collection-page main-content">

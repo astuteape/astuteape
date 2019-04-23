@@ -1,8 +1,6 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import DarkMode from "../theme/dark_mode"
-
 const PrimaryNav = () => {
   return (
     <nav className="navbar">
@@ -31,9 +29,6 @@ const PrimaryNav = () => {
           >
             Projects
           </AniLink>
-        </li>
-        <li>
-          <DarkMode />
         </li>
       </ul>
     </nav>

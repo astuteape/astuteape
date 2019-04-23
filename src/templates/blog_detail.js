@@ -4,6 +4,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 // Site components
+import DarkMode from "../components/theme/dark_mode"
 import Layout from "../components/layout/detail_layout"
 import SEO from "../components/meta_data/seo"
 
@@ -23,6 +24,7 @@ export default ({ data }) => {
       <div className="post-detail main-content">
         <div className="post-title">
           <h1>{article.frontmatter.title}</h1>
+          <DarkMode />
         </div>
         <div className="post-info">
           <p>

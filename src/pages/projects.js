@@ -25,7 +25,7 @@ const ProjectsPage = ({ data }) => {
           "work",
         ]}
       />
-      <div className="collection-page page-title">
+      <div className="collection-page">
         <PageTitle titleText="Projects" />
       </div>
       <div className="collection-page main-content">

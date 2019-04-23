@@ -1,5 +1,12 @@
 import React from "react"
 
-const PageTitle = props => <h1 className="page-title">{props.titleText}</h1>
+import DarkMode from "../theme/dark_mode"
+
+const PageTitle = props => (
+  <div>
+    <h1 className="page-title">{props.titleText}</h1>
+    <DarkMode />
+  </div>
+)
 
 export default PageTitle

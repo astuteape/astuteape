@@ -53,17 +53,13 @@ class DarkMode extends React.Component {
               }}
               checked={theme === `dark`}
             />{" "}
-            <ul>
-              <li className={this.state.theme === `dark` ? `hide` : `show`}>
-                {sun}
-              </li>
-              <li className={this.state.theme === "dark" ? `show` : `hide`}>
-                {moon}
-              </li>
-            </ul>
-            <span>
-              {this.state.theme === `light` ? `Light Mode` : `Dark Mode`}
+            <span className={this.state.theme === `dark` ? `hide` : `show`}>
+              {sun}
             </span>
+            <span className={this.state.theme === "dark" ? `show` : `hide`}>
+              {moon}
+            </span>
+            <p>{this.state.theme === `light` ? `Light Mode` : `Dark Mode`}</p>
           </label>
         )}
       </ThemeToggler>
