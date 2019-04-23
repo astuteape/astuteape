@@ -110,7 +110,33 @@ Primary site nagivation
 Dark mode toggle
 ================ */
 .toggle {
-  color: white;
+  color: var(--color-nav-link);
+}
+
+.toggle:hover {
+  color: var(--color-link-achov);
+}
+
+.toggle input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.toggle ul {
+  display: block;
+}
+
+.toggle li.hide {
+  display: none;
+}
+
+.toggle li.show {
+  display: block;
+}
+
+.toggle li:hover path {
+  fill: var(--color-light);
 }
 
 /* ====================

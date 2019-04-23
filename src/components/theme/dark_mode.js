@@ -5,16 +5,9 @@ class DarkMode extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      label: `dark`,
+      theme: `light`,
     }
   }
-
-  setLabel = () => {
-    this.setState(prevState => ({
-      label: prevState.label === `dark` ? `light` : `dark`,
-    }))
-  }
-
   render() {
     const moon = (
       <svg width="32" height="32" viewBox="0 0 21 32">
@@ -38,19 +31,28 @@ class DarkMode extends React.Component {
     return (
       <ThemeToggler>
         {({ theme, toggleTheme }) => (
-          <label class="toggle">
-            <ul>
-              {this.state.label === `dark` ? <li>{sun}</li> : <li>{moon}</li>}
-            </ul>
+          <label className="toggle">
             <input
               type="checkbox"
-              onClick={this.setLabel}
-              onChange={event =>
+              onChange={event => {
                 toggleTheme(event.target.checked ? `dark` : `light`)
-              }
+                this.setState(prevState => ({
+                  theme: prevState.theme === `light` ? `dark` : `light`,
+                }))
+              }}
               checked={theme === `dark`}
             />{" "}
-            <span>{this.state.label === `dark` ? `Light` : `Dark`}</span>
+            <ul>
+              <li className={this.state.theme === `dark` ? `hide` : `show`}>
+                {sun}
+              </li>
+              <li className={this.state.theme === "dark" ? `show` : `hide`}>
+                {moon}
+              </li>
+            </ul>
+            <span>
+              {this.state.theme === `light` ? `Light Mode` : `Dark Mode`}
+            </span>
           </label>
         )}
       </ThemeToggler>
