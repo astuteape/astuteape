@@ -8,6 +8,17 @@ class DarkMode extends React.Component {
       theme: `light`,
     }
   }
+
+  setTheme = event => {
+    return event.target.checked ? `dark` : `light`
+  }
+
+  setDisplayLabel = () => {
+    this.setState(prevState => ({
+      theme: prevState.theme === `light` ? `dark` : `light`,
+    }))
+  }
+
   render() {
     const moon = (
       <svg id="moon" width="13.5" height="22" viewBox="0 0 13.5 22">
@@ -37,10 +48,8 @@ class DarkMode extends React.Component {
             <input
               type="checkbox"
               onChange={event => {
-                toggleTheme(event.target.checked ? `dark` : `light`)
-                this.setState(prevState => ({
-                  theme: prevState.theme === `light` ? `dark` : `light`,
-                }))
+                toggleTheme(this.setTheme(event))
+                this.setDisplayLabel()
               }}
               checked={theme === `dark`}
             />{" "}
