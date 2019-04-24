@@ -5,6 +5,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { graphql } from "gatsby"
 
 // Site components
+import DarkMode from "../components/theme/dark_mode"
 import Layout from "../components/layout/layout"
 import PageTitle from "../components/text/page_title"
 import SEO from "../components/meta_data/seo"
@@ -27,6 +28,7 @@ const ProjectsPage = ({ data }) => {
       />
       <div className="collection-page">
         <PageTitle titleText="Projects" />
+        <DarkMode />
       </div>
       <div className="collection-page main-content">
         {allArticles.edges.map(({ node }) => (

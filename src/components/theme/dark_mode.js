@@ -13,7 +13,7 @@ class DarkMode extends React.Component {
     return event.target.checked ? `dark` : `light`
   }
 
-  setDisplayLabel = () => {
+  setIconLabel = () => {
     this.setState(prevState => ({
       theme: prevState.theme === `light` ? `dark` : `light`,
     }))
@@ -21,48 +21,60 @@ class DarkMode extends React.Component {
 
   render() {
     const moon = (
-      <svg id="moon" width="13.5" height="22" viewBox="0 0 13.5 22">
-        <title>moon</title>
-        <path
-          d="M16,5a10.83,10.83,0,0,0-2.5.3,11,11,0,0,1,0,21.4A10.83,10.83,0,0,0,16,27,11,11,0,0,0,16,5Z"
-          transform="translate(-13.5 -5)"
-          fill="#fff"
-        />
-      </svg>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+          <title>moon</title>
+          <path
+            className="icon"
+            d="M12.16 4.29a11.7 11.7 0 0 0-4 .72 11.7 11.7 0 0 1 0 22 11.71 11.71 0 1 0 4-22.7z"
+            id="icon"
+          />
+          <g className="outline">
+            <path d="M23 28.87a14.78 14.78 0 0 1-14 0l-1 1a16 16 0 0 0 16 0zM3.13 23a14.78 14.78 0 0 1 0-14l-1-1a16 16 0 0 0 0 16zM28.87 9a14.78 14.78 0 0 1 0 14.08l1 1a16 16 0 0 0 0-16zM9 3.13a14.78 14.78 0 0 1 14 0l1-1a16 16 0 0 0-16 0z" />
+          </g>
+        </svg>
+        <h4>Dark Mode</h4>
+      </div>
     )
 
     const sun = (
-      <svg id="sun" width="32" height="32" viewBox="0 0 32 32">
-        <title>sun</title>
-        <path
-          d="M32,20.94,26.87,17.6c0-.22.06-.45.08-.68C28,16.61,29,16.31,30,16c-1.05-.32-2.06-.65-3.05-1,0-.22-.05-.42-.08-.63L32,11.06l-6.11.16c-.1-.22-.21-.43-.32-.64.79-1.08,1.51-2.15,2.17-3.23-1.1.48-2.25,1-3.44,1.45-.13-.15-.26-.3-.4-.44l2-5.3L21.34,6.39l-.1-.06A14.51,14.51,0,0,0,20.33,2a17.41,17.41,0,0,1-1.25,3.44,10.65,10.65,0,0,0-1.49-.31L16,0,14.47,4.93A36.06,36.06,0,0,0,11.67,2a15,15,0,0,1,1,3.51,10.3,10.3,0,0,0-2,.88L6.11,3.06l2,5.29-3-1c.67.78,1.3,1.57,1.9,2.36a9.45,9.45,0,0,0-.88,1.51L0,11.06,5.13,14.4c0,.22-.06.45-.08.68C4,15.39,3,15.69,2,16c1,.32,2.06.65,3.05,1,0,.22,0,.42.08.63L0,20.94l6.11-.16c.1.22.21.43.32.64-.79,1.08-1.51,2.15-2.17,3.23,1.1-.48,2.25-1,3.44-1.45.13.15.26.3.4.44l-2,5.3,4.55-3.33.1.06A14.51,14.51,0,0,0,11.67,30a17.41,17.41,0,0,1,1.25-3.44,10.65,10.65,0,0,0,1.49.31L16,32l1.53-4.93A36.06,36.06,0,0,0,20.33,30a15,15,0,0,1-1-3.51,10.3,10.3,0,0,0,2-.88l4.55,3.33-2-5.29c1,.33,2,.67,3,1-.67-.78-1.3-1.57-1.9-2.36a9.45,9.45,0,0,0,.88-1.51Z"
-          fill="#fff"
-        />
-      </svg>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+          <title>sun</title>
+          <path
+            className="icon"
+            d="M28.87 20l-4.13-2.69c0-.18.05-.37.07-.55.83-.25 1.66-.49 2.45-.74l-2.45-.78c0-.17 0-.34-.07-.51L28.87 12l-4.87.15c-.09-.17-.17-.34-.27-.51.64-.86 1.22-1.73 1.75-2.6-.88.39-1.81.78-2.76 1.17-.11-.12-.21-.24-.32-.35L24 5.59l-3.71 2.68h-.08a11.7 11.7 0 0 0-.73-3.48 13.45 13.45 0 0 1-1 2.77 7.61 7.61 0 0 0-1.19-.25L16 3.13l-1.23 4a28.81 28.81 0 0 0-2.25-2.36 11.56 11.56 0 0 1 .82 2.82 8.47 8.47 0 0 0-1.63.71L8.05 5.59l1.59 4.26L7.22 9c.54.63 1 1.27 1.53 1.9A9.13 9.13 0 0 0 8 12.15L3.13 12l4.13 2.69c0 .18 0 .37-.07.55-.83.25-1.66.49-2.45.74l2.45.78c0 .17 0 .34.07.51L3.13 20 8 19.85c.09.17.17.34.27.51-.64.86-1.22 1.73-1.75 2.6.88-.39 1.81-.78 2.76-1.17.11.12.21.24.32.35l-1.55 4.27 3.66-2.68.08.05a11.7 11.7 0 0 0 .73 3.48 13.45 13.45 0 0 1 1-2.77 7.61 7.61 0 0 0 1.19.25L16 28.87l1.23-4a28.81 28.81 0 0 0 2.25 2.36 11.56 11.56 0 0 1-.82-2.82 8.47 8.47 0 0 0 1.63-.71L24 26.41l-1.59-4.26 2.42.81a42.45 42.45 0 0 1-1.53-1.9 9.13 9.13 0 0 0 .7-1.21z"
+            id="icon"
+          />
+          <g className="outline">
+            <path d="M23 28.87a14.78 14.78 0 0 1-14 0l-1 1a16 16 0 0 0 16 0zM3.13 23a14.78 14.78 0 0 1 0-14l-1-1a16 16 0 0 0 0 16zM28.87 9a14.78 14.78 0 0 1 0 14.08l1 1a16 16 0 0 0 0-16zM9 3.13a14.78 14.78 0 0 1 14 0l1-1a16 16 0 0 0-16 0z" />
+          </g>
+        </svg>
+        <h4>Light Mode</h4>
+      </div>
     )
 
+    // Set sun or moon icon with corresponding theme
+    let iconLabel = this.state.theme === `dark` ? moon : sun
+
     return (
-      <ThemeToggler>
-        {({ theme, toggleTheme }) => (
-          <label className="toggle">
-            <input
-              type="checkbox"
-              onChange={event => {
-                toggleTheme(this.setTheme(event))
-                this.setDisplayLabel()
-              }}
-              checked={theme === `dark`}
-            />{" "}
-            <span className={this.state.theme === `dark` ? `hide` : `show`}>
-              {sun}
-            </span>
-            <span className={this.state.theme === "dark" ? `show` : `hide`}>
-              {moon}
-            </span>
-            <p>{this.state.theme === `light` ? `Light Mode` : `Dark Mode`}</p>
-          </label>
-        )}
-      </ThemeToggler>
+      <div className="theme-toggle">
+        <ThemeToggler>
+          {({ theme, toggleTheme }) => (
+            <label>
+              <input
+                type="checkbox"
+                onClick={this.setIconLabel}
+                onChange={event => {
+                  toggleTheme(this.setTheme(event))
+                }}
+                checked={theme === `dark`}
+              />{" "}
+              <div>{iconLabel}</div>
+            </label>
+          )}
+        </ThemeToggler>
+      </div>
     )
   }
 }

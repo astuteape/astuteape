@@ -106,39 +106,6 @@ Primary site nagivation
   }
 }
 
-/* =============
-Dark mode toggle
-================ */
-.toggle {
-  color: var(--color-nav-link);
-}
-
-.toggle:hover {
-  color: var(--color-link-achov);
-}
-
-.toggle input {
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-
-.toggle ul {
-  display: block;
-}
-
-.toggle li.hide {
-  display: none;
-}
-
-.toggle li.show {
-  display: block;
-}
-
-.toggle li:hover path {
-  fill: var(--color-light);
-}
-
 /* ====================
 Social media nagivation
 ======================= */
@@ -156,8 +123,54 @@ Social media nagivation
 
 .social-nav li:hover g.outline {
   transform-origin: center;
-  animation: rotate 5s linear 0.5s infinite;
-  animation: spin 5s linear infinite;
+  animation: spin 8s linear 0.25s infinite;
+  fill: var(--color-link-achov);
+}
+
+/* =============
+Dark mode toggle
+================ */
+.theme-toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/* Remove toggle from document flow and pin
+to upper right corner
+*/
+@media screen and (min-width: 1024px) {
+  .theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    flex-direction: column;
+  }
+}
+
+.theme-toggle label {
+  color: var(--color-text-heading);
+}
+
+/* Hide checkbox */
+.theme-toggle input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.theme-toggle div {
+  fill: var(--color-icon);
+}
+
+.theme-toggle div h4 {
+  margin: 5px 0 0 0;
+}
+
+.theme-toggle div:hover g.outline {
+  transform-origin: center;
+  animation: spin 8s linear 0.25s infinite;
   fill: var(--color-link-achov);
 }
 

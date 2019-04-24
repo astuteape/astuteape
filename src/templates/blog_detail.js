@@ -24,7 +24,6 @@ export default ({ data }) => {
       <div className="post-detail main-content">
         <div className="post-title">
           <h1>{article.frontmatter.title}</h1>
-          <DarkMode />
         </div>
         <div className="post-info">
           <p>
@@ -43,6 +42,7 @@ export default ({ data }) => {
             </span>
           </p>
         </div>
+        <DarkMode />
         <div
           className="post-content"
           dangerouslySetInnerHTML={{ __html: article.html }}

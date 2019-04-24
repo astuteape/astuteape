@@ -4,6 +4,7 @@ import React from "react"
 import SEO from "../components/meta_data/seo"
 
 // Site components
+import DarkMode from "../components/theme/dark_mode"
 import HeroText from "../components/text/hero_text"
 import Image from "../components/image/image"
 import Layout from "../components/layout/index_layout"
@@ -31,6 +32,7 @@ const IndexPage = () => (
       <div>
         <PageTitle titleText="Wade Christensen" />
         <h3 className="page-title-aside">Is Astute Ape</h3>
+        <DarkMode />
       </div>
     </div>
     <div className="index main-content">
