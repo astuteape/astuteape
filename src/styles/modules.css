@@ -252,12 +252,12 @@ a.button-link:hover {
 /* =========================================
 Blog and Projects Items AKA collection-items
 ============================================ */
-.collection-item-info {
-  margin-bottom: 0.3rem;
-}
-
 .collection-item-title {
   margin-bottom: 0;
+}
+
+.collection-item-info {
+  margin-bottom: 0.3rem;
 }
 
 .collection-item-info li {
