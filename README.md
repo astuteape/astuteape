@@ -20,6 +20,7 @@ Each blog post lives in a folder matching a hyphen separated version of the post
   - author
   - date (publish date)
   - summary (280 characters or less)
+  - keywords (keywords for SEO)
 
 ```
 ---
@@ -27,6 +28,7 @@ title: "A Blog Post"
 author: "John Doe"
 date: "2019-01-22"
 summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales magna in nisi tempus sollicitudin ac vitae felis. Donec at convallis ex, eget hendrerit tellus."
+keywords: "Blog SEO Adwords Blah Ugh"
 ---
 ```
 
