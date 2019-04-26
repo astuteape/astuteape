@@ -22,7 +22,7 @@ Each blog post lives in a folder matching a hyphen separated version of the post
   - summary (280 characters or less)
   - keywords (keywords for SEO)
 
-```
+```markdown
 ---
 title: "A Blog Post"
 author: "John Doe"
@@ -49,10 +49,12 @@ Projects are portfolio items or other things I'm working on that I wish to showc
 - Project frontmatter includes:
   - title
   - summary (280 characters or less)
+  - project_type
 
-```
+```markdown
 ---
 title: "A Portfolio Project"
 summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales magna in nisi tempus sollicitudin ac vitae felis. Donec at convallis ex, eget hendrerit tellus."
+project_type: "Code"
 ---
 ```

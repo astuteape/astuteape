@@ -1,6 +1,7 @@
 ---
 title: "Rosemarie Ostler Website"
 summary: "Rosemarie Ostler is a linguist and freelance writer living in Eugene, Oregon. She wanted a simple website that would work well across modern devices."
+project_type: "Design, Code"
 ---
 
 Rosemarie Ostler is a linguist and freelance writer living in Eugene, Oregon. She wanted a simple website that would work well across modern devices.

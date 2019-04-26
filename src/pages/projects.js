@@ -39,6 +39,7 @@ const ProjectsPage = ({ data }) => {
                   {node.frontmatter.title}
                 </h3>
               </AniLink>
+              <h4>Project Type: {node.frontmatter.project_type}</h4>
               <p className="collection-item-summary">
                 {node.frontmatter.summary
                   ? node.frontmatter.summary
@@ -49,7 +50,7 @@ const ProjectsPage = ({ data }) => {
                 fade
                 to={`/projects${node.fields.slug}`}
               >
-                Read
+                View
               </AniLink>
             </div>
           </div>
@@ -74,9 +75,8 @@ export const query = graphql`
           id
           frontmatter {
             title
-            author
-            date(formatString: "MMMM DD, YYYY")
             summary
+            project_type
           }
           timeToRead
           excerpt(pruneLength: 280)
