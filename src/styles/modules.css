@@ -127,6 +127,10 @@ Social media nagivation
   fill: var(--color-icon);
 }
 
+.social-nav li a {
+  fill: var(--color-icon);
+}
+
 .social-nav li:hover g.outline {
   transform-origin: center;
   animation: spin 8s linear 0.25s infinite;
