@@ -30,7 +30,7 @@ const ProjectsPage = ({ data }) => {
         <PageTitle titleText="Projects" />
         <DarkMode />
       </div>
-      <div className="collection-page main-content">
+      <div className="collection-page main-content project">
         {allArticles.edges.map(({ node }) => (
           <div key={node.id}>
             <div className="collection-item">
