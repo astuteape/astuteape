@@ -20,18 +20,24 @@ Primary site nagivation
 .stripe-midtone {
   height: 6.25px;
   width: 100vw;
+  transition: background 1s;
+  transition-timing-function: ease-in-out;
   background: var(--color-light);
 }
 
 .stripe-light {
   height: 6.25px;
   width: 100vw;
+  transition: background 1s;
+  transition-timing-function: ease-in-out;
   background: var(--shade-light);
 }
 
 .stripe-accent {
   height: 6.25px;
   width: 100vw;
+  transition: background 1s;
+  transition-timing-function: ease-in-out;
   background: var(--color-accent);
 }
 
