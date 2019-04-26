@@ -4,6 +4,11 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 const PrimaryNav = () => {
   return (
     <nav className="navbar">
+      {/* Divs for style only. Replicate linear gradient
+      but avoids fuzzy stops in edge */}
+      <div className="stripe-accent" />
+      <div className="stripe-light" />
+      <div className="stripe-midtone" />
       <ul className="primary-nav">
         <li>
           <AniLink fade to="/" activeClassName="active">
