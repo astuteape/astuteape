@@ -50,11 +50,13 @@ Projects are portfolio items or other things I'm working on that I wish to showc
   - title
   - summary (280 characters or less)
   - project_type
+  - project_position (An integer field used to sort project display on the Projects page)
 
 ```markdown
 ---
 title: "A Portfolio Project"
 summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales magna in nisi tempus sollicitudin ac vitae felis. Donec at convallis ex, eget hendrerit tellus."
 project_type: "Code"
+project_position: 1
 ---
 ```
