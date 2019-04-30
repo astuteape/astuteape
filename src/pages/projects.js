@@ -3,6 +3,7 @@ import React from "react"
 // From Gatsby
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 // Site components
 import DarkMode from "../components/theme/dark_mode"
@@ -34,24 +35,33 @@ const ProjectsPage = ({ data }) => {
         {allArticles.edges.map(({ node }) => (
           <div key={node.id}>
             <div className="collection-item">
-              <AniLink fade to={`/projects${node.fields.slug}`}>
-                <h3 className="collection-item-title">
-                  {node.frontmatter.title}
-                </h3>
-              </AniLink>
-              <h4>Project Type: {node.frontmatter.project_type}</h4>
-              <p className="collection-item-summary">
-                {node.frontmatter.summary
-                  ? node.frontmatter.summary
-                  : node.excerpt}
-              </p>
-              <AniLink
-                className="button-link"
-                fade
-                to={`/projects${node.fields.slug}`}
-              >
-                View
-              </AniLink>
+              <div>
+                <AniLink fade to={`/projects${node.fields.slug}`}>
+                  <Img
+                    fluid={node.frontmatter.featureImage.childImageSharp.fluid}
+                  />
+                </AniLink>
+              </div>
+              <div>
+                <AniLink fade to={`/projects${node.fields.slug}`}>
+                  <h3 className="collection-item-title">
+                    {node.frontmatter.title}
+                  </h3>
+                </AniLink>
+                <h4>Project Type: {node.frontmatter.project_type}</h4>
+                <p className="collection-item-summary">
+                  {node.frontmatter.summary
+                    ? node.frontmatter.summary
+                    : node.excerpt}
+                </p>
+                <AniLink
+                  className="button-link"
+                  fade
+                  to={`/projects${node.fields.slug}`}
+                >
+                  View
+                </AniLink>
+              </div>
             </div>
           </div>
         ))}
@@ -76,6 +86,14 @@ export const query = graphql`
           frontmatter {
             title
             summary
+            featureImage {
+              relativePath
+              childImageSharp {
+                fluid(maxWidth: 490) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
             project_type
             project_position
           }
