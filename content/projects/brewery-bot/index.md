@@ -2,8 +2,8 @@
 title: "Brewery Bot"
 summary: "BreweryBot was a Facebook Messenger bot that helped people find breweries near them. I used TypeScript, Express, Wit.ai, Google Geocode API, Google Places API, and the BreweryDB API to deliver a real-time chat experience."
 featureImage: "./brewery_bot.png"
-project_type: "Code"
-project_position: 4
+projectType: "Code"
+projectPosition: 4
 ---
 
 <div>

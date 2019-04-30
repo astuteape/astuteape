@@ -48,7 +48,7 @@ const ProjectsPage = ({ data }) => {
                     {node.frontmatter.title}
                   </h3>
                 </AniLink>
-                <h4>Project Type: {node.frontmatter.project_type}</h4>
+                <h4>Project Type: {node.frontmatter.projectType}</h4>
                 <p className="collection-item-summary">
                   {node.frontmatter.summary
                     ? node.frontmatter.summary
@@ -77,7 +77,7 @@ export const query = graphql`
   query {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content/projects/" } }
-      sort: { fields: [frontmatter___project_position], order: ASC }
+      sort: { fields: [frontmatter___projectPosition], order: ASC }
     ) {
       totalCount
       edges {
@@ -94,8 +94,8 @@ export const query = graphql`
                 }
               }
             }
-            project_type
-            project_position
+            projectType
+            projectPosition
           }
           timeToRead
           excerpt(pruneLength: 280)
