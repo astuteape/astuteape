@@ -10,6 +10,7 @@ import Layout from "../components/layout/layout"
 import PageTitle from "../components/text/page_title"
 import SEO from "../components/meta_data/seo"
 import SocialNav from "../components/nav/social_nav"
+import ArticleList from "../components/text/article_list"
 
 const BlogPage = ({ data }) => {
   const allArticles = data.allMarkdownRemark
@@ -32,38 +33,44 @@ const BlogPage = ({ data }) => {
         <DarkMode />
       </div>
       <div className="collection-page main-content">
-        {allArticles.edges.map(({ node }) => (
-          <div className="collection-item" key={node.id}>
-            <AniLink fade to={`/blog${node.fields.slug}`}>
-              <h3 className="collection-item-title">
-                {node.frontmatter.title}
-              </h3>
-              <ul className="collection-item-info">
-                <li>{`${node.frontmatter.date} | `}</li>
-                <li>
-                  {/* Pluralize Read Time if > 1 miute */}
-                  {node.timeToRead > 1
-                    ? `Read Time: ${node.timeToRead} minutes`
-                    : `Read Time: ${node.timeToRead} minute`}
-                </li>
-              </ul>
-            </AniLink>
-            <p className="collection-item-summary">
-              {/* Display a summary from the post front matter. 
+        <div className="aa-articles">
+          {allArticles.edges.map(({ node }) => (
+            <div className="collection-item" key={node.id}>
+              <AniLink fade to={`/blog${node.fields.slug}`}>
+                <h3 className="collection-item-title">
+                  {node.frontmatter.title}
+                </h3>
+                <ul className="collection-item-info">
+                  <li>{`${node.frontmatter.date} | `}</li>
+                  <li>
+                    {/* Pluralize Read Time if > 1 miute */}
+                    {node.timeToRead > 1
+                      ? `Read Time: ${node.timeToRead} minutes`
+                      : `Read Time: ${node.timeToRead} minute`}
+                  </li>
+                </ul>
+              </AniLink>
+              <p className="collection-item-summary">
+                {/* Display a summary from the post front matter. 
                 If none exists, an exerpt is pulled from the post */}
-              {node.frontmatter.summary
-                ? node.frontmatter.summary
-                : node.excerpt}
-            </p>
-            <AniLink
-              className="button-link"
-              fade
-              to={`/blog${node.fields.slug}`}
-            >
-              Read
-            </AniLink>
-          </div>
-        ))}
+                {node.frontmatter.summary
+                  ? node.frontmatter.summary
+                  : node.excerpt}
+              </p>
+              <AniLink
+                className="button-link"
+                fade
+                to={`/blog${node.fields.slug}`}
+              >
+                Read
+              </AniLink>
+            </div>
+          ))}
+        </div>
+
+        <div className="external-articles">
+          <ArticleList />
+        </div>
       </div>
       <div className="collection-page main-footer">
         <SocialNav />

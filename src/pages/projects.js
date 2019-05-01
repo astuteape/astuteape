@@ -35,14 +35,14 @@ const ProjectsPage = ({ data }) => {
         {allArticles.edges.map(({ node }) => (
           <div key={node.id}>
             <div className="collection-item">
-              <div>
+              <div className="collection-item-feature-image">
                 <AniLink fade to={`/projects${node.fields.slug}`}>
                   <Img
                     fluid={node.frontmatter.featureImage.childImageSharp.fluid}
                   />
                 </AniLink>
               </div>
-              <div>
+              <div className="collection-item-info">
                 <AniLink fade to={`/projects${node.fields.slug}`}>
                   <h3 className="collection-item-title">
                     {node.frontmatter.title}

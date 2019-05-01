@@ -198,6 +198,26 @@ Blog and Projects pages media queries
     border-top: solid 1px var(--color-text);
     border-bottom: solid 1px var(--color-text);
   }
+
+  .collection-page.main-content.project > div:nth-child(3n) .collection-item {
+    flex-direction: row;
+    max-width: 1024px;
+  }
+
+  .collection-page.main-content.project
+    > div:nth-child(3n)
+    .collection-item-info {
+    min-width: 490px;
+    margin: 0 0 0 30px;
+  }
+
+  .collection-page.main-content.project .collection-item-feature-image {
+    min-width: 490px;
+  }
+
+  .collection-page.main-content.project .collection-item-info {
+    margin-top: auto;
+  }
 }
 
 /* =======================
