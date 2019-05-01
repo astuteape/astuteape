@@ -14,37 +14,34 @@ Style of the root element or main site container
   padding: 0;
 }
 
-/* Vertically center index page content */
+/* =================================
+Layout of the main content container
+==================================== */
+.layout-main-container {
+  /* Margin for navigation */
+  width: 100vw;
+  height: calc(100vh -75px);
+  margin: 0 0 75px 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+/* =========================
+Main container media queries
+============================ */
 @media screen and (min-width: 1224px) {
-  .layout-site-container.index {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+  /* Margin for navigation */
+  .layout-main-container {
+    width: calc(100vw - 200px);
     height: 100vh;
+    margin: 0 0 0 200px;
   }
 }
 
-/* ==========================================================
-Layout of the two main site sections (navigation and content)
-============================================================= */
-.layout-main-container {
-  display: grid;
-  grid-template-areas:
-    "main-header"
-    "main-content"
-    "main-footer";
-  grid-auto-rows: min-content;
-  margin: 0 0 75px 0;
-}
-
-.layout-main-container-detail {
-  display: flex;
-  flex-direction: row;
-  margin: 0 0 75px 0;
-  justify-content: center;
-}
-
+/* ======================
+Layout of site navigation
+========================= */
 /* Plugin required to prevent nav from transitioning when the page
 transitions occur. This element is the navigation section */
 .gatsby-plugin-transition-link-portal {
@@ -52,24 +49,6 @@ transitions occur. This element is the navigation section */
   height: 75px;
   top: auto !important;
   bottom: 0;
-}
-
-/* =========================
-Main container media queries
-============================ */
-
-@media screen and (min-width: 1224px) {
-  .layout-main-container {
-    margin: 40px 0 0 200px;
-  }
-
-  .layout-site-container.index .layout-main-container {
-    margin: 0 0 0 200px;
-  }
-
-  .layout-main-container-detail {
-    margin: 40px 0 0 200px;
-  }
 }
 
 /* =========================
@@ -83,148 +62,123 @@ Nav container media queries
   }
 }
 
-/* ==============================================
-Layout of the grid items in the main content area
-================================================= */
-.layout-main-container .main-header {
-  grid-area: main-header;
-}
+/* =========================================
+Layout of individual pages and page elements
+============================================ */
 
-.layout-main-container .main-content {
-  grid-area: main-content;
-}
-
-.layout-main-container .main-footer {
-  grid-area: main-footer;
-}
-
-/* ============================
-Layout grid items media queries 
-=============================== */
-@media screen and (min-width: 768px) {
-  .layout-main-container .main-header,
-  .layout-main-container .main-content,
-  .layout-main-container .main-footer {
-    padding: 25px 20px 0 20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .layout-main-container .main-header,
-  .layout-main-container .main-content,
-  .layout-main-container .main-footer {
-    padding: 40px 0 0 0;
-  }
-}
-
-/* =======
-Index page
-========== */
-.layout-main-container .index.main-header,
-.layout-main-container .index.main-content,
-.layout-main-container .index.main-footer {
+/* Index page
+============= */
+.index-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 15px;
 }
 
-.layout-main-container .index.main-header {
-  justify-content: flex-end;
-}
-
-.layout-main-container .index.main-content,
-.layout-main-container .index.main-footer {
-  justify-content: flex-start;
-}
-
-/* ====================
-Blog and Projects pages
-======================= */
-.layout-main-container .collection-page.main-header,
-.layout-main-container .collection-page.main-content,
-.layout-main-container .collection-page.main-footer {
-  display: flex;
-  flex-direction: column;
-}
-
-.layout-main-container .collection-page.main-content {
-  justify-self: center;
-}
-
-.layout-main-container .collection-item {
-  display: flex;
-  flex-direction: column;
-  max-width: 650px;
-  height: 100%;
-  padding: 15px;
-  border-bottom: solid 1px var(--color-text);
-}
-
-/* ==================================
-Blog and Projects pages media queries 
-===================================== */
-@media screen and (min-width: 1024px) {
-  /* TODO: clean selector puke */
-  .layout-main-container
-    .collection-page.main-content.project
-    .collection-item {
-    border-bottom: none;
-  }
-
-  .layout-main-container .collection-page.main-content.project {
-    display: grid;
-    grid-gap: 15px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content min-content min-content;
-    grid-auto-flow: row;
-    grid-auto-columns: min-content;
-    max-width: 1024px;
-  }
-
-  .collection-page.main-content.project .collection-item {
-    justify-self: center;
-  }
-
-  .collection-page.main-content.project > div:nth-child(3n + 1) {
-    border-right: 1px solid var(--color-text);
-  }
-
-  .collection-page.main-content.project > div:nth-child(3n) {
-    grid-column: 1 / 4;
+@media screen and (min-width: 1224px) {
+  .index-container {
     justify-self: center;
     align-self: center;
     width: 100%;
-    border-top: solid 1px var(--color-text);
-    border-bottom: solid 1px var(--color-text);
-  }
-
-  .collection-page.main-content.project > div:nth-child(3n) .collection-item {
-    flex-direction: row;
-    max-width: 1024px;
-  }
-
-  .collection-page.main-content.project
-    > div:nth-child(3n)
-    .collection-item-info {
-    min-width: 490px;
-    margin: 0 0 0 30px;
-  }
-
-  .collection-page.main-content.project .collection-item-feature-image {
-    min-width: 490px;
-  }
-
-  .collection-page.main-content.project .collection-item-info {
-    margin-top: auto;
+    min-height: 100%;
   }
 }
+
+/* Collections (writing and projects)
+===================================== */
+.projects-container,
+.writing-container {
+  display: grid;
+  grid-template-areas:
+    "main-header"
+    "main-content"
+    "main-footer";
+  margin: 1.5rem 1.5rem 0 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .projects-container,
+  .writing-container {
+    margin-top: 3rem;
+  }
+}
+
+.main-header {
+  grid-area: main-header;
+}
+
+.main-content {
+  grid-area: main-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.main-footer {
+  grid-area: main-footer;
+  margin-top: 1.5rem;
+}
+
+/* Writing Page
+=============== */
+@media screen and (min-width: 1024px) {
+  .main-content.writing {
+    justify-self: center;
+    align-items: flex-start;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .main-content.writing {
+    max-width: 1024px;
+    margin-top: 3rem;
+  }
+}
+
+.aa-articles-list {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-text);
+}
+
+.external-articles-list {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .aa-articles-list {
+    grid-area: left;
+    border-bottom: none;
+  }
+
+  .external-articles-list {
+    grid-area: right;
+    border-left: 1px solid var(--color-text);
+  }
+}
+
+/* Projects Page
+================ */
+
+/* .detail-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} */
 
 /* =======================
 Blog and post detail views
 ========================== */
-.post-detail.main-content {
+/* .post-detail.main-content {
   width: 100%;
   max-width: 650px;
   margin-top: 20px;
-}
+} */

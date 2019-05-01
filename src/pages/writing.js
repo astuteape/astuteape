@@ -29,52 +29,58 @@ const WritingPage = ({ data }) => {
           `tutorials`,
         ]}
       />
-      <div className="collection-page">
-        <PageTitle titleText="Writing" />
-        <DarkMode />
-      </div>
-      <div className="collection-page main-content">
-        <div className="aa-articles">
-          {allArticles.edges.map(({ node }) => (
-            <div className="collection-item" key={node.id}>
-              <AniLink fade to={`/writing${node.fields.slug}`}>
-                <h3 className="collection-item-title">
-                  {node.frontmatter.title}
-                </h3>
-                <ul className="collection-item-info">
-                  <li>{`${node.frontmatter.date} | `}</li>
-                  <li>
-                    {/* Pluralize Read Time if > 1 miute */}
-                    {node.timeToRead > 1
-                      ? `Read Time: ${node.timeToRead} minutes`
-                      : `Read Time: ${node.timeToRead} minute`}
-                  </li>
-                </ul>
-              </AniLink>
-              <p className="collection-item-summary">
-                {/* Display a summary from the post front matter. 
-                If none exists, an exerpt is pulled from the post */}
-                {node.frontmatter.summary
-                  ? node.frontmatter.summary
-                  : node.excerpt}
-              </p>
-              <AniLink
-                className="button-link"
-                fade
-                to={`/writing${node.fields.slug}`}
-              >
-                Read
-              </AniLink>
-            </div>
-          ))}
-        </div>
+      {/* Apply content layout rules to outermost div *-container */}
+      <div className="writing-container">
+        <section className="main-header">
+          <PageTitle titleText="Writing" />
+          <DarkMode />
+        </section>
 
-        <div className="external-articles">
-          <ArticleList />
-        </div>
-      </div>
-      <div className="collection-page main-footer">
-        <SocialNav />
+        <section className="main-content writing">
+          {/* Left column */}
+          <div className="aa-articles-list">
+            {allArticles.edges.map(({ node }) => (
+              <div className="collection-item" key={node.id}>
+                <AniLink fade to={`/writing${node.fields.slug}`}>
+                  <h3 className="collection-item-title">
+                    {node.frontmatter.title}
+                  </h3>
+                  <ul className="collection-item-info">
+                    <li>{`${node.frontmatter.date} | `}</li>
+                    <li>
+                      {/* Pluralize Read Time if > 1 miute */}
+                      {node.timeToRead > 1
+                        ? `Read Time: ${node.timeToRead} minutes`
+                        : `Read Time: ${node.timeToRead} minute`}
+                    </li>
+                  </ul>
+                </AniLink>
+                <p className="collection-item-summary">
+                  {/* Display a summary from the post front matter. 
+                If none exists, an exerpt is pulled from the post */}
+                  {node.frontmatter.summary
+                    ? node.frontmatter.summary
+                    : node.excerpt}
+                </p>
+                <AniLink
+                  className="button-link"
+                  fade
+                  to={`/writing${node.fields.slug}`}
+                >
+                  Read
+                </AniLink>
+              </div>
+            ))}
+          </div>
+          {/* Right column */}
+          <div className="external-articles-list">
+            <h2>Articles for Other Publications</h2>
+            <ArticleList />
+          </div>
+        </section>
+        <section className="main-footer">
+          <SocialNav />
+        </section>
       </div>
     </Layout>
   )

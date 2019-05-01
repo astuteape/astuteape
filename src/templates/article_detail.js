@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 
 // Site components
 import DarkMode from "../components/theme/dark_mode"
-import Layout from "../components/layout/detail_layout"
+import Layout from "../components/layout/layout"
 import SEO from "../components/meta_data/seo"
 
 export default ({ data }) => {
@@ -21,32 +21,35 @@ export default ({ data }) => {
           `${article.frontmatter.keywords}`,
         ]}
       />
-      <div className="post-detail main-content">
-        <div className="post-title">
-          <h1>{article.frontmatter.title}</h1>
+      {/* Apply content layout rules to outermost div *-container */}
+      <div className="detail-container">
+        <div className="post-detail main-content">
+          <div className="post-title">
+            <h1>{article.frontmatter.title}</h1>
+          </div>
+          <div className="post-info">
+            <p>
+              <strong>{`By ${article.frontmatter.author}`}</strong>
+            </p>{" "}
+            <p>
+              <span>
+                <strong>{`Published ${article.frontmatter.date} |`}</strong>
+              </span>{" "}
+              <span>
+                <strong>
+                  {article.timeToRead > 1
+                    ? `Read Time: ${article.timeToRead} minutes`
+                    : `Read Time: ${article.timeToRead} minute`}
+                </strong>
+              </span>
+            </p>
+          </div>
+          <DarkMode />
+          <div
+            className="post-content"
+            dangerouslySetInnerHTML={{ __html: article.html }}
+          />
         </div>
-        <div className="post-info">
-          <p>
-            <strong>{`By ${article.frontmatter.author}`}</strong>
-          </p>{" "}
-          <p>
-            <span>
-              <strong>{`Published ${article.frontmatter.date} |`}</strong>
-            </span>{" "}
-            <span>
-              <strong>
-                {article.timeToRead > 1
-                  ? `Read Time: ${article.timeToRead} minutes`
-                  : `Read Time: ${article.timeToRead} minute`}
-              </strong>
-            </span>
-          </p>
-        </div>
-        <DarkMode />
-        <div
-          className="post-content"
-          dangerouslySetInnerHTML={{ __html: article.html }}
-        />
       </div>
     </Layout>
   )

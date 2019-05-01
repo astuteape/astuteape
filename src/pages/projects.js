@@ -27,47 +27,52 @@ const ProjectsPage = ({ data }) => {
           "work",
         ]}
       />
-      <div className="collection-page">
-        <PageTitle titleText="Projects" />
-        <DarkMode />
-      </div>
-      <div className="collection-page main-content project">
-        {allArticles.edges.map(({ node }) => (
-          <div key={node.id}>
-            <div className="collection-item">
-              <div className="collection-item-feature-image">
-                <AniLink fade to={`/projects${node.fields.slug}`}>
-                  <Img
-                    fluid={node.frontmatter.featureImage.childImageSharp.fluid}
-                  />
-                </AniLink>
-              </div>
-              <div className="collection-item-info">
-                <AniLink fade to={`/projects${node.fields.slug}`}>
-                  <h3 className="collection-item-title">
-                    {node.frontmatter.title}
-                  </h3>
-                </AniLink>
-                <h4>Project Type: {node.frontmatter.projectType}</h4>
-                <p className="collection-item-summary">
-                  {node.frontmatter.summary
-                    ? node.frontmatter.summary
-                    : node.excerpt}
-                </p>
-                <AniLink
-                  className="button-link"
-                  fade
-                  to={`/projects${node.fields.slug}`}
-                >
-                  View
-                </AniLink>
+      {/* Apply content layout rules to outermost div *-container */}
+      <div className="projects-container">
+        <div className="collection-page">
+          <PageTitle titleText="Projects" />
+          <DarkMode />
+        </div>
+        <div className="collection-page main-content project">
+          {allArticles.edges.map(({ node }) => (
+            <div key={node.id}>
+              <div className="collection-item">
+                <div className="collection-item-feature-image">
+                  <AniLink fade to={`/projects${node.fields.slug}`}>
+                    <Img
+                      fluid={
+                        node.frontmatter.featureImage.childImageSharp.fluid
+                      }
+                    />
+                  </AniLink>
+                </div>
+                <div className="collection-item-info">
+                  <AniLink fade to={`/projects${node.fields.slug}`}>
+                    <h3 className="collection-item-title">
+                      {node.frontmatter.title}
+                    </h3>
+                  </AniLink>
+                  <h4>Project Type: {node.frontmatter.projectType}</h4>
+                  <p className="collection-item-summary">
+                    {node.frontmatter.summary
+                      ? node.frontmatter.summary
+                      : node.excerpt}
+                  </p>
+                  <AniLink
+                    className="button-link"
+                    fade
+                    to={`/projects${node.fields.slug}`}
+                  >
+                    View
+                  </AniLink>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-      <div className="collection-page main-footer">
-        <SocialNav />
+          ))}
+        </div>
+        <div className="collection-page main-footer">
+          <SocialNav />
+        </div>
       </div>
     </Layout>
   )

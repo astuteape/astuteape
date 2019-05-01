@@ -14,9 +14,7 @@ const SiteTitle = () => (
       }
     `}
     render={data => (
-      <header>
-        <h1 className="site-title">{data.site.siteMetadata.title}</h1>
-      </header>
+      <h1 className="site-title">{data.site.siteMetadata.title}</h1>
     )}
   />
 )
