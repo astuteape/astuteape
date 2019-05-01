@@ -31,13 +31,13 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `
   ).then(result => {
-    const blogPath = new RegExp("\\/content\\/blog\\/")
+    const writingPath = new RegExp("\\/content\\/writing\\/")
     const projectsPath = new RegExp("\\/content\\/projects\\/")
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      if (blogPath.test(node.fileAbsolutePath)) {
+      if (writingPath.test(node.fileAbsolutePath)) {
         createPage({
-          path: `/blog${node.fields.slug}`,
-          component: path.resolve(`./src/templates/blog_detail.js`),
+          path: `/writing${node.fields.slug}`,
+          component: path.resolve(`./src/templates/article_detail.js`),
           context: {
             slug: node.fields.slug,
           },

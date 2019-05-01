@@ -12,16 +12,17 @@ import SEO from "../components/meta_data/seo"
 import SocialNav from "../components/nav/social_nav"
 import ArticleList from "../components/text/article_list"
 
-const BlogPage = ({ data }) => {
+const WritingPage = ({ data }) => {
   const allArticles = data.allMarkdownRemark
 
   return (
     <Layout>
       <SEO
-        title="Blog"
+        title="Writing"
         keywords={[
           `astute ape`,
           `wade christensen`,
+          `writing`,
           `blog`,
           `articles`,
           `writing`,
@@ -29,14 +30,14 @@ const BlogPage = ({ data }) => {
         ]}
       />
       <div className="collection-page">
-        <PageTitle titleText="Blog" />
+        <PageTitle titleText="Writing" />
         <DarkMode />
       </div>
       <div className="collection-page main-content">
         <div className="aa-articles">
           {allArticles.edges.map(({ node }) => (
             <div className="collection-item" key={node.id}>
-              <AniLink fade to={`/blog${node.fields.slug}`}>
+              <AniLink fade to={`/writing${node.fields.slug}`}>
                 <h3 className="collection-item-title">
                   {node.frontmatter.title}
                 </h3>
@@ -60,7 +61,7 @@ const BlogPage = ({ data }) => {
               <AniLink
                 className="button-link"
                 fade
-                to={`/blog${node.fields.slug}`}
+                to={`/writing${node.fields.slug}`}
               >
                 Read
               </AniLink>
@@ -79,11 +80,11 @@ const BlogPage = ({ data }) => {
   )
 }
 
-// All posts generated from Markdown and filtered by those in the /content/blog directory
+// All posts generated from Markdown and filtered by those in the /content/writing directory
 export const query = graphql`
   query {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+      filter: { fileAbsolutePath: { regex: "/content/writing/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       totalCount
@@ -106,4 +107,4 @@ export const query = graphql`
     }
   }
 `
-export default BlogPage
+export default WritingPage

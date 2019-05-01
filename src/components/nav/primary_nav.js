@@ -18,11 +18,11 @@ const PrimaryNav = () => {
         <li>
           <AniLink
             fade
-            to="/blog"
+            to="/writing"
             activeClassName="active"
             partiallyActive={true}
           >
-            Blog
+            Writing
           </AniLink>
         </li>
         <li>
