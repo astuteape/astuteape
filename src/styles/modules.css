@@ -197,7 +197,7 @@ to upper right corner
 
 .theme-toggle div:hover g.icon {
   transform-origin: 50% 50%;
-  animation: spin 3s linear 0.25s infinite;
+  animation: spin 3s ease-in-out 0.25s infinite;
   fill: var(--color-icon-achov);
 }
 
@@ -211,6 +211,7 @@ Page titles
   text-transform: uppercase;
   color: var(--color-page-bg);
   text-shadow: 3px 3px 0 var(--color-text-heading);
+  transition: all 0.5s linear;
 }
 
 .page-title-aside {
@@ -255,18 +256,34 @@ Hero Text
 /* ====
 Buttons
 ======= */
-a.button-link {
-  width: max-content;
-  padding: 0.3rem 0.5rem;
-  border-radius: 0.2rem;
-  font-family: "Teko", sans-serif;
-  font-size: 1.1rem;
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100px;
+  height: 30px;
+  margin-left: 0;
+  padding: 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 0.15rem;
+  box-sizing: border-box;
+  transition: margin-left 0.5s ease-in-out, border 0.5s ease-in-out;
   background: var(--color-icon);
-  color: var(--color-page-bg);
 }
 
-a.button-link:hover {
+.button-container:hover {
+  margin-left: 0.25rem;
+  border-bottom: 3px solid var(--color-link-achov);
   background: var(--color-icon-achov);
+}
+
+.button-text {
+  margin: auto 1rem;
+  font-family: "Teko", sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: var(--color-page-bg);
 }
 
 /* =========================================

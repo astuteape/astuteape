@@ -47,6 +47,15 @@ body.dark {
 /* =======
 Animations
 ========== */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes spin {
   0% {
     transform: scale(1, 1);
@@ -56,15 +65,6 @@ Animations
   }
   100% {
     transform: scale(1, 1);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 

@@ -58,12 +58,10 @@ const ProjectsPage = ({ data }) => {
                     ? node.frontmatter.summary
                     : node.excerpt}
                 </p>
-                <AniLink
-                  className="button-link"
-                  fade
-                  to={`/projects${node.fields.slug}`}
-                >
-                  View
+                <AniLink fade to={`/writing${node.fields.slug}`}>
+                  <div className="button-container">
+                    <p className="button-text">View =></p>
+                  </div>
                 </AniLink>
               </div>
             </div>
