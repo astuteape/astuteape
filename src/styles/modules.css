@@ -259,15 +259,15 @@ Buttons
 .button-container {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
   width: 100px;
   height: 30px;
   margin-left: 0;
   padding: 0;
+  border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   border-radius: 0.15rem;
-  box-sizing: border-box;
   transition: margin-left 0.5s ease-in-out, border 0.5s ease-in-out;
   background: var(--color-icon);
 }
