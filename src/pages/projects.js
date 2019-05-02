@@ -29,50 +29,49 @@ const ProjectsPage = ({ data }) => {
       />
       {/* Apply content layout rules to outermost div *-container */}
       <div className="projects-container">
-        <div className="collection-page">
+        <section className="main-header">
           <PageTitle titleText="Projects" />
           <DarkMode />
-        </div>
-        <div className="collection-page main-content project">
+        </section>
+
+        <section className="main-content projects">
           {allArticles.edges.map(({ node }) => (
             <div key={node.id}>
               <div className="collection-item">
-                <div className="collection-item-feature-image">
-                  <AniLink fade to={`/projects${node.fields.slug}`}>
+                <AniLink fade to={`/projects${node.fields.slug}`}>
+                  <div className="feature-image">
                     <Img
                       fluid={
                         node.frontmatter.featureImage.childImageSharp.fluid
                       }
                     />
-                  </AniLink>
-                </div>
-                <div className="collection-item-info">
-                  <AniLink fade to={`/projects${node.fields.slug}`}>
+                  </div>
+                  <div className="collection-item-info">
                     <h3 className="collection-item-title">
                       {node.frontmatter.title}
                     </h3>
-                  </AniLink>
-                  <h4>Project Type: {node.frontmatter.projectType}</h4>
-                  <p className="collection-item-summary">
-                    {node.frontmatter.summary
-                      ? node.frontmatter.summary
-                      : node.excerpt}
-                  </p>
-                  <AniLink
-                    className="button-link"
-                    fade
-                    to={`/projects${node.fields.slug}`}
-                  >
-                    View
-                  </AniLink>
-                </div>
+                    <h4>Project Type: {node.frontmatter.projectType}</h4>
+                  </div>
+                </AniLink>
+                <p className="collection-item-summary">
+                  {node.frontmatter.summary
+                    ? node.frontmatter.summary
+                    : node.excerpt}
+                </p>
+                <AniLink
+                  className="button-link"
+                  fade
+                  to={`/projects${node.fields.slug}`}
+                >
+                  View
+                </AniLink>
               </div>
             </div>
           ))}
-        </div>
-        <div className="collection-page main-footer">
+        </section>
+        <section className="main-footer">
           <SocialNav />
-        </div>
+        </section>
       </div>
     </Layout>
   )
