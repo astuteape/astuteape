@@ -19,9 +19,6 @@ const typography = new Typography({
     ".primary-nav li > a": {
       fontFamily: ["Teko", "Arial", "Helvetica", "sans-serif"].join(","),
     },
-    ".page-title": {
-      fontFamily: "Arial",
-    },
   }),
 })
 

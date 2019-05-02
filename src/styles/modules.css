@@ -206,7 +206,7 @@ Page titles
 =========== */
 .page-title {
   margin-bottom: 0;
-  font-size: 1.6rem;
+  font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
   color: var(--color-page-bg);
@@ -214,22 +214,33 @@ Page titles
   transition: all 0.5s linear;
 }
 
+@media screen and (min-width: 768px) {
+  .page-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .page-title {
+    font-size: 5rem;
+  }
+}
+
+/* Index page
+============= */
 .page-title-aside {
   font-size: 1.25rem;
   text-align: right;
 }
 
 @media screen and (min-width: 768px) {
-  .page-title {
-    font-size: 3.5rem;
-  }
-
   .page-title-aside {
     font-size: 1.6rem;
-    text-align: right;
   }
 }
 
+/* Index page image
+=================== */
 .index-image {
   width: 300px !important;
   margin-bottom: 20px;
