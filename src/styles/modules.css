@@ -139,8 +139,12 @@ Social media nagivation
 
 .social-nav li:hover g.outline {
   transform-origin: center;
-  animation: spin 8s linear 0.25s infinite;
+  animation: rotate 8s linear 0.25s infinite;
   fill: var(--color-link-achov);
+}
+
+.social-nav li:hover g.icon {
+  fill: var(--color-icon-achov);
 }
 
 /* =============
@@ -187,8 +191,14 @@ to upper right corner
 
 .theme-toggle div:hover g.outline {
   transform-origin: center;
-  animation: spin 8s linear 0.25s infinite;
+  animation: rotate 8s linear 0.25s infinite;
   fill: var(--color-link-achov);
+}
+
+.theme-toggle div:hover g.icon {
+  transform-origin: 50% 50%;
+  animation: spin 3s linear 0.25s infinite;
+  fill: var(--color-icon-achov);
 }
 
 /* ========
