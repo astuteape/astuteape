@@ -50,6 +50,48 @@ Primary site nagivation
   width: 100vw;
 }
 
+@media (min-width: 1224px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+    height: 100vh;
+    background: var(--color-nav-bg);
+  }
+
+  .stripe-midtone {
+    order: 2;
+    height: 100vh;
+    width: 16.66px;
+    background: var(--color-light);
+  }
+
+  .stripe-light {
+    order: 3;
+    height: 100vh;
+    width: 16.66px;
+    background: var(--shade-light);
+  }
+
+  .stripe-accent {
+    order: 4;
+    height: 100vh;
+    width: 16.66px;
+    background: var(--color-accent);
+  }
+
+  .primary-nav {
+    order: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 33%;
+    max-height: 200px;
+    width: 150px;
+  }
+}
+
 .primary-nav > li > a {
   padding: 10px;
   font-size: 1.3rem;
@@ -73,48 +115,6 @@ Primary site nagivation
 @media screen and (min-width: 768px) {
   .primary-nav > li > a {
     font-size: 1.75rem;
-  }
-}
-
-@media (min-width: 1224px) {
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 200px;
-    height: 100vh;
-    background: var(--color-nav-bg);
-  }
-
-  .primary-nav {
-    order: 1;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 33%;
-    max-height: 200px;
-    width: 150px;
-  }
-
-  .stripe-midtone {
-    order: 2;
-    height: 100vh;
-    width: 16.66px;
-    background: var(--color-light);
-  }
-
-  .stripe-light {
-    order: 3;
-    height: 100vh;
-    width: 16.66px;
-    background: var(--shade-light);
-  }
-
-  .stripe-accent {
-    order: 4;
-    height: 100vh;
-    width: 16.66px;
-    background: var(--color-accent);
   }
 }
 
@@ -148,8 +148,11 @@ Dark mode toggle
 ================ */
 .theme-toggle {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
+  position: absolute;
+  top: 5px;
+  right: 5px;
   text-align: center;
 }
 
@@ -158,10 +161,8 @@ to upper right corner
 */
 @media screen and (min-width: 1024px) {
   .theme-toggle {
-    position: absolute;
     top: 20px;
     right: 40px;
-    flex-direction: column;
   }
 }
 

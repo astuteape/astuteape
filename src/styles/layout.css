@@ -73,6 +73,14 @@ Layout of individual pages and page elements
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* Clear top to make room for darkmode toggle */
+  margin: 4.25rem 1.5rem 0 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .index-container {
+    margin: 3rem 0 0 0;
+  }
 }
 
 @media screen and (min-width: 1224px) {
@@ -93,7 +101,15 @@ Layout of individual pages and page elements
     "main-header"
     "main-content"
     "main-footer";
-  margin: 1.5rem 1.5rem 0 1.5rem;
+  /* Clear top to make room for darkmode toggle */
+  margin: 4.25rem 1.5rem 0 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .projects-container,
+  .writing-container {
+    margin: 3rem 0 0 0;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -193,7 +209,8 @@ Layout of individual pages and page elements
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1.5rem 1.5rem 0 1.5rem;
+  /* Clear top to make room for darkmode toggle */
+  margin: 4.25rem 1.5rem 0 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
