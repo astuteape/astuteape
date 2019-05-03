@@ -36,34 +36,34 @@ const ProjectsPage = ({ data }) => {
 
         <section className="main-content projects">
           {allArticles.edges.map(({ node }) => (
-            <div key={node.id}>
-              <div className="collection-item">
+            <div className="collection-item" key={node.id}>
+              <div className="feature-image">
                 <AniLink fade to={`/projects${node.fields.slug}`}>
-                  <div className="feature-image">
-                    <Img
-                      fluid={
-                        node.frontmatter.featureImage.childImageSharp.fluid
-                      }
-                    />
-                  </div>
-                  <div className="collection-item-info">
-                    <h3 className="collection-item-title">
-                      {node.frontmatter.title}
-                    </h3>
-                    <h4>Project Type: {node.frontmatter.projectType}</h4>
-                  </div>
+                  <Img
+                    fluid={node.frontmatter.featureImage.childImageSharp.fluid}
+                  />
+                </AniLink>
+              </div>
+              <div className="collection-item-info">
+                <AniLink fade to={`/projects${node.fields.slug}`}>
+                  <h3 className="collection-item-title">
+                    {node.frontmatter.title}
+                  </h3>
+                  <h4 className="collection-item-type">
+                    Project Type: {node.frontmatter.projectType}
+                  </h4>
                 </AniLink>
                 <p className="collection-item-summary">
                   {node.frontmatter.summary
                     ? node.frontmatter.summary
                     : node.excerpt}
                 </p>
-                <AniLink fade to={`/projects${node.fields.slug}`}>
-                  <div className="button-container">
-                    <p className="button-text">View =></p>
-                  </div>
-                </AniLink>
               </div>
+              <AniLink fade to={`/projects${node.fields.slug}`}>
+                <div className="button-container">
+                  <p className="button-text">View =></p>
+                </div>
+              </AniLink>
             </div>
           ))}
         </section>

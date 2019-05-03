@@ -108,7 +108,7 @@ Layout of individual pages and page elements
 @media screen and (min-width: 768px) {
   .projects-container,
   .writing-container {
-    margin: 3rem 0 0 0;
+    margin: 3rem;
   }
 }
 
@@ -159,11 +159,35 @@ Layout of individual pages and page elements
   margin-top: 1.5rem;
 }
 
+.collection-item-title,
+.collection-item-info,
+.collection-item-type,
+.collect-item-summary {
+  margin-bottom: 0.15rem;
+}
+
+.collection-item-info li {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+}
+
 /* Writing Page
 =============== */
-@media screen and (min-width: 1024px) {
+.aa-articles-list .collection-item:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .aa-articles-list .collection-item:not(:first-child) {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .main-content.writing {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 0.75fr;
   }
 }
 
@@ -194,12 +218,26 @@ Layout of individual pages and page elements
 
 /* Projects Page
 ================ */
+.main-content.projects .collection-item:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-content.projects .collection-item:not(:first-child) {
+    margin-top: 2rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .main-content.projects {
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 1.25rem;
     grid-row-gap: 1rem;
   }
+}
+
+.feature-image {
+  margin-bottom: 1rem;
 }
 
 /* Detail Pages

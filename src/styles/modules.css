@@ -297,41 +297,6 @@ Buttons
   color: var(--color-page-bg);
 }
 
-/* =========================================
-Blog and Projects Items AKA collection-items
-============================================ */
-@media screen and (min-width: 768px) {
-  .aa-articles-list .collection-item:not(:first-child) {
-    margin-top: 3rem;
-  }
-}
-
-.collection-item-title {
-  margin-bottom: 0;
-}
-
-.collection-item-info {
-  margin-bottom: 0.3rem;
-}
-
-.collection-item-info li {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 0 3px;
-  color: var(--color-text-heading);
-}
-
-.collection-item-summary {
-  /* margin: 0 0 0.75rem 0; */
-}
-
-.collection-item a.button-link {
-  justify-self: flex-end;
-  align-self: flex-start;
-  margin-top: auto;
-}
-
 /* =======================
 Blog and post detail views
 ========================== */
