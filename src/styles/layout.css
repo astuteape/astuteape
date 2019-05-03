@@ -194,8 +194,15 @@ Layout of individual pages and page elements
 .aa-articles-list {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   border-bottom: 1px solid var(--color-text);
+}
+
+@media screen and (min-width: 768px) {
+  .aa-articles-list {
+    grid-area: left;
+    border-bottom: none;
+  }
 }
 
 .external-articles-list {
@@ -205,22 +212,12 @@ Layout of individual pages and page elements
 }
 
 @media screen and (min-width: 768px) {
-  .aa-articles-list {
-    grid-area: left;
-    border-bottom: none;
-  }
-
-  .external-articles-list {
-    grid-area: right;
-    border-left: 1px solid var(--color-text);
-  }
-}
-
-@media screen and (min-width: 768px) {
   .external-articles-list {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    grid-area: right;
+    border-left: 1px solid var(--color-text);
+    padding: 0 1rem 1rem 1rem;
   }
 }
 

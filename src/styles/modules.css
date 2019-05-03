@@ -300,54 +300,35 @@ Buttons
 /* =======================
 Blog and post detail views
 ========================== */
-.post-title {
+.detail-title {
+  text-align: center;
   margin: auto auto 0 auto;
 }
 
-.post-title {
+.detail-info {
   text-align: center;
-  padding: 10px 10px 0 10px;
+  margin-top: 0.5rem;
+  color: var(--color-text);
 }
 
-.post-info {
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 0 10px 10px 10px;
+.detail-info li {
+  display: inline-block;
 }
 
-.post-info :first-child p {
-  margin: 0;
-  padding: 0 10px 20px 10px;
-}
-
-.post-info :not(:first-child) {
-  padding: 0;
-  margin: 0;
-  font-size: 0.8rem;
-}
-
-.post-content {
-  padding: 10px;
-}
-
-.post-content p {
+.detail-content p {
   font-size: 1.125rem;
   line-height: 1.2rem;
   text-align: left;
 }
 
-.post-content img,
-.post-content iframe {
+.detail-content img,
+.detail-content iframe {
   display: block;
   margin: 0 auto 1rem auto;
   text-align: center;
 }
 
-.post-content pre {
-  padding: 10px;
-}
-
-.post-content code.language-text {
+.detail-content code.language-text {
   padding: 5px 10px;
 }
 
