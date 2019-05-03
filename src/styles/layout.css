@@ -216,6 +216,29 @@ Layout of individual pages and page elements
   }
 }
 
+@media screen and (min-width: 768px) {
+  .external-articles-list {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .external-articles-list {
+    grid-area: right;
+    border-left: 1px solid var(--color-text);
+  }
+}
+
+.external-articles-list li {
+  margin-bottom: 1rem;
+}
+
+.external-articles-list li * {
+  margin: 0.1rem auto;
+}
+
 /* Projects Page
 ================ */
 .main-content.projects .collection-item:not(:first-child) {
