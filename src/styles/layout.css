@@ -80,6 +80,7 @@ Layout of individual pages and page elements
 @media screen and (min-width: 768px) {
   .index-container {
     margin: 3rem 0 0 0;
+    height: calc(100vh - 3rem);
   }
 }
 
@@ -88,7 +89,6 @@ Layout of individual pages and page elements
     justify-self: center;
     align-self: center;
     width: 100%;
-    min-height: 100%;
   }
 }
 
