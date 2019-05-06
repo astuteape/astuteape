@@ -245,6 +245,34 @@ Page titles
   margin-bottom: 1.5rem;
 }
 
+.white {
+  fill: #fff;
+}
+
+.ape-illustration .color-dark path {
+  fill: var(--color-dark);
+}
+
+body.dark .ape-illustration .color-dark path {
+  fill: #2b3b75;
+}
+
+.ape-illustration .color-midtone path {
+  fill: var(--color-midtone);
+}
+
+.ape-illustration .color-light path {
+  fill: var(--color-light);
+}
+
+.ape-illustration .color-accent path {
+  fill: var(--color-accent);
+}
+
+.ape-illustration .color-accent-two path {
+  fill: var(--color-accent-two);
+}
+
 /* =======
 Hero Text 
 ========= */

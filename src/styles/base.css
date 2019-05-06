@@ -9,6 +9,7 @@ body {
   --color-midtone: #2b3b75;
   --color-dark: #1c1f2a;
   --color-accent: #e35205;
+  --color-accent-two: #d4c363;
   --color-page-bg: var(--shade-light);
   --color-nav-bg: var(--color-dark);
   --color-nav-link: var(--shade-light);
@@ -32,6 +33,7 @@ body.dark {
   --color-midtone: #707eb1;
   --color-dark: #262933;
   --color-accent: #d46529;
+  --color-accent-two: #dfe305;
   --color-page-bg: var(--color-dark);
   --color-nav-bg: var(--color-dark);
   --color-nav-link: var(--shade-light);
