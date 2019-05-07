@@ -245,6 +245,11 @@ Page titles
   margin-bottom: 1.5rem;
 }
 
+.ape-illustration * {
+  transform-origin: 50% 50%;
+  transition: fill 2s ease-in-out;
+}
+
 .white {
   fill: #fff;
 }
@@ -253,8 +258,33 @@ Page titles
   fill: var(--color-dark);
 }
 
+.ape-illustration:hover .color-light g path {
+  fill: var(--color-accent-two);
+  transition: all 1s ease-in-out;
+}
+
+.ape-illustration:hover .color-midtone g path {
+  fill: var(--color-accent);
+  transition: all 1s ease-in-out;
+}
+
+.ape-illustration:hover .color-accent-two g path {
+  fill: var(--color-dark);
+  transition: all 1s ease-in-out;
+}
+
+.ape-illustration:hover .color-accent g path {
+  fill: var(--color-midtone);
+  transition: all 1s ease-in-out;
+}
+
 body.dark .ape-illustration .color-dark path {
   fill: #2b3b75;
+}
+
+body.dark .ape-illustration:hover .color-accent-two g path {
+  fill: #2b3b75;
+  transition: all 1s ease-in-out;
 }
 
 .ape-illustration .color-midtone path {
