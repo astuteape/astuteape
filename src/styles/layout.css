@@ -293,6 +293,11 @@ Layout of individual pages and page elements
   margin-top: 1.5rem;
 }
 
+.detail-container img,
+.detail-container iframe {
+  max-width: calc(100vw - 3rem);
+}
+
 .detail-footer {
   margin-top: 1.5rem;
 }
