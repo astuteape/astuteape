@@ -19,6 +19,14 @@ body {
   --color-link-achov: var(--color-accent);
   --color-icon: var(--color-dark);
   --color-icon-achov: var(--color-light);
+  /* Ape illustration */
+  --color-ape-white: rgb(241, 232, 228);
+  --color-ape-light: rgb(33, 197, 202);
+  --color-ape-midtone: rgb(82, 110, 199);
+  --color-ape-dark: rgb(40, 0, 78);
+  --color-ape-accent: rgb(238, 85, 14);
+  --color-ape-accent-two: rgb(233, 218, 87);
+
   transition: all 1s;
 }
 
@@ -49,6 +57,15 @@ body.dark {
 /* =======
 Animations
 ========== */
+@keyframes fill-color-dark {
+  0% {
+    fill: var(--color-ape-dark);
+  }
+  100% {
+    fill: var(--color-ape-light);
+  }
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
