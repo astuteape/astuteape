@@ -255,8 +255,10 @@ Page titles
   fill: var(--color-ape-white);
 }
 
-.ape-illustration .color-light path {
-  fill: var(--color-page-bg);
+.ape-illustration .color-light path,
+.ape-illustration .color-accent path,
+.ape-illustration .color-accent-two path {
+  fill: transparent;
 }
 .ape-illustration .color-midtone path {
   fill: var(--color-ape-midtone);
@@ -264,14 +266,6 @@ Page titles
 
 .ape-illustration .color-dark path {
   fill: var(--color-ape-dark);
-}
-
-.ape-illustration .color-accent path {
-  fill: var(--color-page-bg);
-}
-
-.ape-illustration .color-accent-two path {
-  fill: var(--color-page-bg);
 }
 
 /* Ape dark mode animation */
@@ -290,7 +284,7 @@ body.dark .ape-illustration .color-dark g path {
 }
 
 body.dark .ape-illustration .color-midtone g path {
-  fill: var(--color-page-bg);
+  fill: transparent;
 }
 
 body.dark .ape-illustration .color-accent g path {
