@@ -1,9 +1,9 @@
 ---
 title: "Brewery Bot"
-summary: "BreweryBot was a Facebook Messenger bot that helped people find breweries near them. I used TypeScript, Express, Wit.ai, Google Geocode API, Google Places API, and the BreweryDB API to deliver a real-time chat experience."
-featureImage: "./brewery_bot.png"
+summary: "I live in Portland, Oregon, which is arguably the best craft beer city in the United States. I created a chatbot to help people discover the beer scene around them, whether in Portland or anywhere else."
+featureImage: "./brewery_bot_fi.png"
 projectType: "Code"
-projectPosition: 4
+projectPosition: 3
 ---
 
 <div>
@@ -12,4 +12,6 @@ projectPosition: 4
 
 BreweryBot was a Facebook Messenger bot that helped people find breweries near them.
 
-I used TypeScript, Express, Wit.ai, Google Geocode API, Google Places API, and the BreweryDB API to deliver a real-time chat experience. The asynchronous nature of the app required a deep dive into JavaScript promises and async programming.
+I used TypeScript, Express, Wit.ai, Google Geocode API, Google Places API, and the BreweryDB API to deliver a real-time chat experience. The asynchronous nature of the app required a dive into JavaScript promises and asynchronous programming.
+
+Due to my general unease with Facebook and its data practices, the bot is no longer live. However, the video above shows it in action, and you can [view the code on GitHub](https://github.com/astuteape/brewery-bot)
