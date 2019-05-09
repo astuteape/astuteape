@@ -18,7 +18,7 @@ const ProjectsPage = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="projects"
+        title="Projects"
         keywords={[
           "astute ape",
           "wade christensen",
