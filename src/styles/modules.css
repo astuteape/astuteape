@@ -246,56 +246,32 @@ Page titles
   margin-bottom: 1.5rem;
 }
 
-.ape-illustration * {
-  transform-origin: 50% 50%;
-  transition: fill 2s ease-in-out;
+/* Ape dark mode transition */
+.ape-illustration #color-light,
+.ape-illustration #color-accent,
+.ape-illustration #color-accent-two {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
 }
 
-/* Ape svg fill colors */
-.ape-illustration .white path {
-  fill: var(--color-ape-white);
-}
-
-.ape-illustration .color-light path,
-.ape-illustration .color-accent path,
-.ape-illustration .color-accent-two path {
-  fill: transparent;
-}
-.ape-illustration .color-midtone path {
-  fill: var(--color-ape-midtone);
-}
-
-.ape-illustration .color-dark path {
-  fill: var(--color-ape-dark);
+.ape-illustration #color-midtone,
+.ape-illustration #color-dark {
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
 }
 
 /* Ape dark mode animation */
-body.dark .ape-illustration .white path {
-  fill: var(--color-ape-light);
-  transition: all 1s ease-in-out;
+body.dark .ape-illustration #color-light,
+body.dark .ape-illustration #color-accent,
+body.dark .ape-illustration #color-accent-two {
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
 }
 
-body.dark .ape-illustration .color-light g path {
-  fill: var(--color-ape-light);
-  transition: all 1s ease-in-out;
-}
-
-body.dark .ape-illustration .color-dark g path {
-  fill: var(--color-page-bg);
-}
-
-body.dark .ape-illustration .color-midtone g path {
-  fill: transparent;
-}
-
-body.dark .ape-illustration .color-accent g path {
-  fill: var(--color-ape-accent);
-  transition: all 1s ease-in-out;
-}
-
-body.dark .ape-illustration .color-accent-two g path {
-  fill: var(--color-ape-accent-two);
-  transition: all 1s ease-in-out;
+body.dark .ape-illustration #color-midtone,
+body.dark .ape-illustration #color-dark {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
 }
 
 /* =======
