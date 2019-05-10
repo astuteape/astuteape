@@ -95,6 +95,7 @@ Primary site nagivation
 .primary-nav > li > a {
   padding: 10px;
   font-size: 1.3rem;
+  text-decoration: none;
   text-transform: uppercase;
   transition: color 0.5s, font-size 0.5s;
   transition-timing-function: ease-in-out;
@@ -370,6 +371,10 @@ Blog and post detail views
   font-size: 1.125rem;
   line-height: 1.2rem;
   text-align: left;
+}
+
+.detail-content p > a:link {
+  text-decoration: underline;
 }
 
 .detail-content img,
