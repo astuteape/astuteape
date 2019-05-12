@@ -3,7 +3,7 @@ title: "Brewery Bot"
 summary: "I live in Portland, Oregon, which is arguably the best craft beer city in the United States. I created a chatbot to help people discover the beer scene around them, whether in Portland or anywhere else."
 featureImage: "./brewery_bot_fi.png"
 projectType: "Code"
-projectPosition: 3
+projectPosition: 4
 ---
 
 <div>

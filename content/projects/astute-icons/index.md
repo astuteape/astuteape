@@ -3,7 +3,7 @@ title: "Astute Icons"
 summary: "A continuously growing MIT licensed icon set that's ideal for subtle animations."
 featureImage: "./astute_icons_fi.png"
 projectType: "Design"
-projectPosition: 2
+projectPosition: 3
 ---
 
 ![Icon Sample](./astute_icons_fi.png)
