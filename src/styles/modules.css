@@ -343,6 +343,21 @@ Blog and post detail views
   display: inline-block;
 }
 
+.detail-content h2,
+.detail-content h3,
+.detail-content h4,
+.detail-content h5,
+.detail-content h6 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+}
+
+/* Style auto generated header link icon */
+.anchor > svg > path {
+  fill: var(--color-link-achov);
+}
+
 .detail-content p {
   font-size: 1.125rem;
   line-height: 1.2rem;
@@ -360,8 +375,26 @@ Blog and post detail views
   text-align: center;
 }
 
+.detail-content blockquote {
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background: var(--color-blockquote);
+}
+
 .detail-content code.language-text {
   padding: 5px 10px;
+}
+
+.detail-content ul li {
+  color: var(--color-text);
+}
+
+.detail-content ul li:before {
+  content: "\2022 ";
+  color: var(--color-text);
+  padding-right: 0.5em;
 }
 
 /* ======

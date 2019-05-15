@@ -10,11 +10,13 @@ body {
   --color-dark: #1c1f2a;
   --color-accent: #e35205;
   --color-accent-two: #d4c363;
+  --color-accent-three: #c0c7e5;
   --color-page-bg: var(--shade-light);
   --color-nav-bg: var(--color-dark);
   --color-nav-link: var(--shade-light);
   --color-text: var(--shade-midtone);
   --color-text-heading: var(--shade-dark);
+  --color-blockquote: var(--color-accent-three);
   --color-link: var(--color-midtone);
   --color-link-achov: var(--color-accent);
   --color-icon: var(--color-dark);
@@ -34,11 +36,13 @@ body.dark {
   --color-dark: #262933;
   --color-accent: #d46529;
   --color-accent-two: #dfe305;
+  --color-accent-three: #414861;
   --color-page-bg: var(--color-dark);
   --color-nav-bg: var(--color-dark);
   --color-nav-link: var(--shade-light);
   --color-text: var(--shade-light);
   --color-text-heading: var(--shade-light);
+  --color-blockquote: var(--color-accent-three);
   --color-link: var(--color-light);
   --color-link-achov: var(--color-accent);
   --color-icon: var(--color-midtone);
