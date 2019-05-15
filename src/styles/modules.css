@@ -390,6 +390,7 @@ Blog and post detail views
 .detail-content ul li,
 .detail-content ol li {
   color: var(--color-text);
+  font-size: 1.125rem;
 }
 
 .detail-content ol {
@@ -398,9 +399,9 @@ Blog and post detail views
 
 .detail-content ol li {
   list-style-type: upper-roman;
-  font-size: 1.125rem;
 }
 
+/* Color bullets to maintain visibility in dark mode */
 .detail-content ul li:before {
   content: "\2022 ";
   color: var(--color-text);

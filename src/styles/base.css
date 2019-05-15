@@ -21,7 +21,7 @@ body {
   --color-link-achov: var(--color-accent);
   --color-icon: var(--color-dark);
   --color-icon-achov: var(--color-light);
-  transition: all 1s;
+  transition: background 1s, color 1s, fill 1s;
 }
 
 /* =====================
@@ -47,7 +47,7 @@ body.dark {
   --color-link-achov: var(--color-accent);
   --color-icon: var(--color-midtone);
   --color-icon-achov: var(--color-light);
-  transition: all 1s;
+  transition: background 1s, color 1s, fill 1s;
 }
 
 /* =======
