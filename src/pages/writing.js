@@ -46,7 +46,7 @@ const WritingPage = ({ data }) => {
                     {node.frontmatter.title}
                   </h3>
                   <ul className="collection-item-info">
-                    <li>{`${node.frontmatter.date} | `}</li>
+                    <li>{`${node.frontmatter.date} |\u00A0`}</li>
                     <li>
                       {/* Pluralize Read Time if > 1 miute */}
                       {node.timeToRead > 1

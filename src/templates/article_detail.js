@@ -28,7 +28,7 @@ export default ({ data }) => {
           <h1 className="detail-title">{article.frontmatter.title}</h1>
           <ul className="detail-info">
             <li>{`${article.frontmatter.author}`}</li>
-            <li>{` | ${article.frontmatter.date} |`}</li>
+            <li>{`\u00A0| ${article.frontmatter.date} |\u00A0`}</li>
             <li>
               {article.timeToRead > 1
                 ? `Read Time: ${article.timeToRead} minutes`
