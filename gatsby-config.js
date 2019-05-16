@@ -3,6 +3,7 @@ module.exports = {
     title: `Astute Ape`,
     description: `The website of Wade Christensen`,
     author: `wade@astuteape.com`,
+    siteUrl: "https://astuteape.com",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,6 +19,61 @@ module.exports = {
       options: {
         name: `projects`,
         path: `${__dirname}/content/projects`,
+      },
+    },
+    {
+      // RSS Feed
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.summary,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  cutom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+            {
+              allMarkdownRemark(
+                filter: { fileAbsolutePath: { regex: "/content/writing/" } }
+                sort: { order: DESC, fields: [frontmatter___date]},
+              ) {
+                edges {
+                  node {
+                    html
+                    fields {slug}
+                    frontmatter {
+                      title
+                      date
+                      summary
+                    }
+                  }
+                }
+              }
+            }
+          `,
+            output: "/rss.xml",
+            title: "Astute Ape RSS Feed",
+          },
+        ],
       },
     },
     {
