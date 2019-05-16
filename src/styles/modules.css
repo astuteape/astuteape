@@ -302,17 +302,16 @@ Buttons
   position: relative;
   width: 100px;
   height: 30px;
-  margin-left: 0;
   padding: 0;
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   border-radius: 0.15rem;
-  transition: margin-left 0.5s ease-in-out, border 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, border 0.5s ease-in-out;
   background: var(--color-icon);
 }
 
 .button-container:hover {
-  margin-left: 0.25rem;
+  transform: translateX(0.25rem);
   border-bottom: 3px solid var(--color-link-achov);
   background: var(--color-icon-achov);
 }
