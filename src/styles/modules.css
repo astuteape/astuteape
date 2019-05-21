@@ -363,6 +363,15 @@ Blog and post detail views
   text-align: left;
 }
 
+.detail-content > p:first-of-type:first-letter {
+  float: left;
+  font-size: 3.25rem;
+  line-height: 3rem;
+  padding: 0.25rem 0.25rem 0.1rem 0;
+  font-family: Teko, Arial, Helvetica, sans-serif;
+  color: var(--color-icon);
+}
+
 .detail-content p > a:link {
   text-decoration: underline;
 }
