@@ -166,6 +166,10 @@ Dark mode toggle
   text-align: center;
 }
 
+.theme-toggle * {
+  cursor: pointer;
+}
+
 /* Remove toggle from document flow and pin
 to upper right corner
 */
