@@ -9,7 +9,7 @@ import Layout from "../components/layout/layout"
 import PageTitle from "../components/text/page_title"
 import SocialNav from "../components/nav/social_nav"
 
-const IndexPage = () => (
+const ContactPage = () => (
   <Layout>
     <SEO
       title="Contact"
@@ -27,7 +27,7 @@ const IndexPage = () => (
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          action="/"
+          action="/form-success"
         >
           <p class="hidden">
             <label>
@@ -59,4 +59,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default ContactPage
