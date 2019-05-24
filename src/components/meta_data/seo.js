@@ -52,6 +52,10 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `../../images/astute_ape.png`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
