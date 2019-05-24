@@ -127,6 +127,11 @@ Social media nagivation
   padding-bottom: 20px;
 }
 
+.social-nav h4 {
+  font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+  font-weight: 700;
+}
+
 .social-nav li {
   display: inline-block;
   padding: 0 10px;
@@ -280,8 +285,8 @@ Hero Text
 .hero-text {
   max-width: 800px;
   font-size: 28px;
+  font-family: "Teko", "Arial", "Helvetica", "sans-serif";
   text-align: center;
-  font-family: "Teko";
   color: var(--color-text);
 }
 
