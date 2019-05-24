@@ -6,7 +6,7 @@ const SocialNav = () => (
     <ul>
       <li>
         <a
-          href="mailto:wade@astuteape.com?subject=Mail from Astute Ape Website"
+          href="mailto:wade@astuteape.com?subject=Mail%20from%20Astute%20Ape%20Website"
           rel="noopener noreferrer"
         >
           <svg
