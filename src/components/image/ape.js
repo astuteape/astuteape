@@ -18,12 +18,12 @@ const ApeIllustration = () => (
           y2="95.03"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#1b1f2a" />
-          <stop offset="0.22" stop-color="#1c212e" />
-          <stop offset="0.46" stop-color="#1e253b" />
-          <stop offset="0.7" stop-color="#232e50" />
-          <stop offset="0.94" stop-color="#28396d" />
-          <stop offset="1" stop-color="#2a3c75" />
+          <stop offset="0" stopColor="#1b1f2a" />
+          <stop offset="0.22" stopColor="#1c212e" />
+          <stop offset="0.46" stopColor="#1e253b" />
+          <stop offset="0.7" stopColor="#232e50" />
+          <stop offset="0.94" stopColor="#28396d" />
+          <stop offset="1" stopColor="#2a3c75" />
         </linearGradient>
         <linearGradient
           id="linear-gradient-2"
@@ -161,9 +161,9 @@ const ApeIllustration = () => (
           y2="22.47"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#2a3c75" />
-          <stop offset="0.53" stop-color="#404d76" />
-          <stop offset="1" stop-color="#4f5876" />
+          <stop offset="0" stopColor="#2a3c75" />
+          <stop offset="0.53" stopColor="#404d76" />
+          <stop offset="1" stopColor="#4f5876" />
         </linearGradient>
         <linearGradient
           id="linear-gradient-19"
@@ -253,13 +253,13 @@ const ApeIllustration = () => (
           y2="88.62"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#515876" />
-          <stop offset="0.05" stop-color="#456a82" />
-          <stop offset="0.14" stop-color="#368091" />
-          <stop offset="0.23" stop-color="#2a919c" />
-          <stop offset="0.36" stop-color="#229ca4" />
-          <stop offset="0.53" stop-color="#1da3a9" />
-          <stop offset="1" stop-color="#1ca5aa" />
+          <stop offset="0" stopColor="#515876" />
+          <stop offset="0.05" stopColor="#456a82" />
+          <stop offset="0.14" stopColor="#368091" />
+          <stop offset="0.23" stopColor="#2a919c" />
+          <stop offset="0.36" stopColor="#229ca4" />
+          <stop offset="0.53" stopColor="#1da3a9" />
+          <stop offset="1" stopColor="#1ca5aa" />
         </linearGradient>
         <linearGradient
           id="linear-gradient-30"
@@ -309,10 +309,10 @@ const ApeIllustration = () => (
           y2="309.79"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#e15426" />
-          <stop offset="0.4" stop-color="#e5592a" />
-          <stop offset="0.86" stop-color="#ef6734" />
-          <stop offset="1" stop-color="#f36d38" />
+          <stop offset="0" stopColor="#e15426" />
+          <stop offset="0.4" stopColor="#e5592a" />
+          <stop offset="0.86" stopColor="#ef6734" />
+          <stop offset="1" stopColor="#f36d38" />
         </linearGradient>
         <linearGradient
           id="linear-gradient-36"
@@ -426,12 +426,12 @@ const ApeIllustration = () => (
           y2="7.57"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#e9da57" />
-          <stop offset="0.54" stop-color="#eadb59" />
-          <stop offset="0.74" stop-color="#eddf60" />
-          <stop offset="0.88" stop-color="#f2e66b" />
-          <stop offset="0.99" stop-color="#f9f07c" />
-          <stop offset="1" stop-color="#faf17e" />
+          <stop offset="0" stopColor="#e9da57" />
+          <stop offset="0.54" stopColor="#eadb59" />
+          <stop offset="0.74" stopColor="#eddf60" />
+          <stop offset="0.88" stopColor="#f2e66b" />
+          <stop offset="0.99" stopColor="#f9f07c" />
+          <stop offset="1" stopColor="#faf17e" />
         </linearGradient>
         <linearGradient
           id="linear-gradient-50"
