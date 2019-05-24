@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Astute Ape`,
-    description: `The website of Wade Christensen`,
+    description: `The Website of Wade Christensen`,
     author: `wade@astuteape.com`,
     siteUrl: "https://astuteape.com",
   },
