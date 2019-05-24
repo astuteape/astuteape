@@ -53,7 +53,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `og:image`,
-          content: `../../images/astute_ape.png`,
+          content: `/icons/icon-256x256.png`,
         },
         {
           name: `twitter:card`,
