@@ -35,19 +35,19 @@ const ContactPage = () => (
             </label>
           </p>
           <p>
-            <label>
-              Full Name: <input type="text" name="name" />
-            </label>
+            <label>Full Name:</label>
+            <br />
+            <input type="text" name="name" placeholder="Nim Chimpsky" />
           </p>
           <p>
-            <label>
-              Email: <input type="email" name="email" />
-            </label>
+            <label>Email:</label>
+            <br />
+            <input type="email" name="email" placeholder="nim@astuteape.com" />
           </p>
           <p>
-            <label>
-              Message: <textarea name="message" />
-            </label>
+            <label>Message:</label>
+            <br />
+            <textarea name="message" />
           </p>
           <p>
             <button type="submit">Send</button>

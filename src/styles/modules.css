@@ -440,3 +440,36 @@ Footnotes
 .footnotes a:hover {
   color: var(--color-link-achov);
 }
+
+/* ========
+Form styles
+=========== */
+form * {
+  color: var(--color-text);
+}
+
+form .hidden {
+  display: none;
+}
+
+label {
+  font-size: 1rem;
+  line-height: 2.25rem;
+}
+
+input {
+  min-width: 350px;
+  border-top: none;
+  border-right: none;
+  border-bottom: solid 1px var(--color-text);
+  border-left: none;
+  font-size: 1rem;
+  background: transparent;
+}
+
+textarea {
+  min-width: 350px;
+  border: solid 1px var(--color-text);
+  font-size: 1rem;
+  background: transparent;
+}
