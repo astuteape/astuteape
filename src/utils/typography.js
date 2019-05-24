@@ -14,7 +14,7 @@ const typography = new Typography({
     },
   ],
   headerFontFamily: ["Teko", "Arial", "Helvetica", "sans-serif"],
-  bodyFontFamily: ["Roboto Condensend", "Arial", "Helvetica", "sans-serif"],
+  bodyFontFamily: ["Roboto Condensed", "Arial", "Helvetica", "sans-serif"],
   overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
     ".primary-nav li > a": {
       fontFamily: ["Teko", "Arial", "Helvetica", "sans-serif"].join(","),
