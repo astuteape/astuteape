@@ -2,59 +2,8 @@ import React from "react"
 
 const SocialNav = () => (
   <div className="social-nav">
-    <h4>Get in touch, or follow me on social</h4>
+    <h4>Where to Find Me</h4>
     <ul>
-      <li>
-        <a
-          href="mailto:wade@astuteape.com?subject=Mail%20from%20Astute%20Ape%20Website"
-          rel="noopener noreferrer"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-          >
-            <title>email</title>
-            <g className="icon">
-              <path
-                d="M26.11,23.82c0,.05-.1.2-.23.2H6.12c-.13,0-.2-.15-.23-.2A.56.56,0,0,1,6,23.24l7.14-7.18,2.37,2.22a.72.72,0,0,0,1,0l2.37-2.22L26,23.24A.56.56,0,0,1,26.11,23.82Z"
-                transform="translate(0 0)"
-              />
-              <path
-                d="M26.41,9V22.89s0,0,0,0l-7.12-7.15,7.11-6.65Z"
-                transform="translate(0 0)"
-              />
-              <path
-                d="M12.73,15.71,5.61,22.86l0,0V9l0,0Z"
-                transform="translate(0 0)"
-              />
-              <path
-                d="M26,8.68,18.9,15.34l-.18.17-.2.19-2.36,2.21a.24.24,0,0,1-.32,0L13.48,15.7l-.2-.19-.18-.17L6,8.68a.49.49,0,0,1-.09-.5S6,8,6.12,8H25.88c.15,0,.21.15.24.2A.49.49,0,0,1,26,8.68Z"
-                transform="translate(0 0)"
-              />
-            </g>
-            <g className="outline">
-              <path
-                d="M3.13,23A14.78,14.78,0,0,1,3.13,9l-1-1a16,16,0,0,0,0,16Z"
-                transform="translate(0 0)"
-              />
-              <path
-                d="M23,28.87A14.78,14.78,0,0,1,9,28.87l-1,1a16,16,0,0,0,16,0Z"
-                transform="translate(0 0)"
-              />
-              <path
-                d="M28.87,9a14.78,14.78,0,0,1,0,14.08l1,1a16,16,0,0,0,0-16Z"
-                transform="translate(0 0)"
-              />
-              <path
-                d="M9,3.13A14.78,14.78,0,0,1,23,3.13l1-1a16,16,0,0,0-16,0Z"
-                transform="translate(0 0)"
-              />
-            </g>
-          </svg>
-        </a>
-      </li>
       <li>
         <a
           href="https://twitter.com/astuteape"

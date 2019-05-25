@@ -16,10 +16,12 @@ const FormSuccessPage = () => (
       <div>
         <DarkMode />
       </div>
-      <div>
+      <div className="index-text-body">
+        <h1>Thank You,</h1>
         <p>
-          Your form submission was submitted. I will get back to you as soon as
-          possible.
+          I have received your form submission, and I will get back to you as
+          soon as possible. I typically respond to genuine messages within two
+          business days.
         </p>
       </div>
       <SocialNav />
