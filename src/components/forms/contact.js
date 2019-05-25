@@ -18,17 +18,26 @@ const ContactForm = () => (
       <p>
         <label>Full Name:</label>
         <br />
-        <input type="text" name="name" placeholder="Nim Chimpsky" />
+        <input type="text" name="name" placeholder="Nim Chimpsky" required />
       </p>
       <p>
         <label>Email:</label>
         <br />
-        <input type="email" name="email" placeholder="nim@astuteape.com" />
+        <input
+          type="email"
+          name="email"
+          placeholder="nim@astuteape.com"
+          required
+        />
       </p>
       <p>
         <label>Message:</label>
         <br />
-        <textarea name="message" />
+        <textarea
+          name="message"
+          placeholder="Hi Wade, I have a question for you . . . ."
+          required
+        />
       </p>
       <p>
         <button type="submit">Send</button>

@@ -207,7 +207,18 @@ textarea {
 @media (min-width: 411px) {
   textarea {
     min-width: 350px;
+    outline: none;
   }
+}
+
+input:invalid,
+textarea:invalid {
+  outline: none;
+  box-shadow: none;
+}
+
+input:not(:placeholder-shown):invalid {
+  background-color: #ffe5d6;
 }
 
 /* ====
