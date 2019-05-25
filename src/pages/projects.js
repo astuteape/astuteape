@@ -27,7 +27,7 @@ const ProjectsPage = ({ data }) => {
         ]}
       />
       {/* Apply content layout rules to outermost div *-container */}
-      <div className="projects-container">
+      <div className="multi-container">
         <section className="main-header">
           <PageTitle titleText="Projects" />
         </section>

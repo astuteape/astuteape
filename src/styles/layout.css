@@ -58,7 +58,6 @@ Nav container media queries
 @media screen and (min-width: 1224px) {
   .gatsby-plugin-transition-link-portal {
     width: 200px;
-    height: 100%;
     height: 100vh;
   }
 }
@@ -67,55 +66,55 @@ Nav container media queries
 Layout of individual pages and page elements
 ============================================ */
 
-/* Index page
+/* Non-collection Pages (Index, About, Contact(
 ============= */
-.index-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* Clear top to make room for darkmode toggle */
-  margin: 4.25rem 1.5rem 0 1.5rem;
-}
-
-@media screen and (min-width: 768px) and (min-height: 750px) {
-  .index-container {
-    margin: 3rem 0 0 0;
-    height: calc(100vh - 3rem);
-  }
+.single-container {
+  margin: 1.5rem 1.5rem 0 1.5rem;
 }
 
 @media screen and (min-width: 1224px) {
-  .index-container {
-    justify-self: center;
-    align-self: center;
-    width: 100%;
+  .single-container {
+    margin-top: 3rem;
+  }
+}
+
+.single-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.single-content p {
+  max-width: 650px;
+}
+
+@media (min-width: 768px) {
+  .single-content {
+    margin-top: 3rem;
   }
 }
 
 /* Collections (writing and projects)
 ===================================== */
-.projects-container,
-.writing-container {
+.multi-container {
   display: grid;
   grid-template-areas:
     "main-header"
     "main-content"
     "main-footer";
-  /* Clear top to make room for darkmode toggle */
-  margin: 4.25rem 1.5rem 0 1.5rem;
+  margin: 1.5rem 1.5rem 0 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
-  .projects-container,
-  .writing-container {
-    margin: 3rem;
+  .multi-container {
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .projects-container,
-  .writing-container {
+  .multi-container {
     margin-top: 3rem;
   }
 }
@@ -139,19 +138,13 @@ Layout of individual pages and page elements
     align-items: flex-start;
     display: grid;
     grid-template-areas: "left right";
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .main-content {
     max-width: 1024px;
-  }
-}
-
-@media screen and (min-width: 1224px) {
-  .main-content {
-    margin-top: 7rem;
   }
 }
 

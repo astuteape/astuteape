@@ -28,12 +28,12 @@ const IndexPage = () => (
       ]}
     />
     {/* Apply content layout rules to outermost div *-container */}
-    <div className="index-container">
-      <div>
+    <div className="single-container">
+      <div className="single-header">
         <PageTitle titleText="Astute Ape" />
       </div>
-      <ApeIllustration />
-      <div className="index-text-body">
+      <div className="single-content">
+        <ApeIllustration />
         <HeroText />
       </div>
       <SocialNav />

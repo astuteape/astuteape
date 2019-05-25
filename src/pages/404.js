@@ -9,10 +9,10 @@ import ApeIllustration from "../components/image/ape"
 const NotFoundPage = () => (
   <div>
     <SEO title="404: Not found" />
-    <div className="index-container">
+    <div className="single-container">
       <PageTitle titleText="404" />
-      <ApeIllustration />
-      <div className="index-text-body">
+      <div className="single-content">
+        <ApeIllustration />
         <h2>
           Oops! It looks like we're in uncharted lands. Let's go{" "}
           <Link to="/">home</Link>.

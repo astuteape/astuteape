@@ -215,22 +215,22 @@ to upper right corner
 Page titles
 =========== */
 .page-title {
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
   font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
   color: var(--color-page-bg);
   text-shadow: 3px 3px 0 var(--color-text-heading);
-  transition: all 0.5s linear;
+  transition: color 0.5s linear;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 411px) {
   .page-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .page-title {
     font-size: 5rem;
   }
