@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 // Site components
-import DarkMode from "../components/theme/dark_mode"
 import Layout from "../components/layout/layout"
 import PageTitle from "../components/text/page_title"
 import SEO from "../components/meta_data/seo"
@@ -33,7 +32,6 @@ const WritingPage = ({ data }) => {
       <div className="writing-container">
         <section className="main-header">
           <PageTitle titleText="Writing" />
-          <DarkMode />
         </section>
 
         <section className="main-content writing">

@@ -6,7 +6,6 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 // Site components
-import DarkMode from "../components/theme/dark_mode"
 import Layout from "../components/layout/layout"
 import PageTitle from "../components/text/page_title"
 import SEO from "../components/meta_data/seo"
@@ -31,7 +30,6 @@ const ProjectsPage = ({ data }) => {
       <div className="projects-container">
         <section className="main-header">
           <PageTitle titleText="Projects" />
-          <DarkMode />
         </section>
 
         <section className="main-content projects">

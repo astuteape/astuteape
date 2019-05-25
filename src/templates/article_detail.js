@@ -4,7 +4,6 @@ import React from "react"
 import { graphql } from "gatsby"
 
 // Site components
-import DarkMode from "../components/theme/dark_mode"
 import Layout from "../components/layout/layout"
 import SEO from "../components/meta_data/seo"
 import SocialNav from "../components/nav/social_nav"
@@ -35,7 +34,6 @@ export default ({ data }) => {
                 : `Read Time: ${article.timeToRead} minute`}
             </li>
           </ul>
-          <DarkMode />
         </section>
         <section
           className="detail-content"
