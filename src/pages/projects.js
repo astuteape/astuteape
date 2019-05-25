@@ -60,9 +60,7 @@ const ProjectsPage = ({ data }) => {
                 </p>
               </div>
               <AniLink fade to={`/projects${node.fields.slug}`}>
-                <div className="button-container">
-                  <p className="button-text">View =></p>
-                </div>
+                <button>View</button>
               </AniLink>
             </div>
           ))}

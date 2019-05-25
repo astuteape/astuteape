@@ -4,7 +4,6 @@ import React from "react"
 import SEO from "../components/meta_data/seo"
 
 // Site components
-import DarkMode from "../components/theme/dark_mode"
 import Layout from "../components/layout/layout"
 import SocialNav from "../components/nav/social_nav"
 
@@ -13,9 +12,6 @@ const FormSuccessPage = () => (
     <SEO title="Success" keywords={[`astute ape`, `wade christensen`]} />
     {/* Apply content layout rules to outermost div *-container */}
     <div className="index-container">
-      <div>
-        <DarkMode />
-      </div>
       <div className="index-text-body">
         <h1>Thank You,</h1>
         <p>

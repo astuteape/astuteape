@@ -63,9 +63,7 @@ const WritingPage = ({ data }) => {
                     : node.excerpt}
                 </p>
                 <AniLink fade to={`/writing${node.fields.slug}`}>
-                  <div className="button-container">
-                    <p className="button-text">Read =></p>
-                  </div>
+                  <button>Read</button>
                 </AniLink>
               </div>
             ))}
