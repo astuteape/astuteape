@@ -2,15 +2,19 @@
 Root Variables light mode
 ========================= */
 body {
+  /* Achromatic Definitions */
   --shade-light: #fff;
   --shade-midtone: #2d3038;
   --shade-dark: #000;
+  /* Color Definitions */
   --color-light: #4f5775;
   --color-midtone: #2b3b75;
   --color-dark: #1c1f2a;
+  /* Accent Definitions */
   --color-accent: #e35205;
   --color-accent-two: #d4c363;
   --color-accent-three: #c0c7e5;
+  /* Module Assignment */
   --color-page-bg: var(--shade-light);
   --color-nav-bg: var(--color-dark);
   --color-nav-link: var(--shade-light);
@@ -19,8 +23,14 @@ body {
   --color-blockquote: var(--color-accent-three);
   --color-link: var(--color-midtone);
   --color-link-achov: var(--color-accent);
+  --color-button: var(--color-dark);
+  --color-button-hover: var(--color-light);
   --color-icon: var(--color-dark);
   --color-icon-achov: var(--color-light);
+  --color-icon-outline-achov: var(--color-accent);
+  --color-border: var(--shade-midtone);
+  --color-placeholder: var(--shade-dark);
+  --color-warning: var(--color-accent);
   transition: background 1s, color 1s, fill 1s;
 }
 
@@ -28,15 +38,19 @@ body {
 Root Variables dark mode
 ======================== */
 body.dark {
-  --shade-light: #dfdfdf;
-  --shade-midtone: #5f6267;
-  --shade-dark: #313131;
-  --color-light: #abb2ce;
-  --color-midtone: #707eb1;
-  --color-dark: #262933;
-  --color-accent: #d46529;
-  --color-accent-two: #dfe305;
-  --color-accent-three: #414861;
+  /* Achromatic Definitions */
+  --shade-light: #fff;
+  --shade-midtone: #2d3038;
+  --shade-dark: #000;
+  /* Color Definitions */
+  --color-light: #7986b5;
+  --color-midtone: #4f5775;
+  --color-dark: #1c1f2a;
+  /* Accent Definitions */
+  --color-accent: #e35205;
+  --color-accent-two: #d4c363;
+  --color-accent-three: #2b8f9b;
+  /* Module Assignment */
   --color-page-bg: var(--color-dark);
   --color-nav-bg: var(--color-dark);
   --color-nav-link: var(--shade-light);
@@ -45,8 +59,14 @@ body.dark {
   --color-blockquote: var(--color-accent-three);
   --color-link: var(--color-light);
   --color-link-achov: var(--color-accent);
-  --color-icon: var(--color-midtone);
-  --color-icon-achov: var(--color-light);
+  --color-button: var(--color-light);
+  --color-button-hover: var(--color-accent-three);
+  --color-icon: var(--color-light);
+  --color-icon-achov: var(--color-accent-three);
+  --color-icon-outline-achov: var(--color-accent);
+  --color-border: var(--shade-light);
+  --color-placeholder: var(--shade-light);
+  --color-warning: var(--color-accent);
   transition: background 1s, color 1s, fill 1s;
 }
 
@@ -179,7 +199,7 @@ input {
   padding: 0 5px;
   border-top: none;
   border-right: none;
-  border-bottom: solid 1px var(--color-text);
+  border-bottom: solid 1px var(--color-border);
   border-left: none;
   font-size: 1rem;
   line-height: 1.2rem;
@@ -197,7 +217,7 @@ textarea {
   min-width: 250px;
   min-height: 150px;
   padding: 5px;
-  border: solid 1px var(--color-text);
+  border: solid 1px var(--color-border);
   font-size: 1rem;
   line-height: 1.2rem;
   background: transparent;
@@ -219,11 +239,15 @@ textarea:invalid {
 
 input:invalid,
 input:not(:placeholder-shown):invalid {
-  border-bottom: 1px solid var(--color-link-achov);
+  border-bottom: 1px solid var(--color-warning);
 }
 
 textarea:invalid {
-  border: 1px solid var(--color-link-achov);
+  border: 1px solid var(--color-warning);
+}
+
+::placeholder {
+  color: var(--color-placeholder);
 }
 
 /* ====
@@ -237,12 +261,12 @@ button {
   font-size: 1.1rem;
   line-height: 2rem;
   transition: transform 0.5s ease-in-out;
-  background: var(--color-icon);
+  background: var(--color-button);
   color: var(--color-page-bg);
   cursor: pointer;
 }
 
 button:hover {
   transform: translateX(0.2rem);
-  background: var(--color-icon-achov);
+  background: var(--color-button-hover);
 }

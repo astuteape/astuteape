@@ -146,7 +146,7 @@ Social media nagivation
 .social-nav li:hover g.outline {
   transform-origin: center;
   animation: rotate 8s linear 0.25s infinite;
-  fill: var(--color-link-achov);
+  fill: var(--color-icon-outline-achov);
 }
 
 .social-nav li:hover g.icon {
@@ -231,7 +231,7 @@ Dark mode toggle
 .theme-toggle div:hover g.outline {
   transform-origin: center;
   animation: rotate 8s linear 0.25s infinite;
-  fill: var(--color-link-achov);
+  fill: var(--color-icon-outline-achov);
 }
 
 .theme-toggle div:hover g.icon {
