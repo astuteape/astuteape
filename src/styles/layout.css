@@ -25,6 +25,7 @@ Layout of the main content container
 Page Header
 =========== */
 .layout-page-header {
+  position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -43,7 +44,7 @@ Page Body
 ========= */
 .layout-main-container {
   width: 100%;
-  margin: 2rem 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -51,7 +52,7 @@ Page Body
   /* Margin for navigation */
   .layout-main-container {
     width: calc(100% - 200px);
-    margin: 2rem 0 2rem 200px;
+    margin: 0 0 0 200px;
   }
 }
 
@@ -101,12 +102,12 @@ Layout of individual pages and page elements
 /* Non-collection Pages (Index, About, Contact(
 ============= */
 .single-container {
-  margin: 1.5rem 1.5rem 0 1.5rem;
+  margin: 1rem 1rem 0 1rem;
 }
 
-@media screen and (min-width: 1224px) {
+@media (min-width: 1224px) {
   .single-container {
-    margin-top: 3rem;
+    margin: 3rem 1rem 0 1rem;
   }
 }
 
@@ -115,39 +116,23 @@ Layout of individual pages and page elements
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 1.5rem;
 }
 
 .single-content p {
   max-width: 650px;
 }
 
-@media (min-width: 768px) {
-  .single-content {
-    margin-top: 3rem;
-  }
-}
-
 /* Collections (writing and projects)
 ===================================== */
 .multi-container {
   display: grid;
-  grid-template-areas:
-    "main-header"
-    "main-content"
-    "main-footer";
-  margin: 1.5rem 1.5rem 0 1.5rem;
+  grid-template-areas: "main-content";
+  margin: 1rem 1rem 0 1rem;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 1224px) {
   .multi-container {
-    margin: 0;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .multi-container {
-    margin-top: 3rem;
+    margin: 5rem 1rem 0 1rem;
   }
 }
 
@@ -157,7 +142,6 @@ Layout of individual pages and page elements
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -166,13 +150,23 @@ Layout of individual pages and page elements
     align-items: flex-start;
     display: grid;
     grid-template-areas: "left right";
-    margin-top: 3rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .main-content {
     max-width: 1024px;
+  }
+}
+
+.main-content.writing .section-subhead {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 1224px) {
+  .main-content.writing .section-subhead {
+    margin-bottom: 2rem;
   }
 }
 
@@ -196,12 +190,12 @@ Layout of individual pages and page elements
   max-width: 650px;
 }
 
-.aa-articles-list .collection-item:not(:first-child) {
+.aa-articles-list .collection-item:not(:nth-child(2)) {
   margin-top: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
-  .aa-articles-list .collection-item:not(:first-child) {
+  .aa-articles-list .collection-item:not(:nth-child(2)) {
     margin-top: 2rem;
   }
 }
@@ -299,19 +293,26 @@ Layout of individual pages and page elements
 
 /* Detail Pages
 =============== */
+.detail-header {
+  position: relative;
+  width: 100%;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .detail-header {
+    margin-top: 3rem;
+  }
+}
+
 .detail-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   /* Clear top to make room for darkmode toggle */
-  margin: 1.5rem 1.5rem 0 1.5rem;
-}
-
-@media screen and (min-width: 768px) {
-  .detail-container {
-    margin: 3rem 0 0 0;
-  }
+  margin: 1rem 1rem 0 1rem;
 }
 
 @media screen and (min-width: 1224px) {
@@ -321,8 +322,11 @@ Layout of individual pages and page elements
     justify-content: flex-start;
     width: 100%;
     min-height: 100%;
-    margin: 7rem 0 0 0;
   }
+}
+
+.detail-title {
+  text-align: center;
 }
 
 .detail-content {
@@ -332,5 +336,5 @@ Layout of individual pages and page elements
 
 .detail-container img,
 .detail-container iframe {
-  max-width: calc(100vw - 3rem);
+  max-width: calc(100vw - 2rem);
 }

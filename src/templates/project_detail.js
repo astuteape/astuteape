@@ -24,7 +24,7 @@ export default ({ data }) => {
       {/* Apply content layout rules to outermost div *-container */}
       <div className="detail-container">
         <section className="detail-header">
-          <h1>{project.frontmatter.title}</h1>
+          <h1 className="detail-title">{project.frontmatter.title}</h1>
           <DarkMode />
         </section>
         <section

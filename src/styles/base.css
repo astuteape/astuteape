@@ -217,8 +217,13 @@ textarea:invalid {
   box-shadow: none;
 }
 
+input:invalid,
 input:not(:placeholder-shown):invalid {
-  background-color: #ffe5d6;
+  border-bottom: 1px solid var(--color-link-achov);
+}
+
+textarea:invalid {
+  border: 1px solid var(--color-link-achov);
 }
 
 /* ====

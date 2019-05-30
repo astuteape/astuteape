@@ -24,16 +24,18 @@ export default ({ data }) => {
       {/* Apply content layout rules to outermost div *-container */}
       <div className="detail-container">
         <section className="detail-header">
-          <h1 className="detail-title">{article.frontmatter.title}</h1>
-          <ul className="detail-info">
-            <li>{`${article.frontmatter.author}`}</li>
-            <li>{`\u00A0| ${article.frontmatter.date} |\u00A0`}</li>
-            <li>
-              {article.timeToRead > 1
-                ? `Read Time: ${article.timeToRead} minutes`
-                : `Read Time: ${article.timeToRead} minute`}
-            </li>
-          </ul>
+          <div>
+            <h1 className="detail-title">{article.frontmatter.title}</h1>
+            <ul className="detail-info">
+              <li>{`${article.frontmatter.author}`}</li>
+              <li>{`\u00A0| ${article.frontmatter.date} |\u00A0`}</li>
+              <li>
+                {article.timeToRead > 1
+                  ? `Read Time: ${article.timeToRead} minutes`
+                  : `Read Time: ${article.timeToRead} minute`}
+              </li>
+            </ul>
+          </div>
           <DarkMode />
         </section>
         <section

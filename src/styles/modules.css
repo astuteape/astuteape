@@ -124,7 +124,7 @@ Social media nagivation
 ======================= */
 .social-nav {
   text-align: center;
-  padding-bottom: 20px;
+  padding: 2rem 0;
 }
 
 .social-nav h4 {
@@ -153,6 +153,32 @@ Social media nagivation
   fill: var(--color-icon-achov);
 }
 
+/* ========
+Page titles
+=========== */
+.page-title {
+  margin: 1.5rem 0 0 0;
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-page-bg);
+  text-shadow: 3px 3px 0 var(--color-text-heading);
+  transition: color 0.5s linear;
+}
+
+@media screen and (min-width: 411px) {
+  .page-title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-title {
+    margin-top: 3rem;
+    font-size: 5rem;
+  }
+}
+
 /* =============
 Dark mode toggle
 ================ */
@@ -160,21 +186,31 @@ Dark mode toggle
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  /* Hide the height of the invisible checkbox */
+  margin-top: -31px;
   text-align: center;
+}
+
+@media (min-width: 1224px) {
+  .layout-page-header .theme-toggle {
+    position: absolute;
+    /* Top negative value hides invisible checkbox */
+    top: -25px;
+    right: 0px;
+    margin-top: 0;
+  }
+
+  .detail-header .theme-toggle {
+    position: absolute;
+    /* Top negative value hides invisible checkbox */
+    top: -41px;
+    right: 0px;
+    margin-top: 0;
+  }
 }
 
 .theme-toggle * {
   cursor: pointer;
-}
-
-/* Remove toggle from document flow and pin
-to upper right corner
-*/
-@media screen and (min-width: 1024px) {
-  .theme-toggle {
-    top: 20px;
-    right: 40px;
-  }
 }
 
 .theme-toggle label {
@@ -192,10 +228,6 @@ to upper right corner
   fill: var(--color-icon);
 }
 
-.theme-toggle div h4 {
-  margin: 5px 0 0 0;
-}
-
 .theme-toggle div:hover g.outline {
   transform-origin: center;
   animation: rotate 8s linear 0.25s infinite;
@@ -208,29 +240,8 @@ to upper right corner
   fill: var(--color-icon-achov);
 }
 
-/* ========
-Page titles
-=========== */
-.page-title {
-  margin-bottom: 1.5rem;
-  font-size: 3rem;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--color-page-bg);
-  text-shadow: 3px 3px 0 var(--color-text-heading);
-  transition: color 0.5s linear;
-}
-
-@media screen and (min-width: 411px) {
-  .page-title {
-    font-size: 4rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .page-title {
-    font-size: 5rem;
-  }
+.theme-toggle h4 {
+  margin: 0;
 }
 
 /* Index page
@@ -285,14 +296,9 @@ Hero Text
   color: var(--color-link-achov);
 }
 
-/* =======================
-Blog and post detail views
-========================== */
-.detail-title {
-  text-align: center;
-  margin: auto auto 0 auto;
-}
-
+/* =============================
+Article and Project detail views
+================================ */
 .detail-info {
   text-align: center;
   margin-top: 0.5rem;
@@ -311,6 +317,10 @@ Blog and post detail views
   margin-top: 1.75rem;
   margin-bottom: 0.25rem;
   text-decoration: underline;
+}
+
+.detail-content h2:first-of-type {
+  margin-top: 0;
 }
 
 /* Style auto generated header link icon */

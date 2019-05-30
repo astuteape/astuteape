@@ -31,6 +31,7 @@ const WritingPage = ({ data }) => {
         <section className="main-content writing">
           {/* Left column */}
           <div className="aa-articles-list">
+            <h2 className="section-subhead">Astute Ape Articles</h2>
             {allArticles.edges.map(({ node }) => (
               <div className="collection-item" key={node.id}>
                 <AniLink fade to={`/writing${node.fields.slug}`}>
@@ -62,7 +63,7 @@ const WritingPage = ({ data }) => {
           </div>
           {/* Right column */}
           <div className="external-articles-list">
-            <h2>Articles for Other Publications</h2>
+            <h2 className="section-subhead">Articles Elsewhere</h2>
             <ArticleList />
           </div>
         </section>
