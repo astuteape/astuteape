@@ -7,15 +7,13 @@ import Img from "gatsby-image"
 
 // Site components
 import Layout from "../components/layout/layout"
-import PageTitle from "../components/text/page_title"
 import SEO from "../components/meta_data/seo"
-import SocialNav from "../components/nav/social_nav"
 
 const ProjectsPage = ({ data }) => {
   const allArticles = data.allMarkdownRemark
 
   return (
-    <Layout>
+    <Layout title="Projects">
       <SEO
         title="Projects"
         keywords={[
@@ -28,10 +26,6 @@ const ProjectsPage = ({ data }) => {
       />
       {/* Apply content layout rules to outermost div *-container */}
       <div className="multi-container">
-        <section className="main-header">
-          <PageTitle titleText="Projects" />
-        </section>
-
         <section className="main-content projects">
           {allArticles.edges.map(({ node }) => (
             <div className="collection-item" key={node.id}>
@@ -62,9 +56,6 @@ const ProjectsPage = ({ data }) => {
               </AniLink>
             </div>
           ))}
-        </section>
-        <section className="main-footer">
-          <SocialNav />
         </section>
       </div>
     </Layout>

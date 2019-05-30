@@ -160,9 +160,6 @@ Dark mode toggle
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: absolute;
-  top: 5px;
-  right: 5px;
   text-align: center;
 }
 

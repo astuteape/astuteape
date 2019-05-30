@@ -6,16 +6,14 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 // Site components
 import Layout from "../components/layout/layout"
-import PageTitle from "../components/text/page_title"
 import SEO from "../components/meta_data/seo"
-import SocialNav from "../components/nav/social_nav"
 import ArticleList from "../components/text/article_list"
 
 const WritingPage = ({ data }) => {
   const allArticles = data.allMarkdownRemark
 
   return (
-    <Layout>
+    <Layout title="Writing">
       <SEO
         title="Writing"
         keywords={[
@@ -30,10 +28,6 @@ const WritingPage = ({ data }) => {
       />
       {/* Apply content layout rules to outermost div *-container */}
       <div className="multi-container">
-        <section className="main-header">
-          <PageTitle titleText="Writing" />
-        </section>
-
         <section className="main-content writing">
           {/* Left column */}
           <div className="aa-articles-list">
@@ -71,9 +65,6 @@ const WritingPage = ({ data }) => {
             <h2>Articles for Other Publications</h2>
             <ArticleList />
           </div>
-        </section>
-        <section className="main-footer">
-          <SocialNav />
         </section>
       </div>
     </Layout>

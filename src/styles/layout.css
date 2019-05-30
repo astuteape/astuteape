@@ -10,32 +10,64 @@ min-width: 1224px;
 Style of the root element or main site container 
 ================================================ */
 .layout-site-container {
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* =================================
 Layout of the main content container
 ==================================== */
-.layout-main-container {
-  /* Margin for navigation */
-  width: 100vw;
-  height: calc(100vh -75px);
-  margin: 0 0 75px 0;
+/* ========
+Page Header
+=========== */
+.layout-page-header {
+  width: 100%;
+  margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 
-/* =========================
-Main container media queries
-============================ */
+@media (min-width: 1224px) {
+  .layout-page-header {
+    /* Margin for navigation */
+    width: calc(100% - 200px);
+    margin: 0 0 0 200px;
+  }
+}
+
+/* ======
+Page Body
+========= */
+.layout-main-container {
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0;
+}
+
 @media screen and (min-width: 1224px) {
   /* Margin for navigation */
   .layout-main-container {
-    width: calc(100vw - 200px);
-    height: 100vh;
+    width: calc(100% - 200px);
+    margin: 2rem 0 2rem 200px;
+  }
+}
+
+/* ========
+Page Footer
+=========== */
+.layout-page-footer {
+  width: 100%;
+  margin: 0 0 75px 0;
+  padding: 0;
+}
+
+@media (min-width: 1224px) {
+  .layout-page-footer {
+    /* Margin for navigation */
+    width: calc(100% - 200px);
     margin: 0 0 0 200px;
   }
 }
@@ -119,10 +151,6 @@ Layout of individual pages and page elements
   }
 }
 
-.main-header {
-  grid-area: main-header;
-}
-
 .main-content {
   grid-area: main-content;
   display: flex;
@@ -146,11 +174,6 @@ Layout of individual pages and page elements
   .main-content {
     max-width: 1024px;
   }
-}
-
-.main-footer {
-  grid-area: main-footer;
-  margin-top: 1.5rem;
 }
 
 .collection-item-title,
@@ -282,7 +305,7 @@ Layout of individual pages and page elements
   justify-content: center;
   align-items: center;
   /* Clear top to make room for darkmode toggle */
-  margin: 4.25rem 1.5rem 0 1.5rem;
+  margin: 1.5rem 1.5rem 0 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -310,8 +333,4 @@ Layout of individual pages and page elements
 .detail-container img,
 .detail-container iframe {
   max-width: calc(100vw - 3rem);
-}
-
-.detail-footer {
-  margin-top: 1.5rem;
 }

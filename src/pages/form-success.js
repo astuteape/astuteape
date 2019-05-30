@@ -5,7 +5,6 @@ import SEO from "../components/meta_data/seo"
 
 // Site components
 import Layout from "../components/layout/layout"
-import SocialNav from "../components/nav/social_nav"
 
 const FormSuccessPage = () => (
   <Layout>
@@ -20,7 +19,6 @@ const FormSuccessPage = () => (
           business days.
         </p>
       </div>
-      <SocialNav />
     </div>
   </Layout>
 )

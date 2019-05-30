@@ -1,16 +1,15 @@
 import React from "react"
 import SEO from "../components/meta_data/seo"
-import PageTitle from "../components/text/page_title"
 import { Link } from "gatsby"
 
 // Site components
 import ApeIllustration from "../components/image/ape"
+import Layout from "../components/layout/layout"
 
 const NotFoundPage = () => (
-  <div>
+  <Layout title="404">
     <SEO title="404: Not found" />
     <div className="single-container">
-      <PageTitle titleText="404" />
       <div className="single-content">
         <ApeIllustration />
         <h2>
@@ -19,7 +18,7 @@ const NotFoundPage = () => (
         </h2>
       </div>
     </div>
-  </div>
+  </Layout>
 )
 
 export default NotFoundPage

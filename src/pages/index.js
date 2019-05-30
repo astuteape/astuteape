@@ -7,11 +7,9 @@ import SEO from "../components/meta_data/seo"
 import ApeIllustration from "../components/image/ape"
 import HeroText from "../components/text/hero_text"
 import Layout from "../components/layout/layout"
-import PageTitle from "../components/text/page_title"
-import SocialNav from "../components/nav/social_nav"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout title="Astute Ape">
     <SEO
       title="Home"
       keywords={[
@@ -29,14 +27,10 @@ const IndexPage = () => (
     />
     {/* Apply content layout rules to outermost div *-container */}
     <div className="single-container">
-      <div className="single-header">
-        <PageTitle titleText="Astute Ape" />
-      </div>
       <div className="single-content">
         <ApeIllustration />
         <HeroText />
       </div>
-      <SocialNav />
     </div>
   </Layout>
 )
