@@ -111,6 +111,12 @@ Layout of individual pages and page elements
   }
 }
 
+@media (min-width: 1224px) and (min-height: 1080px) {
+  .single-container {
+    margin-top: 5rem;
+  }
+}
+
 .single-content {
   display: flex;
   flex-direction: column;
