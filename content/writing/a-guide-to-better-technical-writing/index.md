@@ -21,7 +21,7 @@ keywords: "writing technology technical blog documentation"
 
 Update the docs. Send that email. Would you like to submit a post to the company blog? Oh, and a conference talk—you would love to give a conference talk, right?
 
-We write constantly, and whether we view it as a chore or a joy depends on the depth of our writer's toolbox.
+We write constantly, and whether we view it as a chore or a joy depends on the depth of our writers' toolboxes.
 
 After nearly five years as a producer at Treehouse, an online school teaching web development, I have observed several patterns among new technical writers. This article, which is loosely based on training materials I've created in the past, is meant to help you break out of those common patterns and write confidently.
 
