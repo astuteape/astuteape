@@ -8,15 +8,7 @@ const HeroText = () => {
         I'm a <span className="hero-emphasis">software developer</span>,
         <span className="hero-emphasis"> multimedia producer</span>, and
         <span className="hero-emphasis"> educator</span> available for web
-        development, and both print and digital design. Currently, I bring
-        coding lessons to life{" "}
-        <a
-          href="https://teamtreehouse.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @Treehouse.
-        </a>
+        development, and both print and digital design.
       </p>
     </div>
   )
