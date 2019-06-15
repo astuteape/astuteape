@@ -266,6 +266,5 @@ button {
 }
 
 button:hover {
-  transform: translateX(0.2rem);
   background: var(--color-button-hover);
 }
