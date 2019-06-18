@@ -10,13 +10,11 @@ const NotFoundPage = () => (
   <Layout title="404">
     <SEO title="404: Not found" />
     <div className="single-container">
-      <div className="single-content">
-        <ApeIllustration />
-        <h2>
-          Oops! It looks like we're in uncharted lands. Let's go{" "}
-          <Link to="/">home</Link>.
-        </h2>
-      </div>
+      <ApeIllustration />
+      <h2>
+        Oops! It looks like we're in uncharted lands. Let's go{" "}
+        <Link to="/">home</Link>.
+      </h2>
     </div>
   </Layout>
 )

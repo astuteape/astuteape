@@ -23,7 +23,7 @@ export default ({ data }) => {
       />
       {/* Apply content layout rules to outermost div *-container */}
       <div className="detail-container">
-        <section className="detail-header">
+        <div className="detail-header">
           <div>
             <h1 className="detail-title">{article.frontmatter.title}</h1>
             <ul className="detail-info">
@@ -37,7 +37,7 @@ export default ({ data }) => {
             </ul>
           </div>
           <DarkMode />
-        </section>
+        </div>
         <section
           className="detail-content"
           dangerouslySetInnerHTML={{ __html: article.html }}

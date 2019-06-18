@@ -1,5 +1,4 @@
 import React from "react"
-import "../../styles/modules.css"
 
 const HeroText = () => {
   return (

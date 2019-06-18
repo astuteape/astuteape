@@ -124,7 +124,6 @@ Social media nagivation
 ======================= */
 .social-nav {
   text-align: center;
-  padding: 2rem 0;
 }
 
 .social-nav h4 {
@@ -134,7 +133,7 @@ Social media nagivation
 
 .social-nav li {
   display: inline-block;
-  padding: 0 10px;
+  padding: 10px 10px 0 10px;
   text-align: center;
   fill: var(--color-icon);
 }
@@ -157,13 +156,13 @@ Social media nagivation
 Page titles
 =========== */
 .page-title {
-  margin: 1.5rem 0 0 0;
   font-size: 3.5rem;
   text-align: center;
   text-transform: uppercase;
-  color: var(--color-page-bg);
-  text-shadow: 3px 3px 0 var(--color-text-heading);
+  color: var(--color-text-heading);
   transition: color 0.5s linear;
+  width: max-content;
+  height: max-content;
 }
 
 @media screen and (min-width: 411px) {
@@ -172,10 +171,12 @@ Page titles
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .page-title {
-    margin-top: 3rem;
+    writing-mode: vertical-lr;
     font-size: 5rem;
+    justify-self: flex-start;
+    align-self: flex-start;
   }
 }
 
@@ -186,26 +187,23 @@ Dark mode toggle
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width: 100px;
   /* Hide the height of the invisible checkbox */
   margin-top: -31px;
   text-align: center;
 }
 
-@media (min-width: 1224px) {
-  .layout-page-header .theme-toggle {
-    position: absolute;
-    /* Top negative value hides invisible checkbox */
-    top: -25px;
-    right: 0px;
-    margin-top: 0;
+@media (min-width: 1024px) {
+  .layout-content-header .theme-toggle {
+    /* Writing mode plus position makes this a bit brittle and hacky */
+    justify-self: flex-start;
+    margin-top: -21px;
+    margin-left: 8px;
   }
 
   .detail-header .theme-toggle {
-    position: absolute;
-    /* Top negative value hides invisible checkbox */
-    top: -41px;
-    right: 0px;
-    margin-top: 0;
+    justify-self: center;
+    align-self: center;
   }
 }
 
@@ -247,7 +245,7 @@ Dark mode toggle
 /* Index page
 ============= */
 .ape-illustration {
-  margin-bottom: 1.5rem;
+  margin: 1rem;
 }
 
 /* Ape dark mode transition */

@@ -126,6 +126,7 @@ h4,
 h5,
 h6 {
   color: var(--color-text-heading);
+  margin: 0;
 }
 
 ol,
@@ -185,6 +186,10 @@ table {
 /* ========
 Form styles
 =========== */
+form {
+  margin: 1rem;
+}
+
 form .hidden {
   display: none;
 }

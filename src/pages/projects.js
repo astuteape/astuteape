@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 // Site components
+import ExperimentsList from "../components/experiment/experiments_list"
 import Layout from "../components/layout/layout"
 import SEO from "../components/meta_data/seo"
 
@@ -25,8 +26,9 @@ const ProjectsPage = ({ data }) => {
         ]}
       />
       {/* Apply content layout rules to outermost div *-container */}
-      <div className="multi-container">
-        <section className="main-content projects">
+      <div className="multi-container projects">
+        <section className="projects-list">
+          <h2 className="section-subhead">Showcase</h2>
           {allArticles.edges.map(({ node }) => (
             <div className="collection-item" key={node.id}>
               <div className="feature-image">
@@ -56,6 +58,12 @@ const ProjectsPage = ({ data }) => {
               </AniLink>
             </div>
           ))}
+        </section>
+        <section className="experiments-list">
+          <h2 className="section-subhead">Experiments</h2>
+          <div>
+            <ExperimentsList />
+          </div>
         </section>
       </div>
     </Layout>

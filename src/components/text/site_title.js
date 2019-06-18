@@ -1,6 +1,5 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import "../../styles/modules.css"
 
 const SiteTitle = () => (
   <StaticQuery

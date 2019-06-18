@@ -5,7 +5,6 @@ import SEO from "../components/meta_data/seo"
 
 // Site components
 import ApeIllustration from "../components/image/ape"
-import HeroText from "../components/text/hero_text"
 import Layout from "../components/layout/layout"
 
 const IndexPage = () => (
@@ -25,12 +24,8 @@ const IndexPage = () => (
         `art`,
       ]}
     />
-    {/* Apply content layout rules to outermost div *-container */}
     <div className="single-container">
-      <div className="single-content">
-        <ApeIllustration />
-        <HeroText />
-      </div>
+      <ApeIllustration />
     </div>
   </Layout>
 )

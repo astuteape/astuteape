@@ -7,7 +7,7 @@ import SEO from "../components/meta_data/seo"
 import Layout from "../components/layout/layout"
 
 const FormSuccessPage = () => (
-  <Layout title="Contact">
+  <Layout title="Success">
     <SEO title="Success" keywords={[`astute ape`, `wade christensen`]} />
     {/* Apply content layout rules to outermost div *-container */}
     <div className="single-container">

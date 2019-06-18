@@ -15,9 +15,7 @@ const ContactPage = () => (
     />
     {/* Apply content layout rules to outermost div *-container */}
     <div className="single-container">
-      <div className="single-content">
-        <ContactForm />
-      </div>
+      <ContactForm />
     </div>
   </Layout>
 )
