@@ -9,23 +9,23 @@ import PrimaryNav from "../nav/primary_nav"
 import SocialNav from "../nav/social_nav"
 
 const Layout = ({ title, children }) => (
-  <div className="layout-site-container">
-    <main className="layout-content-container">
-      <section className="layout-content-header">
+  <main>
+    <section className="l-wrapper">
+      <div className="l-header">
         <PageTitle titleText={title} />
         <DarkMode />
-      </section>
-      {/* Site Content */}
-      <section className="layout-content-main">{children}</section>
-      <section className="layout-content-footer">
+      </div>
+      <div className="l-content">{children}</div>
+      <div className="l-footer">
         <SocialNav />
-      </section>
-    </main>
-    {/* Site Navigation */}
-    <TransitionPortal>
-      <PrimaryNav />
-    </TransitionPortal>
-  </div>
+      </div>
+    </section>
+    <nav class="nav">
+      <TransitionPortal>
+        <PrimaryNav />
+      </TransitionPortal>
+    </nav>
+  </main>
 )
 
 Layout.propTypes = {

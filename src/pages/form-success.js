@@ -7,16 +7,26 @@ import SEO from "../components/meta_data/seo"
 import Layout from "../components/layout/layout"
 
 const FormSuccessPage = () => (
-  <Layout title="Success">
-    <SEO title="Success" keywords={[`astute ape`, `wade christensen`]} />
+  <Layout title="Thank You">
+    <SEO title="Thank You" keywords={[`astute ape`, `wade christensen`]} />
     {/* Apply content layout rules to outermost div *-container */}
-    <div className="single-container">
-      <div className="single-content">
-        <h1>Thank You,</h1>
+    <div className="form-success">
+      <div>
+        <h2>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+          >
+            <path d="M29.9 2.8c-.2-.1-.5-.2-.5-.4s-.1-.4-.2-.5c-.1-.1-.3-.2-.5-.2s-.2 0-.5-.5-.4-.7-.8-.8c-.5-.3-1-.4-1.5-.4-.7 0-1.5.3-2 .8-.4.4-.6 1-.8 1.5-.2.5-.3.9-.4 1.4-.1.6-.2 2.1-.4 2.7-.2.5-.5 1-.9 1.3-.3.3-.5.3-.3 0s.7-.8.7-.8c-.3-.3-.6-.7-.9-1-.3-.3-.6-.5-1-.7l-6.8 7.9c.1.3.3.7.6.9.3.3.6.4 1 .5L13.6 16c-.3.3-2.9 3.1-3.5 3.7-.7.6-4.8 3.5-5.8 4.3-.6.5-1.3 1.1-1.2 1.4.1.3 1.5-.7 1.7-.4.2.2-1.2 1.2-1.9 1.6-.7.5-1.5 1-1.3 1.3s6.9-2.8 7.1-2.5c-1.1 1.7-2.4 3.4-3.7 5-.3.5-.7 1.1-.3 1.4.3.4.8 0 1.3-.4s5.9-6.1 6.4-6.5c.4-.4.9-.4 1.1-.5s.6-.8 1-1c.8-.5 1.7-.9 2.6-1.1.4 0 .3.4.3.6 0 .3.5.8.9 1.2 0 0-.1.2 0 .3 0-.1.1-.1.1-.1l.3.2c.5.3 1 .7 1.4 1.1 0 .1.1.2 0 .2h-.7c-.3 0-.5-.2-.7 0-.1 0-.1.1-.2.2v.2c0-.1.1-.1.2-.2h.2s0 .3.2.3h1.1c.1 0 .3.1.4.1h.4c.1 0 .1.1.2.2s.3.2.4.2l.3.1c.1 0 .4.3.5.1v-.3-.2s.9.1 1.1.1h1.3c.1 0 .2-.1.2-.2 0 0-.1-.1 0-.1s.4.1.6.3c0-.1 0-.2-.1-.3-.1-.1-.2-.2-.3-.2h-.8c-.1 0-1.3.2-1.3 0s.2-.3.2-.2.1 0 .1-.1V25.5c-.2-.2-.5 0-.7 0-.2.1-.5.2-.7.2-.1 0-.3 0-.4-.1-.1-.1-.3-.2-.4-.4l-.5-.6c.1 0 .1.1.2.1.1.1.3.2.4.2.1 0 .2.1.3.1.1 0 .4.3.5.1v-.3-.2s.9.1 1.1.1h1.3c.1 0 .2-.1.2-.2 0 0-.1-.1 0-.1s.4.1.6.3c0-.1 0-.2-.1-.3-.1-.1-.2-.2-.3-.2h-.8c-.1 0-1.3.2-1.3.1s.2-.3.2-.2c.1.1 0 0 0 .1s.1 0 .1-.1V23.8c-.2-.1-.5 0-.7.1-.2.1-.5.2-.7.2-.1 0-.3 0-.4-.1-.1-.1-.3-.2-.4-.4-.2-.2-.5-.6-.5-.6s-.3-.4-.4-.6c.2-.4 2.7-3.3 3.1-3.7.4-.4 2.2-1.7 2.6-2.2l.9-1.5c.1-.2 0-.4.2-.7.2-.3 1.1-1 1.3-1.8.1-.9.1-1.8 0-2.7-.2-1.4-.6-2.8-1-4.1.1-.5.2-1 .4-1.4.1-.3.5-.4.7-.5.2-.1.8 0 1.2 0 .3 0 .6.1.9.2.2-.6-.1-1-.4-1.2z" />
+          </svg>{" "}
+          I'll be in touch,
+        </h2>
         <p>
-          I have received your form submission, and I will get back to you as
-          soon as possible. I typically respond to genuine messages within two
-          business days.
+          Your message is flying through space, and I should receive it
+          shortly.I will get back to you as soon as possible. I typically
+          respond within two business days.
         </p>
       </div>
     </div>

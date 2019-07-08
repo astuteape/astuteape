@@ -7,19 +7,19 @@ import PrimaryNav from "../nav/primary_nav"
 import SocialNav from "../nav/social_nav"
 
 const Layout = ({ children }) => (
-  <div className="layout-site-container">
-    {/* Site Content */}
-    <main className="layout-content-container detail">
-      <section>{children}</section>
-    </main>
-    <section className="layout-content-footer detail">
-      <SocialNav />
+  <main>
+    <section className="l-detail-wrapper">
+      <div className="l-detail-content">{children}</div>
+      <div className="l-detail-footer">
+        <SocialNav />
+      </div>
     </section>
-    {/* Site Navigation */}
-    <TransitionPortal>
-      <PrimaryNav />
-    </TransitionPortal>
-  </div>
+    <nav className="nav">
+      <TransitionPortal>
+        <PrimaryNav />
+      </TransitionPortal>
+    </nav>
+  </main>
 )
 
 Layout.propTypes = {

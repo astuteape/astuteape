@@ -21,13 +21,12 @@ export default ({ data }) => {
           `${project.frontmatter.keywords}`,
         ]}
       />
-      {/* Apply content layout rules to outermost div *-container */}
-      <div className="detail-container">
-        <section className="detail-header">
+      <div>
+        <div className="detail-header">
           <h1 className="detail-title">{project.frontmatter.title}</h1>
           <DarkMode />
-        </section>
-        <section
+        </div>
+        <div
           className="detail-content"
           dangerouslySetInnerHTML={{ __html: project.html }}
         />

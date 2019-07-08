@@ -26,8 +26,14 @@ const ProjectsPage = ({ data }) => {
         ]}
       />
       {/* Apply content layout rules to outermost div *-container */}
-      <div className="multi-container projects">
-        <section className="projects-list">
+      <div className="projects">
+        <section className="experiments-list">
+          <h2 className="section-subhead">Experiments</h2>
+          <div>
+            <ExperimentsList />
+          </div>
+        </section>
+        <section className="showcase-list">
           <h2 className="section-subhead">Showcase</h2>
           {allArticles.edges.map(({ node }) => (
             <div className="collection-item" key={node.id}>
@@ -58,12 +64,6 @@ const ProjectsPage = ({ data }) => {
               </AniLink>
             </div>
           ))}
-        </section>
-        <section className="experiments-list">
-          <h2 className="section-subhead">Experiments</h2>
-          <div>
-            <ExperimentsList />
-          </div>
         </section>
       </div>
     </Layout>

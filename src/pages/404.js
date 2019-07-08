@@ -9,11 +9,10 @@ import Layout from "../components/layout/layout"
 const NotFoundPage = () => (
   <Layout title="404">
     <SEO title="404: Not found" />
-    <div className="single-container">
+    <div className="bad-req">
       <ApeIllustration />
       <h2>
-        Oops! It looks like we're in uncharted lands. Let's go{" "}
-        <Link to="/">home</Link>.
+        I see no evil pages here. Let's go <Link to="/">home</Link>.
       </h2>
     </div>
   </Layout>

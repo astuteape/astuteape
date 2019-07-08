@@ -16,8 +16,8 @@ body {
   --color-accent-three: #c0c7e5;
   /* Module Assignment */
   --color-page-bg: var(--shade-light);
-  --color-nav-bg: var(--color-dark);
-  --color-nav-link: var(--shade-light);
+  --color-nav-bg: var(--shade-light);
+  --color-nav-link: var(--color-dark);
   --color-text: var(--shade-midtone);
   --color-text-heading: var(--shade-dark);
   --color-blockquote: var(--color-accent-three);
@@ -258,12 +258,12 @@ textarea:not(:placeholder-shown):invalid {
 Buttons
 ======= */
 button {
-  height: 36px;
+  height: 28px;
   border: none;
   border-radius: 0.15rem;
   padding: 0 1rem;
-  font-size: 1.1rem;
-  line-height: 2rem;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
   transition: transform 0.5s ease-in-out;
   background: var(--color-button);
   color: var(--color-page-bg);

@@ -5,10 +5,12 @@ const PrimaryNav = () => {
   return (
     <nav className="navbar">
       {/* Divs for style only. Replicate linear gradient
-      but avoids fuzzy stops in edge */}
+      but avoids fuzzy stops in MS edge */}
       <div className="stripe-accent" />
       <div className="stripe-light" />
       <div className="stripe-midtone" />
+      <div className="stripe-light non-mobile" />
+      <div className="stripe-midtone non-mobile" />
       <ul className="primary-nav">
         <li>
           <AniLink fade to="/" activeClassName="active">

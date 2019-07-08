@@ -24,7 +24,7 @@ const IndexPage = () => (
         `art`,
       ]}
     />
-    <div className="single-container">
+    <div>
       <ApeIllustration />
     </div>
   </Layout>

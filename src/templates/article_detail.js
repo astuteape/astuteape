@@ -21,8 +21,7 @@ export default ({ data }) => {
           `${article.frontmatter.keywords}`,
         ]}
       />
-      {/* Apply content layout rules to outermost div *-container */}
-      <div className="detail-container">
+      <div>
         <div className="detail-header">
           <div>
             <h1 className="detail-title">{article.frontmatter.title}</h1>
@@ -38,7 +37,7 @@ export default ({ data }) => {
           </div>
           <DarkMode />
         </div>
-        <section
+        <div
           className="detail-content"
           dangerouslySetInnerHTML={{ __html: article.html }}
         />

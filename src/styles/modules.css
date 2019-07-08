@@ -17,6 +17,11 @@ Primary site nagivation
   background: var(--color-nav-bg);
 }
 
+.navbar .non-mobile {
+  display: none;
+  height: 0;
+}
+
 .stripe-midtone {
   height: 6.25px;
   width: 100vw;
@@ -26,7 +31,7 @@ Primary site nagivation
 }
 
 .stripe-light {
-  height: 6.25px;
+  height: 4.75px;
   width: 100vw;
   transition: background 1s;
   transition-timing-function: ease-in-out;
@@ -34,7 +39,7 @@ Primary site nagivation
 }
 
 .stripe-accent {
-  height: 6.25px;
+  height: 6.75px;
   width: 100vw;
   transition: background 1s;
   transition-timing-function: ease-in-out;
@@ -60,24 +65,38 @@ Primary site nagivation
     background: var(--color-nav-bg);
   }
 
-  .stripe-midtone {
-    order: 2;
+  .navbar .non-mobile {
+    display: block;
     height: 100vh;
-    width: 16.66px;
+  }
+
+  .stripe-midtone.non-mobile {
+    order: 2;
+    width: 10px;
+  }
+
+  .stripe-light.non-mobile {
+    order: 3;
+  }
+
+  .stripe-midtone {
+    order: 4;
+    height: 100vh;
+    width: 11px;
     background: var(--color-light);
   }
 
   .stripe-light {
-    order: 3;
+    order: 5;
     height: 100vh;
-    width: 16.66px;
+    width: 7px;
     background: var(--shade-light);
   }
 
   .stripe-accent {
-    order: 4;
+    order: 6;
     height: 100vh;
-    width: 16.66px;
+    width: 15px;
     background: var(--color-accent);
   }
 
@@ -194,10 +213,10 @@ Dark mode toggle
 }
 
 @media (min-width: 1024px) {
-  .layout-content-header .theme-toggle {
+  .l-header .theme-toggle {
     /* Writing mode plus position makes this a bit brittle and hacky */
     justify-self: flex-start;
-    margin-top: -21px;
+    margin-top: -15px;
     margin-left: 8px;
   }
 
@@ -294,9 +313,80 @@ Hero Text
   color: var(--color-link-achov);
 }
 
+/* ==========
+Wrting Page
+----- & -----
+Projects Page
+============= */
+.aa-articles-list,
+.experiments-list {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--color-text);
+}
+
+.collection-item {
+  margin: 1rem 0;
+}
+
+.external-articles-list li,
+.experiments-list li {
+  margin-bottom: 1rem;
+}
+
+.external-articles-list li *,
+.experiments-list li * {
+  margin: 0.1rem auto;
+}
+
+.feature-image {
+  max-width: 500px;
+  margin: 0.5rem 0;
+}
+
+.section-subhead {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .section-subhead {
+    text-align: left;
+  }
+}
+
+.collection-item-title,
+.collection-item-info,
+.collection-item-type,
+.collect-item-summary {
+  margin-bottom: 0.15rem;
+}
+
+.collection-item-info li {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+}
+
 /* =============================
 Article and Project detail views
 ================================ */
+.detail-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .detail-header {
+    margin-top: 3rem;
+  }
+}
+
 .detail-info {
   text-align: center;
   margin-top: 0.5rem;
@@ -348,6 +438,7 @@ Article and Project detail views
 .detail-content img,
 .detail-content iframe {
   display: block;
+  max-width: 650px;
   margin: 0 auto 1rem auto;
   text-align: center;
 }
@@ -399,4 +490,13 @@ Footnotes
 
 .footnotes a:hover {
   color: var(--color-link-achov);
+}
+
+/* 404 page text */
+.bad-req .ape-illustration #eyes {
+  display: none;
+}
+
+.form-success svg path {
+  fill: var(--color-text);
 }

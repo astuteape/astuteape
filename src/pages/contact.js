@@ -14,7 +14,7 @@ const ContactPage = () => (
       keywords={[`astute ape`, `wade christensen`, `contact`, `hire`]}
     />
     {/* Apply content layout rules to outermost div *-container */}
-    <div className="single-container">
+    <div>
       <ContactForm />
     </div>
   </Layout>

@@ -27,7 +27,7 @@ const WritingPage = ({ data }) => {
         ]}
       />
       {/* Apply content layout rules to outermost div *-container */}
-      <div className="multi-container writing">
+      <div className="writing">
         {/* Left column */}
         <div className="aa-articles-list">
           <h2 className="section-subhead">Astute Ape Articles</h2>
