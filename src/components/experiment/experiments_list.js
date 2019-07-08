@@ -6,7 +6,7 @@ const ExperimentsList = () => (
     <li>
       <Experiment
         title="Analog Clock with Text Labels"
-        link=""
+        link="https://codepen.io/astuteape/pen/QXQZmM/"
         embed={
           <iframe
             height="350"
