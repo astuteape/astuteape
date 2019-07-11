@@ -2,23 +2,6 @@ import React from "react"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
 class DarkMode extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      theme: `light`,
-    }
-  }
-
-  setTheme = event => {
-    return event.target.checked ? `dark` : `light`
-  }
-
-  setIconLabel = () => {
-    this.setState(prevState => ({
-      theme: prevState.theme === `light` ? `dark` : `light`,
-    }))
-  }
-
   render() {
     const moon = (
       <div>
@@ -96,9 +79,6 @@ class DarkMode extends React.Component {
       </div>
     )
 
-    // Set sun or moon icon with corresponding theme
-    let iconLabel = this.state.theme === `dark` ? moon : sun
-
     return (
       <div className="theme-toggle">
         <ThemeToggler>
@@ -106,13 +86,10 @@ class DarkMode extends React.Component {
             <label>
               <input
                 type="checkbox"
-                onClick={this.setIconLabel}
-                onChange={event => {
-                  toggleTheme(this.setTheme(event))
-                }}
+                onChange={event => toggleTheme(event.target.checked ? `dark` : `light`)}
                 checked={theme === `dark`}
               />{" "}
-              <div>{iconLabel}</div>
+              <div>{theme === `dark` ? moon : sun}</div>
             </label>
           )}
         </ThemeToggler>
