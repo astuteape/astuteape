@@ -86,7 +86,7 @@ const SocialNav = () => (
       </li>
       <li>
         <a
-          href="https://codepen.io/astuteape/#"
+          href="https://codepen.io/astuteape/"
           target="_blank"
           rel="noopener noreferrer"
         >
