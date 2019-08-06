@@ -50,6 +50,13 @@ class ContactForm extends React.Component {
               All humans ignore this field:{" "}
               <input name="bot-field" onChange={this.handleChange} />
             </label>
+            <label>
+              <input
+                type="hidden"
+                name="subject"
+                value="Astute Ape Site Form Submission"
+              />
+            </label>
           </div>
           <p>
             <label htmlFor={"name"}>Full Name:</label>
