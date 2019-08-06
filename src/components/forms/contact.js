@@ -52,7 +52,7 @@ class ContactForm extends React.Component {
             </label>
             <label>
               <input
-                type="text"
+                type="subject"
                 name="subject"
                 value="Astute Ape Site Form Submission"
               />
