@@ -54,9 +54,9 @@ class ContactForm extends React.Component {
           <p>
             <label htmlFor="subject" className="hidden">
               <input
-                type="subject"
+                type="text"
                 name="subject"
-                value="Astute Ape Site Form Submission"
+                value="Astute Ape Contact Form Submission"
               />
             </label>
             <label htmlFor={"name"}>Full Name:</label>
