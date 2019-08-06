@@ -45,20 +45,20 @@ class ContactForm extends React.Component {
         >
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
           <input type="hidden" name="form-name" value="contact" />
-          <div hidden>
+          <div className="hidden">
             <label>
               All humans ignore this field:{" "}
               <input name="bot-field" onChange={this.handleChange} />
             </label>
-            <label>
+          </div>
+          <p>
+            <label htmlFor="subject" className="hidden">
               <input
                 type="subject"
                 name="subject"
                 value="Astute Ape Site Form Submission"
               />
             </label>
-          </div>
-          <p>
             <label htmlFor={"name"}>Full Name:</label>
             <br />
             <input
