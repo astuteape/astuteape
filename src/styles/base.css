@@ -108,7 +108,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
   overflow: hidden;
   background: var(--color-page-bg);
@@ -163,6 +163,10 @@ a:hover h4,
 a:hover h5 {
   color: var(--color-link-achov);
   text-decoration: underline;
+}
+
+hr {
+  background-color: var(--color-text);
 }
 
 blockquote,

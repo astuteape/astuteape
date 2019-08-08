@@ -7,7 +7,7 @@ const HeroText = () => {
         I'm a <span className="hero-emphasis">software developer</span>,
         <span className="hero-emphasis"> multimedia producer</span>, and
         <span className="hero-emphasis"> educator</span> available for web
-        development, and both print and digital design.
+        development, print and digital design, and technical writing.
       </p>
     </div>
   )
