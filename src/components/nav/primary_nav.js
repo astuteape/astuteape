@@ -18,6 +18,11 @@ const PrimaryNav = () => {
           </AniLink>
         </li>
         <li>
+          <AniLink fade to="/about" activeClassName="active">
+            About
+          </AniLink>
+        </li>
+        <li>
           <AniLink
             fade
             to="/writing"

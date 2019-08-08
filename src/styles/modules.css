@@ -113,7 +113,7 @@ Primary site nagivation
 
 .primary-nav > li > a {
   padding: 10px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.5s, font-size 0.5s;
@@ -126,9 +126,15 @@ Primary site nagivation
   color: var(--color-link-achov);
 }
 
-@media screen and (min-width: 411px) {
+@media (min-width: 322px) {
   .primary-nav > li > a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .primary-nav > li > a {
+    font-size: 1.3rem;
   }
 }
 
