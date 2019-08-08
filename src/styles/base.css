@@ -216,8 +216,29 @@ input {
   color: var(--color-text);
 }
 
+select {
+  min-width: 250px;
+  padding: 0 5px;
+  border: solid 1px var(--color-border);
+  font-size: 1rem;
+  line-height: 1.2rem;
+  background: transparent;
+  color: var(--color-text);
+}
+
+option {
+  border: solid 1px var(--color-border);
+  background: var(--color-page-bg);
+  color: var(--color-text);
+}
+
+option:hover {
+  background: var(--color-link-achov);
+}
+
 @media (min-width: 411px) {
-  input {
+  input,
+  select {
     min-width: 350px;
   }
 }

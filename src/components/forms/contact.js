@@ -52,13 +52,6 @@ class ContactForm extends React.Component {
             </label>
           </div>
           <p>
-            <label htmlFor="subject" className="hidden">
-              <input
-                type="text"
-                name="subject"
-                value="Astute Ape Contact Form Submission"
-              />
-            </label>
             <label htmlFor={"name"}>Full Name:</label>
             <br />
             <input
@@ -79,6 +72,21 @@ class ContactForm extends React.Component {
               placeholder={"nim@astuteape.com"}
               required={true}
             />
+          </p>
+          <p>
+            <label htmlFor={"project-type"}>Project Type:</label>
+            <br />
+            <select
+              name={"Project Type"}
+              onChange={this.handleChange}
+              required={false}
+            >
+              <option value="web-dev">Web Development</option>
+              <option value="digital-design">Digital Design</option>
+              <option value="print-design">Print Design</option>
+              <option value="technical-writing">Technical Writing</option>
+              <option value="other">Other</option>
+            </select>
           </p>
           <p>
             <label htmlFor={"message"}>Message:</label>

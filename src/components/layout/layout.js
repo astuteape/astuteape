@@ -20,7 +20,7 @@ const Layout = ({ title, children }) => (
         <SocialNav />
       </div>
     </section>
-    <nav class="nav">
+    <nav className="nav">
       <TransitionPortal>
         <PrimaryNav />
       </TransitionPortal>
