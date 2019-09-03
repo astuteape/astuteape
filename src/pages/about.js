@@ -42,8 +42,9 @@ const AboutPage = ({ data }) => (
           <p>
             At best, we humans are just clever primates. Astute apes, you might
             say. I'm certainly not brilliant, but I can be a clever ape most
-            days. I even use tools. Whether those tools include an IDE, the
-            "Chicago Manual of Style," or a brush pen, depends on the project.
+            days. I even use tools. Whether those tools include an IDE, the{" "}
+            <em>Chicago Manual of Style</em>, or a brush pen, depends on the
+            project.
           </p>
           <p>
             If you want to collaborate on something technical, something
