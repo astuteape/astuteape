@@ -210,7 +210,7 @@ Examine your use of these empty adverbs. You will find that cutting them not onl
 
 Reading aloud catches most glaring errors. Reading aloud does not mean quietly murmuring to yourself. Find a private place, and read at full volume. Is that sentence too long? Well, you can't read it without running out of breath, so . . . .
 
-In addition to reading aloud, I recommend a second type of proofreading practiced by one of my journalism professors, the late Tom Wheeler. He would read once at regular pace to ensure everything flowed well and made sense. He would then read slowly—word-by-word. This second proofread catches small typos and easily missed grammatical errors. Its tempting to rely on a spell checker, but theirs just to many things it can miss.
+In addition to reading aloud, I recommend a second type of proofreading practiced by one of my journalism professors, the late Tom Wheeler. He would read once at regular pace to ensure everything flowed well and made sense. He would then read slowly—word-by-word. This second proofread catches small typos and easily missed grammatical errors.
 
 ### Count Words Per Sentence
 
