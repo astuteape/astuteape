@@ -33,16 +33,6 @@ const PrimaryNav = () => {
           </AniLink>
         </li>
         <li>
-          <AniLink
-            fade
-            to="/projects"
-            activeClassName="active"
-            partiallyActive={true}
-          >
-            Projects
-          </AniLink>
-        </li>
-        <li>
           <AniLink fade to="/contact" activeClassName="active">
             Contact
           </AniLink>
