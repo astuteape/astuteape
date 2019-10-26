@@ -17,13 +17,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `projects`,
-        path: `${__dirname}/content/projects`,
-      },
-    },
-    {
       // RSS Feed
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -48,10 +41,10 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: `${site.siteMetadata.siteUrl}/writing${
                     edge.node.fields.slug
-                  }`,
+                    }`,
                   guid: `${site.siteMetadata.siteUrl}/writing${
                     edge.node.fields.slug
-                  }`,
+                    }`,
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })

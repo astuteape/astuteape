@@ -32,20 +32,11 @@ exports.createPages = ({ graphql, actions }) => {
     `
   ).then(result => {
     const writingPath = new RegExp("\\/content\\/writing\\/")
-    const projectsPath = new RegExp("\\/content\\/projects\\/")
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       if (writingPath.test(node.fileAbsolutePath)) {
         createPage({
           path: `/writing${node.fields.slug}`,
           component: path.resolve(`./src/templates/article_detail.js`),
-          context: {
-            slug: node.fields.slug,
-          },
-        })
-      } else if (projectsPath.test(node.fileAbsolutePath)) {
-        createPage({
-          path: `/projects${node.fields.slug}`,
-          component: path.resolve(`./src/templates/project_detail.js`),
           context: {
             slug: node.fields.slug,
           },
