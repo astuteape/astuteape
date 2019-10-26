@@ -8,7 +8,6 @@ import SEO from "../components/meta_data/seo"
 
 // Site components
 import Layout from "../components/layout/layout"
-import HeroText from "../components/text/hero_text"
 
 const AboutPage = ({ data }) => (
   <Layout title="About">
@@ -43,11 +42,11 @@ const AboutPage = ({ data }) => (
             At best, we humans are just clever primates. Astute apes, you might
             say. I'm certainly not brilliant, but I can be a clever ape most
             days. I even use tools. Whether those tools include an IDE, the{" "}
-            <em>Chicago Manual of Style</em>, or a brush pen, depends on the
+            <em>Chicago Manual of Style</em>, or a brush pen depends on the
             project.
           </p>
           <p>
-            If you want to collaborate on something technical, something
+            I'm a Developer Educator at Twilio SendGrid by day, but I'm open to freelance projects when time permits. If you want to collaborate on something technical, something
             educational, or something beautiful, let me know. I'm always happy
             to hear new ideas. In addition to my social channels, you can reach
             out directly with the{" "}
@@ -57,8 +56,6 @@ const AboutPage = ({ data }) => (
             form.
           </p>
         </div>
-        <hr />
-        <HeroText />
       </section>
     </div>
   </Layout>
